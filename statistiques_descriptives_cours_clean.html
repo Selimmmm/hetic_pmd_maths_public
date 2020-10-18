@@ -10492,6 +10492,7 @@ div.cell.selected.jupyter-soft-selected:before {
 }
 .prompt {
 	display: none;
+	display: none;
   /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
   min-width: 14ex;
   /* This padding is tuned to match the padding on the CodeMirror editor. */
@@ -10513,6 +10514,7 @@ div.cell.selected.jupyter-soft-selected:before {
 }
 @media (max-width: 540px) {
   .prompt {
+	display: none;
 	display: none;
     text-align: left;
   }
@@ -10542,6 +10544,7 @@ div.inner_cell {
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
+	display: none;
 	display: none;
   border: 1px solid #cfcfcf;
   border-radius: 2px;
@@ -10590,6 +10593,7 @@ div.unrecognized_cell .inner_cell a:hover {
 }
 @media (max-width: 540px) {
   div.unrecognized_cell > div.prompt {
+	display: none;
 	display: none;
     display: none;
   }
@@ -11317,6 +11321,7 @@ div.text_cell {
 }
 @media (max-width: 540px) {
   div.text_cell > div.prompt {
+	display: none;
 	display: none;
     display: none;
   }

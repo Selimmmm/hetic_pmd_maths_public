@@ -10,5 +10,7 @@
 
 
 ## Statistiques
-[Statistiques descriptives - Cours & Exercices](https://selimmmm.github.io/hetic_pmd_maths_public/statistiques_descriptives_clean.html)
+[Statistiques descriptives - Cours](https://selimmmm.github.io/hetic_pmd_maths_public/statistiques_descriptives_cours_clean.html)
+
+[Statistiques descriptives - Exercices](https://selimmmm.github.io/hetic_pmd_maths_public/statistiques_descriptives_exercices_clean.html)
 
