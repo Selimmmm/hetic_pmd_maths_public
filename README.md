@@ -17,6 +17,6 @@
 
 
 ## Probabilités
-[Probabilités discrètes - Cours](https://selimmmm.github.io/hetic_pmd_maths_public/probabilites_discretes_cours_clean.html)
+[Probabilités discrètes - Cours](https://selimmmm.github.io/hetic_pmd_maths_public/probabilites_discretes_cours_clean.pdf)
 
 [Probabilités discrètes - Exercices](https://selimmmm.github.io/hetic_pmd_maths_public/probabilites_discretes_exercices_clean.html)
