@@ -739,6 +739,62 @@
                     </div>
 
 
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_6" role="button"
+                        aria-expanded="false" aria-controls="enonce_6">Exercice 6 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_6"
+                        aria-expanded="false" aria-controls="corrige_6">Exercice 6 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_6">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    Les lycéens ayant de bons résultats en terminale sont de plus en plus nombreux à
+                                    candidater chaque année dans les écoles les plus sélectives. Afin de faire leurs
+                                    choix, les lycéens ont la possibilité de consulter les données d’admission de
+                                    l’année précédente. Supposons qu’une de ces écoles ait reçu 2851 demandes
+                                    d'admission. Parmi elles, 1033 étudiants ont été admis sur dossier, 854 ont été
+                                    rejetés et 964 ont été mis sur une liste d’attente. À l’issue du processus, 1226
+                                    candidats ont été admis définitivement. Soient 𝐸 l’évènement « le candidat est
+                                    admis sur dossier », 𝑅 l’évènement « le candidat est rejeté », 𝐷 l’évènement
+                                    « le candidat est en liste d’attente » et 𝐹 l’évènement « le candidat mis sur
+                                    liste d’attente est admis ».
+                                </li>
+
+
+                                <ol>
+                                    <li>
+                                        Estimer la probabilité des évènements 𝐸, 𝑅 et 𝐷
+                                    </li>
+                                    <li>
+                                        Les évènements 𝐸 et 𝐷 sont-ils mutuellement exclusifs ? Calculer
+                                        $\mathbb{P}(E \bigcap D)$
+                                    </li>
+                                    <li>
+                                        Estimer la probabilité de l’évènement 𝐹.
+                                    </li>
+                                    <li>
+                                        En vous appuyant sur les probabilités déjà calculées, vous en déduirez la
+                                        probabilité pour un lycéen qui soumet sa candidature d’être admis sur dossier
+                                        ou après un passage par la liste d’attente.
+                                    </li>
+
+                                </ol>
+                            </ul>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_6">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
                     <div class="card ai-card p-5">
                         <h3>Propriétés élémentaires</h3>
                         <h4>Définition</h4>
@@ -795,13 +851,13 @@
 
 
                     <p></p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_6" role="button"
-                        aria-expanded="false" aria-controls="enonce_6">Exercice 6 - Enoncé</a>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_6"
-                        aria-expanded="false" aria-controls="corrige_6">Exercice 6 - Corrigé </button>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_7" role="button"
+                        aria-expanded="false" aria-controls="enonce_7">Exercice 7 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_7"
+                        aria-expanded="false" aria-controls="corrige_7">Exercice 7 - Corrigé </button>
                     <p></p>
 
-                    <div class="collapse multi-collapse" id="enonce_6">
+                    <div class="collapse multi-collapse" id="enonce_7">
                         <div class="card ai-card p-5">
                             <ul>
                                 <li>
@@ -823,7 +879,7 @@
                         </div>
                     </div>
                     <p></p>
-                    <div class="collapse multi-collapse" id="corrige_6">
+                    <div class="collapse multi-collapse" id="corrige_7">
                         <div class="card ai-card p-5">
                             <ol>
                                 <li>
@@ -839,8 +895,7 @@
                         <h4>Définition</h4>
                         <ul>
                             <li>Des expériences identiques sont des expériences qui ont les mêmes issues et probabilités
-                                associées.
-                                ont la même probabilité.</li>
+                                associées.</li>
                             <li>Des expériences indépendantes sont des expériences dont les résultats ne s’influent pas
                                 mutuellement.
                             </li>
@@ -944,16 +999,27 @@
                         <h3>Espérance mathématiques</h3>
                         <h4>Définition</h4>
                         <ul>
-                            <li>L'espérance mathématique associée à la variable aléatoire X ($x_i$) (et aux probabilités
-                                associées
-                                ($p_i$)) : $$\mathbb{E}(X) = \sum_{i=1}^{n}p_i x_i$$</li>
-                            <li>En statistiques :
+                            <li>L'espérance mathématique associée à la variable aléatoire $X$ ($x_i$) et aux
+                                probabilités
+                                associées ($p_i$) : $$\mathbb{E}(X) = \sum_{i=1}^{n}p_i x_i$$</li>
+
+                            <li>Dans le cadre d’un jeu d’argent, l’espérance est le gain moyen que l’on peut espérer
+                                toucher.</li>
+
+                            <li>C'est une notion équivalente à la moyenne en statistiques, les probabilitiés $p_i$
+                                jouant le rôle des fréquences $f_i$ :
 
                                 $$ \bar{x} = \sum_{i=1}^{n} f_i x_i $$</li>
                         </ul>
                         <h4>Exemple</h4>
                         <ul>
-                            <li> ?????? </li>
+                            <li> Soit $X$ la variable aléatoire égale à la face obtenue d'un dé qu'on lance. Si
+                                lorsqu'on jette un dé, on gagne en euros le montant inscrit sur la face, en moyenne
+                                on gagne :
+
+                                $$ \mathbb{E}(X) = \sum_{i=1}^{6}p_i x_i = \frac{1}{6} \sum_{i=1}^{6}i =
+                                \frac{1}{6}(1+2+3+4+5+6) = 3.5
+                                $$
                         </ul>
                     </div>
 
@@ -972,10 +1038,6 @@
 
                                 $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\sum_{i=1}^{n}p_i (x_i -
                                 \mathbb{E}(x))^2}$$</li>
-                        </ul>
-                        <h4>Exemple</h4>
-                        <ul>
-                            <li> ?????? </li>
                         </ul>
                     </div>
 
