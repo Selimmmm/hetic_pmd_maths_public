@@ -62,18 +62,20 @@
     <section class="ai-section ai-bold-anchors">
         <div class="container">
             <div class="row flex-column-reverse flex-md-row mb-5">
-                <div class="col-md-8">
+                <div class="col-md-9">
 
                     <div class="row">
-                        <div class="col-md-8 mr-auto">
+                        <div class="col-md-9 mr-auto">
                             <h1>Probabilités discrètes</h1>
                         </div>
                     </div>
                     <hr class="mt-0 mb-5">
 
+                    <h2>Introduction</h2>
+
                     <div class="card ai-card p-5">
                         <h3></h3>
-                        <h4>Probabilités et fréquence limite d'un évènement</h4>
+                        <h4>Probabilité et fréquence limite d'un évènement</h4>
                         <ul>
                             <li>
                             </li>
@@ -85,7 +87,6 @@
                     <hr class="mt-0 mb-5">
 
 
-
                     <script type="text/x-mathjax-config">
                         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
                         </script>
@@ -95,11 +96,7 @@
                         </script>
 
 
-
-
-                    <a id="I"></a>
-
-                    <h2>I. Vocabulaire probabiliste</h2>
+                    <h2 id="vocaprob">I. Vocabulaire probabiliste</h2>
 
                     <div class="card ai-card p-5">
                         <h3>Expérience aléatoire</h3>
@@ -115,7 +112,6 @@
                             <li>Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.</li>
                         </ul>
                     </div>
-
 
 
                     <div class="card ai-card p-5">
@@ -139,19 +135,40 @@
 
 
                     <div class="card ai-card p-5">
-                        <h3></h3>
+                        <h3>Evénement </h3>
                         <h4>Définition</h4>
                         <ul>
-                            <li>
-                            </li>
-                            <li>
+                            <li>Un <b>événement</b> est un sous-ensemble de l’univers (càd seulement une
+                                partie de $\Omega$)
                             </li>
                         </ul>
                         <h4>Exemple</h4>
                         <ul>
-                            <li>
+                            <li>Pour le lancer de dé, l'évènement "obtenir un nombre inférieur ou égal à 3" est égal
+                                à l'ensemble
+                                $\{1 ; 2 ; 3\}$
                             </li>
-                            <li>
+                            <li>Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à
+                                l'ensemble $\{2 ; 4 ; 6\}$</li>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement élémentaire</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> Un <b>événement élémentaire</b> est un sous-ensemble de l’univers composé d’une seule
+                                issue.
+                            </li>
+                            <li> Un <b>événement élémentaire</b> est donc un <b>singleton</b>, c'est à dire un ensemble
+                                composé d'un seul élément.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> "Obtenir un 1" est un événement élémentaire (il vaut $\{1\}$).
                             </li>
 
                         </ul>
@@ -159,202 +176,496 @@
 
 
                     <div class="card ai-card p-5">
-                        <h3></h3>
+                        <h3>Cardinal</h3>
                         <h4>Définition</h4>
                         <ul>
-                            <li>
+                            <li>Le cardinal d’un ensemble est le nombre d’éléments dans cet ensemble.
+                            </li>
+                            <li>C'est donc aussi le nombre d'évènements élémentaires d'un évènement.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Le cardinal de le l'évènement obtenir un nombre pair est 3 (il y a 3 éléments dans
+                                $\{2;4;6\})$
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement certain</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’événement certain est l’événement constitué de toutes les issues possibles. C’est
+                                l’univers tout entier.
                             </li>
                             <li>
                             </li>
                         </ul>
                         <h4>Exemple</h4>
                         <ul>
-                            <li>
+                            <li> Il est certain en lançant un dé de faire soit 1, soit 2, soit 3, soit 4, soit 5, soit
+                                6. Donc l'évènement $\{1;2;3;4;5;6\}$ est certain (c'est bien $\Omega$, l'univers tout
+                                entier)
                             </li>
-                            <li>
-                            </li>
+                        </ul>
+                    </div>
 
+                    <div class="card ai-card p-5">
+                        <h3>Evénement impossible</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’événement impossible est l’ensemble vide, on le note : $\emptyset$
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Il est impossible de ne faire aucun chiffre
+                            </li>
                         </ul>
                     </div>
 
 
+                    <div class="card ai-card p-5">
+                        <h3>Intersection d’événements</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’intersection de deux événements $A$ et $B$ (notée $A \bigcap B$ ) est l’ensemble des
+                                issues qui
+                                sont à la fois dans A et à la fois dans B.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3
+                                "</li>
+                            <ul>
+                                <li>Alors $A=\{2;4;6\}$
+                                </li>
+                                <li>Et $B=\{1;2;3\}$
+                                </li>
+                                <li>Donc $A \bigcap B = \{2\}$
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair
+                                "</li>
+                            <ul>
+                                <li>Alors $A=\{2;4;6\}$
+                                </li>
+                                <li>Et $B=\{1;3;5\}$
+                                </li>
+                                <li>Donc $A \bigcap B = \emptyset$
+                            </ul>
+                        </ul>
+                    </div>
 
 
-                    ***
-                    ### **Univers** :
-                    -
+                    <div class="card ai-card p-5">
+                        <h3>Union d’événements</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’union de deux événements $A$ et $B$ (notée $A \bigcup B$) est l’ensemble des issues
+                                qui sont
+                                soit dans $A$ soit dans $B$.
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3
+                                "
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$
+                                    </li>
+                                    <li>
+                                        Et $B=\{1;2;3\}$
 
-                    **Exemple** :
-                    - Pour un lancer de dé, les issues sont : $ \{1 ; 2 ; 3 ; 4 ; 5; 6\}$
-                    - Dans le cas du lancer de dé, l'univers est donc : $ \Omega = \{1 ; 2 ; 3 ; 4 ; 5; 6\}$
+                                    </li>
+                                    <li>
+                                        Donc $A \bigcup B = \{1;2;3;4;6\}$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
-
-                    ***
-
-                    ### **Evénement** :
-                    - Un **événement** est un sous-ensemble de l’univers (c'est à dire seulement une partie de $\Omega$)
-
-                    **Exemple** :
-                    - Pour le lancer de dé, l'évènement "obtenir un nombre inférieur ou égal à 3" est égal à l'ensemble
-                    $\{1, 2, 3\}$
-
-                    - Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à l'ensemble $\{2, 4, 6\}$
-
-                    ***
-
-                    ### **Evénement élémentaire** :
-
-                    - **Un événement élémentaire** est un sous-ensemble de l’univers composé d’une seule issue.
-
-
-                    **Exemple** : "Obtenir un 1" est un événement élémentaire (il vaut $\{1\}$).
-
-
-                    ***
-                    ### **Cardinal** :
-                    - Le cardinal d’un ensemble est le nombre d’éléments dans cet ensemble.
-                    - C'est donc le nombre d'évènements élémentaires d'un évènement
-
-                    **Exemple** :
-                    - Le cardinal de le l'évènement obtenir un nombre pair est 3 (il y a 3 éléments dans $\{2;4;6\}$
-
-
-                    ***
-
-                    ### **Evénement certain** :
-                    L’événement certains est l’événement constitué de toutes les issues possibles. C’est l’univers tout
-                    entier.
-
-                    **Exemple** :
-                    - Il est certain en lançant un dé de faire soit 1, soit 2, soit 3, soit 4, soit 5, soit 6.
-                    - Donc l'évènement $\{1;2;3;4;5;6\}$ est certain (c'est bien $\Omega$, l'univers tout entier)
-
-                    ***
-
-                    ### **Evénement impossible** :
-                    - L’événement impossible est l’ensemble vide, on le note : $\emptyset$
-
-                    **Exemple** :
-                    - Il est impossible de ne faire aucun chiffre
-
-                    ***
-
-                    ### **Intersection d’événements** :
-
-                    - L’intersection de deux événements $A$ et $B$ (notée $A \bigcap B$ ) est l’ensemble des issues qui
-                    sont à la fois dans A et à la fois dans B.
-
-                    **Exemple** :
-                    - Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3 "
-                    - Alors $A=\{2;4;6\}$
-                    - Et $B=\{1;2;3\}$
-                    - Donc $A \bigcap B = \{2\}$
-
-                    ***
-
-                    ### **Union d’événements** :
-                    - L’union de deux événements $A$ et $B$ (notée $A \bigcup B$) est l’ensemble des issues qui sont
-                    soit dans $A$ soit dans $B$.
-
-                    **Exemple** :
-                    - Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3 "
-                    - Alors $A=\{2;4;6\}$
-                    - Et $B=\{1;2;3\}$
-                    - Donc $A \bigcup B = \{1;2;3;4;6\}$
-
-
-
-                    ***
-
-
-
-                    ## **Evénement contraire** :
-
-                    - L’**événement contraire** d’un événement $A$ (noté $\bar{A}$) est l’ensemble des issues de
-                    l’univers qui n’appartiennent pas à A.
-                    - On appelle aussi le **complémentaire** de l’événement A.
-
-                    **Exemple** :
-                    - Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3 "
-                    - Alors $A=\{2;4;6\}$
-                    - Et $B=\{1;2;3\}$
-                    - Donc $\bar{A}=\{1;3;5\}$
-                    - Donc $\bar{B}=\{4;5;6\}$
-
-                    ***
-
-                    ## **Evénement incompatibles** :
-
-                    - Deux événements $A$ et $B$ sont incompatibles s’ils ne peuvent se réaliser simultanément (s’ils
-                    n’ont aucune issue en commun).
-                    - Ainsi, deux événements contraires sont incompatibles
-
-
-                    **Exemple** :
-
-                    - Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair"
-                    - Alors $A=\{2;4;6\}$
-                    - Et $B=\{1;3;5\}$
-                    - Donc $A$ et $B$ n'ont aucune issue en commun et sont donc incompatibles
-
-
-                    ***
-
-
-
-                    ## **Partition d'évènements** :
-
-                    - Une famille d'évènements $(A_i)$ forme une partition de l'ensemble $\Omega$ s'ils sont tous deux à
-                    deux incompatibles et si leur réunion est égale à $\Omega$
-
-
-                    **Exemple 1** :
-
-                    - Si on note $A_1$ = "obtenir un nombre pair" et $A_2$ = "obtenir un nombre impair"
-                    - Alors $A_1=\{2;4;6\}$
-                    - Et $A_2=\{1;3;5\}$
-                    - Donc $A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
-                    - De plus $A_1 \bigcup A_2 = \{1;2;3;4;5;6\} = \Omega$
-                    - Donc $(A_1, A_2)$ forme une partition
-
-
-                    **Exemple 2** :
-
-                    - Si on note $A_1 = \{1\}$, $A_2 = \{2\}$ et $A_3 = \{3;4;5;6\}$
-                    - $A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
-                    - $A_2$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
-                    - $A_1$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
-                    - De plus $A_1 \bigcup A_2 \bigcup A_3 = \{1;2;3;4;5;6\} = \Omega$
-                    - Donc $(A_1, A_2, A_3)$ forme une partition
-
-
-                    ***
-                    ***
 
 
 
                     <div class="card ai-card p-5">
-                        <h3>Expérience aléatoire</h3>
+                        <h3>Evénement contraire</h3>
+                        <h4>Définition</h4>
                         <ul>
-                            <li>Une <b>expérience aléatoire</b> est une expérience dont on ne peut connaître le résultat
-                                a
-                                priori.</li>
-                            <li>Les résultats possibles sont appelées <b>issues</b> ou <b>éventualités</b>.</li>
+                            <li> L’<b>événement contraire</b> d’un événement $A$ (noté $\bar{A}$) est l’ensemble des
+                                issues de
+                                l’univers qui n’appartiennent pas à A.
+                            </li>
+                            <li> On l'appelle aussi le <b>complémentaire</b> de l’événement A.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3"
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$, et $B=\{1;2;3\}$
+                                    </li>
+                                    <li>
+                                        Donc $\bar{A}=\{1;3;5\}$ et $\bar{B}=\{4;5;6\}$
+                                    </li>
+
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
-                    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button"
-                        aria-expanded="false" aria-controls="multiCollapseExample1">Exercice 1 - Enoncé</a>
 
-                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                        data-target="#multiCollapseExample2" aria-expanded="false"
-                        aria-controls="multiCollapseExample2">Exercice 1 - Corrigé </button>
+                    <div class="card ai-card p-5">
+                        <h3>Evénement incompatibles</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> Deux événements $A$ et $B$ sont incompatibles s’ils ne peuvent se réaliser
+                                simultanément (s’ils
+                                n’ont aucune issue en commun)
+                            </li>
+                            <li> Ainsi, deux événements contraires sont toujours incompatibles.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair"
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$ et $B=\{1;3;5\}$
+                                    </li>
+                                    <li>
+                                        Donc $A$ et $B$ n'ont aucune issue en commun et sont donc incompatibles
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Partition d'évènements</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> Une famille d'évènements $(A_i)$ forme une partition de l'ensemble $\Omega$ s'ils sont
+                                tous deux à
+                                deux incompatibles et si leur réunion est égale à $\Omega$
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A_1$ = "obtenir un nombre pair" et $A_2$ = "obtenir un nombre impair"
+                                "</li>
+                            <ul>
+
+                                <li>Alors $A_1=\{2;4;6\}$ et $A_2=\{1;3;5\}$</li>
+                                <li>Donc $A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en
+                                    commun</li>
+                                <li>De plus $A_1 \bigcup A_2 = \{1;2;3;4;5;6\} = \Omega$</li>
+                                <li>Donc $(A_1, A_2)$ forme une partition</li>
+                            </ul>
+                        </ul>
+                        <ul>
+
+                            <li>Si on note $A_1 = \{1\}$, $A_2 = \{2\}$ et $A_3 = \{3;4;5;6\}$
+                                "</li>
+                            <ul>
+
+                                <li>$A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
+                                </li>
+                                <li>$A_2$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
+                                </li>
+                                <li>$A_1$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en
+                                    commun</li>
+                                <li>De plus $A_1 \bigcup A_2 \bigcup A_3 = \{1;2;3;4;5;6\} = \Omega$</li>
+                                <li>Donc $(A_1, A_2, A_3)$ forme une partition</li>
+
+                            </ul>
+                        </ul>
+                    </div>
+
+
+                    <h2 id="vocaprob">II. Probabilitiés</h2>
+
+                    <div class="card ai-card p-5">
+                        <h3>Loi de probabilité</h3>
+                        <h4>Définition</h4>
+                        <ul>
+
+                            <li>Soit une expérience aléatoire avec un univers $\Omega$. On rappelle que le cardinal
+                                d'$\Omega$ est le nombre d'issues (dans le cas du dé, il y
+                                en a 6, chacune des faces)</li>
+
+                            <li>On dit qu’elle suit une loi de probabilité $\mathbb{P}$ si à chaque issue $x_i$ on peut
+                                associer
+                                une probabilité $p_i$ telle que :
+                            </li>
+                            <ul>
+                                <li>Les $p_i$ sont entre 0 et 1 ie $ 0 \leq p_i \leq 1 $</li>
+                                <li>la somme des $p_i$ est égale à 1 ie : $\sum_{i=1}^{Card(\Omega)} p_i = 1$</li>
+                                <li>A chaque événement $ A = \{x_1, x_2, ..., x_k\} $ on peut associer le nombre
+                                    $\mathbb{P}(A)
+                                    =
+                                    \sum_{i=1}^{k} p_i = p_1 + p_2 + ... + p_k $</li>
+                            </ul>
+
+                            <ul>
+                                <li>Le nombre $p_i$ est la probabilité de l’éventualité $x_i$</li>
+                                <li>Le nombre $\mathbb{P}(A)$ est la probabilité de l'évènement $A$</li>
+                            </ul>
+                        </ul>
+
+
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Pour un dé non truqué, les probabilités de chaque face sont les mêmes, elles sont
+                                toutes
+                                égales à $1/6$</li>
+                            <ul>
+                                <li> Donc pour tout $1\leq i \leq 6$, on a $p_i = \frac{1}{6}$</li>
+                                <li> Si on note $A=$"obtenir un nombre pair"</li>
+                                <li> Alors $A=\{2;4;6\}$</li>
+                                <li> $\mathbb{P}(A) = p_2 + p_4 + p_6 = 3 \times \frac{1}{6} = \frac{1}{2} $</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Propriétés élémentaires</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>Pour tout évènement $A$ et $B$ :
+                            </li>
+                            <ul>
+                                <li>$0 \leq \mathbb{P}(A) \leq 1$</li>
+                                <li>La probabilité de l'évènement certain est 1 : $\mathbb{P}({\Omega}) = 1$</li>
+                                <li>La probabilité de l'évènement impossible est 0 : $\mathbb{P}({\emptyset}) = 0$</li>
+                                <li>La probabilitié d'un évènement est égal à 1 moins la probabilité de son contraire :
+                                    $\mathbb{P}({A}) = 1 - \mathbb{P}({\bar{A}})$</li>
+                                <li>Si $A$ et $B$ sont incompatibles : $\mathbb{P}({A \bigcap B}) =
+                                    \mathbb{P}({\emptyset}) = 0 $ </li>
+                                <li>$\mathbb{P}({A \bigcup B}) = \mathbb{P}({A}) +
+                                    \mathbb{P}({B}) - \mathbb{P}({A \bigcap B})$</li>
+                            </ul>
+
+                            <ul>
+                                <li>Le nombre $p_i$ est la probabilité de l’éventualité $x_i$</li>
+                                <li>Le nombre $\mathbb{P}(A)$ est la probabilité de l'évènement $A$</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="card ai-card p-5">
+                        <h3>Equiprobabilité</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>On dit qu’il y a équiprobabilité quand toutes les éventualités (ou les événements
+                                élémentaires)
+                                ont la même probabilité.</li>
+                            <li>Dans le cas d’une équiprobabilité, on a : $\mathbb{P}(A) =
+                                \frac{Card(A)}{Card(\Omega)}$.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Dans un lancer de dé, toutes les faces ont une probabilité de $\frac{1}{6}$ : </li>
+                            <ul>
+                                <li>En effet, si $A$ est un évènement élémentaire il peut s'agir d'un des évènements : $
+                                    \{1\} ;
+                                    \{2\} ; \{3\} ; \{4\} ; \{5\} ; \{6\} $</li>
+                                <li>Donc $Card(A) = 1$</li>
+                                <li>On a $Card(\Omega) = 6$</li>
+                                <li>Et finalement $\mathbb{P}(A) = \frac{Card(A)}{Card(\Omega)} = \frac{1}{6}$</li>
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>La probabilité de l’événement $A$ = « faire un nombre strictement inférieur à 3 » est :
+                            </li>
+                            <ul>
+                                <li> $\mathbb{P}{(A)} = \frac{Card(A)}{Card(\Omega)} =
+                                    \frac{Card(\{1;2;3\})}{Card(\Omega)} = \frac{3}{6}
+                                    = \frac{1}{2}$</li>
+                                <li>La probabilité de l’événement $B$ = « faire un nombre pair » est : $\mathbb{P}{(B)}
+                                    =
+                                    \frac{Card(\{2;4;6\})}{Card(\Omega)} = \frac{3}{6} = \frac{1}{2}$</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Répétition d’expériences identiques et indépendantes</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>Des expériences identiques sont des expériences qui ont les mêmes issues et probabilités
+                                associées.
+                                ont la même probabilité.</li>
+                            <li>Des expériences indépendantes sont des expériences dont les résultats ne s’influent pas
+                                mutuellement.
+                            </li>
+
+                            <li>Soit $\Omega$ l’univers d’une expérience. Si on répète n fois cette expérience de
+                                manière
+                                indépendante alors le cardinal (l’ensemble des possibilités) de cette série
+                                d’expériences est :
+                                $Card(\Omega)^{n}$</li>
+                        </ul>
+
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Quand on lance un dé 2 fois successivement, il s’agit d’une répétition de 2
+                                expériences identiques
+                                et indépendantes car l'expérience est évidemment identique, et la réalisation de la
+                                première n'influe pas sur la deuxième (si on a fait un 6 au premier lancer, puis encore
+                                un 6 au deuxième lancer, la probabilité de faire
+                                un 6 au troisième lancer sera toujours de $\frac{1}{6}$. Donc les répétitions sont
+                                indépendantes.)</li>
+                            <ul>
+                                <li>$Card(\Omega)^{n} = 6^{2} = 36$ Il y a bien 36 issues dans cette nouvelle expérience
+                                </li>
+
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>Pour un lancer de pièce, on a $\Omega = \{P, F\}$ :
+                            </li>
+                            <ul>
+                                <li> Si on lance une pièce 3 fois successivement, il s’agit d’une répétition de 2
+                                    expériences
+                                    identiques et indépendantes</li>
+                                <li>$Card(\Omega)^{n} = 2^{3} = 8$ Il y a bien 8 issues dans cette nouvelle expérience :
+                                    PPP ; PPF ;
+                                    PFP ; PFF ; FPP ; FPF ; FFP ; FFF</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+
+
+                    <h2 id="vocaprob">III. Variables aléatoires</h2>
+
+                    <div class="card ai-card p-5">
+                        <h3>Variable aléatoire et loi de probabilité</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>On dit qu’on définit une variable aléatoire $X$ lorsqu’à chaque éventualité d'une
+                                expérience
+                                aléatoire on associe un nombre.
+                            </li>
+                            <li> La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+                                prendre X
+                                ainsi que les probabilités associées.</li>
+
+                            <li> Donc, nous avons besoin :</li>
+                            <li> De l'ensemble des valeurs prises par cette variable aléatoire : $\Omega = \{x_1 ; ...
+                                x_n\}$
+                            </li>
+                            <li> Des valeurs des probabilités associées que l'on note : $\{\mathbb{P}(\{X=x_1)\} ; ...
+                                ;\mathbb{P}(X=x_n)\} = \{p_1 ; ... ; p_n\}$</li>
+
+                        </ul>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si dans un jeu de dé on gagne un montant en euros égal à la valeur sur la face : </li>
+                            <ul>
+                                <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+                                    $\Omega$ :
+                                    $p_i
+                                    = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+                                </li>
+                            </ul>
+
+                            <li>Si dans un jeu de dé on perd 2 euros en faisant 1, on gagne 5 euros en faisant 6, et
+                                rien en
+                                faisant 2,3,4, 5, on définit une variable aléatoire : </li>
+                            <ul>
+                                <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+                                    $\Omega$ :
+                                    $p_i
+                                    = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+                                </li>
+                                <li>La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+                                    prendre X
+                                    ainsi que les probabilités associées. L'ensemble des valeurs prises est $\{-2;0;5\}$
+                                    et : $\mathbb{P}(\{X=-2\}) = \frac{1}{6}$,
+                                    $\mathbb{P}(\{X=0\}) = \frac{4}{6} = \frac{2}{3}$ et $\mathbb{P}(\{X=5\}) =
+                                    \frac{1}{6}$</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="card ai-card p-5">
+                        <h3>Espérance mathématiques</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>L'espérance mathématique associée à la variable aléatoire X ($x_i$) (et aux probabilités
+                                associées
+                                ($p_i$)) : $$\mathbb{E}(X) = \sum_{i=1}^{n}p_i x_i$$</li>
+                            <li>En statistiques :
+
+                                $$ \bar{x} = \sum_{i=1}^{n} f_i x_i $$</li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> ?????? </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Variance et écart-type</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>La variance mathématique associée à la variable aléatoire X ($x_i$) (et aux probabilités
+                                associées
+                                ($p_i$)) :
+
+                                $$\mathbb{V}(X) = \sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2$$</li>
+                            <li>L'écart-type est défini ainsi :
+
+                                $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\sum_{i=1}^{n}p_i (x_i -
+                                \mathbb{E}(x))^2}$$</li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> ?????? </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_1" role="button"
+                        aria-expanded="false" aria-controls="enonce_1">Exercice 1 - Enoncé</a>
+
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_1"
+                        aria-expanded="false" aria-controls="corrige_1">Exercice 1 - Corrigé </button>
 
                     <p>
                     <div class="row">
 
 
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="collapse multi-collapse" id="enonce_1">
                             <div class="card card-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
                                 richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
@@ -362,9 +673,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <p></p>
 
                     <div class="row">
-                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="collapse multi-collapse" id="corrige_1">
                             <div class="card card-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
                                 richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
@@ -372,8 +685,6 @@
                             </div>
                         </div>
                     </div>
-
-                    </p>
 
 
 
@@ -402,27 +713,25 @@
                     aléatoires traitées sont en nombre fini. (« discret » s’oppose à « continu »)
 
 
+                </div>
 
 
-
-
-                    <div class="ai-text-section" id="collections" style="overflow-x:auto;">
-                        <h3>Ressources pour progresser</h3>
-                        <div class="card ai-card p-5 ai-gray-text">
-                            <p>Exercices corrigés en ligne</p>
-                            <ul>
-                                <li>Exercices sur les sommes</li><a href="#">checklist</a>
+                <div class="col-md-3">
+                    <!-- TOC -->
+                    <div class="position-fixed">
+                        <h5 class="mt-0 mt-md-5">Table des matières</h5>
+                        <div class="card p-4 ai-gray-text">
+                            <ul style="padding-left: 1.5rem; margin-bottom: 0rem;">
+                                <li><a href="#vocaprob">I. Vocabulaire probabiliste</a></li>
                             </ul>
                         </div>
                     </div>
-
-
-
                 </div>
-
             </div>
         </div>
-        </div>
+
+
+
     </section>
 
 
