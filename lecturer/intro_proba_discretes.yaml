@@ -10,35 +10,32 @@ title: Introduction aux probabilités discrètes
 section1:
   title: I. Vocabulaire probabiliste
 
-  # Expérience aléatoire
   subsections:
+    # Expérience aléatoire
     - title: Expérience aléatoire
+      type: card
 
-      field1:
-        title: Definition
-        content:
-          line1: >
-            Une <b>expérience aléatoire</b> est une expérience dont on ne peut connaître 
-            le résultat a priori.
-          line2: Les résultats possibles sont appelées issues ou éventualités.
+      fields:
+        - title: Definition
+          content:
+            - 'Une <b>expérience aléatoire</b> est une expérience dont o
+            n ne peut connaître le résultat a priori.'
 
-      field2:
-        title: Exemple
-        content:
-          line1: Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
-
+            - Les résultats possibles sont appelées issues ou éventualités.
+            
+        - title: Exemple
+          content:
+            - Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
+    
+            # Univers
     - title: Univers
-
-      field1:
-        title: Definition
-        content:
-          line1: >
-            L’<b>univers</b> d’une expérience aléatoire est l’ensemble de ses issues possibles.
-          line2: >
-            On le note : $\Omega$.
-
-      field2:
-        title: Exemple
-        content:
-          line1: >
-            Pour un lancer de dé, les issues sont : $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$
+      type: card
+      fields:
+        - title: Definition
+          content:
+            - "L’<b>univers</b> d’une expérience aléatoire est l’ensemble de ses issues possibles."
+            - 'On le note : $\Omega$.'
+      
+        - title: Exemple
+          content:
+          - 'Pour un lancer de dé, les issues sont: $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$'
