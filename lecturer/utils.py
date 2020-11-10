@@ -13,3 +13,16 @@ def make_id(s):
         pass
 
     return s.strip().replace(" ", "_")
+
+
+button_html = """<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#{field_id}" role="button" aria-expanded="false" aria-controls="{field_id}">
+                     {title}
+                    </a><br>"""
+
+
+svg_html = """<object type="image/svg+xml" data="{path_svg}">
+              <!-- Your fall back here -->
+              <img src="{path_svg}" />
+              </object>
+            """

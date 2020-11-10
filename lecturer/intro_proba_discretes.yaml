@@ -2,7 +2,7 @@ toc:
   - I. Vocabulaire probabiliste
   - II. Probabilités
 
-title: Introduction aux probabilités discrètes
+title: "Introduction aux probabilités discrètes"
 
 #########################################
 # Section 1
@@ -40,16 +40,17 @@ section1:
           type: bull
           content:
             - 'Pour un lancer de dé, les issues sont: $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$'
+          image: "../images/venn.svg"
 
     - title: Exercice 1
       fields:
-        - title: "Enonce"
+        - title: "Énoncé"
           type: bull
           button: true
           content:
             - Dans un...
 
-        - title: "Corrige"
+        - title: "Corrigé"
           type: num
           button: true
           content:
