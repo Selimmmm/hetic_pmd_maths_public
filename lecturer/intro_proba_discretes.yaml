@@ -13,10 +13,9 @@ section1:
   subsections:
     # Expérience aléatoire
     - title: Expérience aléatoire
-      type: card
-
       fields:
         - title: Definition
+          type: bull
           content:
             - "Une <b>expérience aléatoire</b> est une expérience dont 
             on ne peut connaître le résultat a priori."
@@ -24,18 +23,34 @@ section1:
             - Les résultats possibles sont appelées issues ou éventualités.
 
         - title: Exemple
+          type: bull
           content:
             - Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
 
             # Univers
     - title: Univers
-      type: card
       fields:
         - title: Definition
+          type: bull
           content:
             - "L’<b>univers</b> d’une expérience aléatoire est l’ensemble de ses issues possibles."
             - 'On le note : $\Omega$.'
 
         - title: Exemple
+          type: bull
           content:
             - 'Pour un lancer de dé, les issues sont: $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$'
+
+    - title: Exercice 1
+      type: exercice
+      fields:
+        - title: "Enoncé"
+          type: bull
+          content:
+            - Dans un...
+
+        - title: "Questions"
+          type: num
+          content:
+            - Dans un...
+            

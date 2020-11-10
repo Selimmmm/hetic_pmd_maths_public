@@ -14,6 +14,9 @@ PATH_CONTENT = "intro_proba_discretes.yaml"
 # research subsection titles in following text and highlight the matched strings (lower)
 
 
+##TODO : h3 and h2
+
+
 class Lecturer:
     def __init__(self):
 
@@ -82,14 +85,7 @@ class Lecturer:
         return subsection_html
 
     def make_subsection(self, subsection):
-        if subsection["type"] == "card":
-            html = self.make_card(subsection)
-        elif subsection["type"] == "exercice":
-            html = self.make_exercice(subsection)
-        return html
 
-    ## TODO more in common card and exercice
-    def make_card(self, subsection):
         # Id and title
         subsection_title = subsection["title"]
         subsection_id = make_id(subsection_title)
@@ -103,7 +99,6 @@ class Lecturer:
             field_html.append(f_html)
         field_html = "\n".join(field_html)
 
-        ## Add card
         html = [
             """<div class="card ai-card p-5">""",
             title,
@@ -111,44 +106,29 @@ class Lecturer:
             """</div>""",
         ]
         html = "\n".join(html)
+
         return html
-
-    def make_exercice(self, subsection):
-        # Id and title
-        subsection_title = subsection["title"]
-        subsection_id = make_id(subsection_title)
-
-        title = f"""<h2 id="{subsection_id}">{subsection_title}</h2>"""
-
-        for f_name in field_names[1:]:
-            f_html = self.make_field(subsection[f_name])
-            field_html.append(f_html)
-        field_html = "\n".join(field_html)
-
-        ## Add card
-        html = [
-            """<div class="card ai-card p-5">""",
-            title,
-            field_html,
-            """</div>""",
-        ]
-        html = "\n".join(html)
-        return "None"
 
     ################################
     ## Make fields
     ################################
 
     def make_field(self, field):
-        print(field)
-        # print(field)
+        if field["type"] == "num":
+            opening = "<ol>"
+            closing = "</ol>"
+
+        elif field["type"] == "bull":
+            opening = "<ul>"
+            closing = "</ul>"
+
         title = f"""<h3>{field["title"]}</h2>"""
-        line_html = ["<ul>"]
+        line_html = [opening]
         for l_content in field["content"]:
-            print(l_content)
+            # print(l_content)
             l_html = "<li>" + l_content + "</li>"
             line_html.append(l_html)
-        line_html.append("</ul>")
+        line_html.append(closing)
         line_html = "\n".join(line_html)
         return title + "\n" + line_html
 
