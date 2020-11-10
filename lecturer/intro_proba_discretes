@@ -1,0 +1,1251 @@
+<!-- Set variables -->
+
+
+<!doctype html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+
+
+
+    <!-- Standard settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+
+
+    <meta name="title" content="HETIC - PMD - Mathématiques">
+    <meta name="description" content="Site de cours.">
+    <meta id="meta-url" name="url" content="">
+    <meta name="author" content="selim-mellouk">
+
+
+
+    <!-- Icons -->
+    <link rel="icon" href="https://dildehdrg5ol8.cloudfront.net/static/img/madewithml/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://dildehdrg5ol8.cloudfront.net/static/img/madewithml/favicon.ico" />
+    <title>Introduction aux probabilités discrètes</title>
+
+
+
+    <!-- Bundles -->
+    <link rel="stylesheet" href="https://dildehdrg5ol8.cloudfront.net/static/bundles/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://dildehdrg5ol8.cloudfront.net/static/bundles/bundle.css">
+    <script src="https://dildehdrg5ol8.cloudfront.net/static/bundles/vendor.js"></script>
+    <script src="https://dildehdrg5ol8.cloudfront.net/static/bundles/bundle.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+
+
+</head>
+
+<!-- Body -->
+
+<body>
+
+
+
+    <!-- Topics -->
+    <section class="ai-section ai-bold-anchors">
+        <div class="container">
+            <div class="row flex-column-reverse flex-md-row mb-5">
+                <div class="col-md-9">
+
+                    <div class="row">
+                        <div class="col-md-9 mr-auto">
+                            <h1>Introduction aux probabilités discrètes</h1>
+                        </div>
+                    </div>
+                    <hr class="mt-0 mb-5">
+
+                    <!-- <h2>Introduction</h2>
+
+                    <div class="card ai-card p-5">
+                        <h3></h3>
+                        <h4>Probabilité et fréquence limite d'un évènement</h4>
+                        <ul>
+                            <li>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <hr class="mt-0 mb-5"> -->
+
+
+
+
+
+                    <h2 id="vocaprob">I. Vocabulaire probabiliste</h2>
+
+                    <div class="card ai-card p-5">
+                        <h3>Expérience aléatoire</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>Une <b>expérience aléatoire</b> est une expérience dont on ne peut connaître le résultat
+                                a
+                                priori.</li>
+                            <li>Les résultats possibles sont appelées <b>issues</b> ou <b>éventualités</b>.</li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Univers</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>L’<b>univers</b> d’une expérience aléatoire est l’ensemble de ses issues possibles.
+                            </li>
+                            <li> On le
+                                note :
+                                $\Omega$</li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Pour un lancer de dé, les issues sont : $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$</li>
+                            <li>Dans le cas du lancer de dé, l'univers est donc : $ \Omega = \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_1" role="button"
+                        aria-expanded="false" aria-controls="enonce_1">Exercice 1 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_1"
+                        aria-expanded="false" aria-controls="corrige_1">Exercice 1 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_1">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    On lance une pièce deux fois, quel est l'ensemble des issues ?
+                                </li>
+                                <li>
+                                    On lance un dé deux fois, quel est l'ensemble des issues ?
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_1">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    L'ensemble des issues est : $\Omega = \{PP ; PF ; FP ; FF\}$
+                                </li>
+                                <li>
+                                    L'ensemble des issues est : $$\Omega = \{
+                                    (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),\\
+                                    (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),\\
+                                    (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),\\
+                                    (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),\\
+                                    (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),\\
+                                    (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)\}$$
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement </h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>Un <b>événement</b> est un sous-ensemble de l’univers (càd seulement une
+                                partie de $\Omega$)
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Pour le lancer de dé, l'évènement "obtenir un nombre inférieur ou égal à 3" est égal
+                                à l'ensemble
+                                $\{1 ; 2 ; 3\}$
+                            </li>
+                            <li>Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à
+                                l'ensemble $\{2 ; 4 ; 6\}$</li>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement élémentaire</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> Un <b>événement élémentaire</b> est un sous-ensemble de l’univers composé d’une seule
+                                issue.
+                            </li>
+                            <li> Un <b>événement élémentaire</b> est donc un <b>singleton</b>, c'est à dire un ensemble
+                                composé d'un seul élément.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> "Obtenir un 1" est un événement élémentaire (il vaut $\{1\}$).
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Cardinal</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>Le cardinal d’un ensemble est le nombre d’éléments dans cet ensemble.
+                            </li>
+                            <li>C'est donc aussi le nombre d'évènements élémentaires d'une expérience aléatoire.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Le cardinal de l'évènement obtenir un nombre pair est 3 (il y a 3 éléments dans
+                                $\{2;4;6\})$
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement certain</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’événement certain est l’événement constitué de toutes les issues possibles. C’est
+                                l’univers tout entier.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Il est certain en lançant un dé de faire soit 1, soit 2, soit 3, soit 4, soit 5, soit
+                                6. Donc l'évènement $\{1;2;3;4;5;6\}$ est certain (c'est bien $\Omega$, l'univers tout
+                                entier)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement impossible</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’événement impossible est l’ensemble vide, on le note : $\emptyset$
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Il est impossible de ne faire aucun chiffre
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Intersection d’événements</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’intersection de deux événements $A$ et $B$ (notée $A \bigcap B$ ) est l’ensemble des
+                                issues qui
+                                sont à la fois dans $A$ <b>et</b> à la fois dans $B$.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <ul>
+                                <li>Si on note $E_1=$"obtenir un nombre pair" et $E_2=$"obtenir un nombre inférieur ou
+                                    égal
+                                    à 3
+                                    "
+                                    <ul>
+                                        <li>
+                                            Alors $E_1=\{2;4;6\}$
+                                        </li>
+                                        <li>
+                                            Et $E_2=\{1;2;3\}$
+
+                                        </li>
+                                        <li>
+                                            Donc $E_1 \bigcap E_2= \{2\}$
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <object type="image/svg+xml" data="images/venn.svg">
+                                <!-- Your fall back here -->
+                                <img src="images/venn.svg" />
+                            </object>
+                            <ul>
+                                <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair
+                                    "</li>
+                                <ul>
+                                    <li>Alors $A=\{2;4;6\}$
+                                    </li>
+                                    <li>Et $B=\{1;3;5\}$
+                                    </li>
+                                    <li>Donc $A \bigcap B = \emptyset$
+                                </ul>
+                            </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Union d’événements</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’union de deux événements $A$ et $B$ (notée $A \bigcup B$) est l’ensemble des issues
+                                qui sont
+                                soit dans $A$ soit dans $B$.
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $E_1=$"obtenir un nombre pair" et $E_2=$"obtenir un nombre inférieur ou égal
+                                à 3
+                                "
+                                <ul>
+                                    <li>
+                                        Alors $E_1=\{2;4;6\}$
+                                    </li>
+                                    <li>
+                                        Et $E_2=\{1;2;3\}$
+
+                                    </li>
+                                    <li>
+                                        Donc $E_1 \bigcup E_2= \{1;2;3;4;6\}$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <object type="image/svg+xml" data="images/venn.svg">
+                            <!-- Your fall back here -->
+                            <img src="images/venn.svg" />
+                        </object>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement contraire</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> L’<b>événement contraire</b> d’un événement $A$ (noté $\bar{A}$) est l’ensemble des
+                                issues de
+                                l’univers qui n’appartiennent pas à A.
+                            </li>
+                            <li> On l'appelle aussi le <b>complémentaire</b> de l’événement A.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3"
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$, et $B=\{1;2;3\}$
+                                    </li>
+                                    <li>
+                                        Donc $\bar{A}=\{1;3;5\}$ et $\bar{B}=\{4;5;6\}$
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Evénement incompatibles</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> Deux événements $A$ et $B$ sont incompatibles s’ils ne peuvent se réaliser
+                                simultanément (s’ils
+                                n’ont aucune issue en commun)
+                            </li>
+                            <li> Ainsi, deux événements contraires sont toujours incompatibles.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair"
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$ et $B=\{1;3;5\}$
+                                    </li>
+                                    <li>
+                                        Donc $A$ et $B$ n'ont aucune issue en commun et sont donc incompatibles
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_2" role="button"
+                        aria-expanded="false" aria-controls="enonce_2">Exercice 2 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_2"
+                        aria-expanded="false" aria-controls="corrige_2">Exercice 2 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_2">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    Trois nouvelles séries sont proposées par une chaîne de télévision. Pour
+                                    chacune d’entre elles, la chaîne diffuse un épisode pilote et, en fonction de
+                                    l’appréciation du public, la chaîne décidera de diffuser la suite des séries. On
+                                    suppose que le public est constitué d’un ensemble stable de personnes, noté 𝑃. On
+                                    considère les sous-ensembles suivants :
+                                </li>
+                                <ul>
+                                    <li>
+                                        $S_i$ = « personnes qui ont apprécié l’épisode pilote de la série i » (i =
+                                        1, 2, 3)
+                                    </li>
+                                </ul>
+                            </ul>
+                            <ul>
+                                <li>Calculer les ensembles suivants en fonction de $S_i$, $\bar{S_i}$ et des
+                                    opérateurs $\bigcap$ et $\bigcup$ :</li>
+                                <ul>
+                                    <li>
+                                        𝐴 = « personnes qui ont apprécié tous les pilotes »
+                                    </li>
+                                    <li>
+                                        𝐵 = « personnes qui n’ont apprécié aucun pilote » ;
+                                    </li>
+                                    <li>
+                                        𝐶 = « personnes qui ont apprécié au moins un pilote »
+                                    </li>
+                                    <li>
+                                        𝐷 = « personnes qui n’ont pas apprécié au moins l’un des pilotes »
+                                    </li>
+                                    <li>
+                                        𝐸 = « personnes qui ont apprécié uniquement le pilote de la première série»
+                                    </li>
+                                    <li>
+                                        𝐹 = « personnes qui ont apprécié au plus un pilote »
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_2">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_3" role="button"
+                        aria-expanded="false" aria-controls="enonce_3">Exercice 3 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_3"
+                        aria-expanded="false" aria-controls="corrige_3">Exercice 3 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_3">
+                        <div class="card ai-card p-5">
+                            On lance deux dés. Une épreuve est identifée à un couple (x, y) où x est le nombre
+                            de points amenés par le premier dé et y par le second.
+                            <ol>
+
+
+
+                                <li>
+                                    Décrire (donner tous les éléments) et dénombrer les ensembles suivants :
+                                    <ul>
+                                        <li>
+                                            $\Omega$ : Ensemble de tous les résultats possibles
+                                        </li>
+                                        <li>
+                                            $A$ : Ensemble des résultats donnant une différence (en valeur absolue) de
+                                            points paire
+                                        </li>
+                                        <li>
+                                            $B$ : ensemble des résultats donnant deux points égaux
+                                        </li>
+                                        <li>
+                                            $C$ : Ensemble des résultats tels que l’un des dés au moins amène 1
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Caractériser par une phrase :
+                                    <ul>
+                                        <li>
+                                            $A \bigcap B$
+                                        </li>
+                                        <li>
+                                            $A \bigcup B$
+                                        </li>
+                                        <li>
+                                            $A \bigcap \bar{B}$
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_3">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXX
+                                </li>
+                                <li>
+                                    XXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_4" role="button"
+                        aria-expanded="false" aria-controls="enonce_4">Exercice 4 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_4"
+                        aria-expanded="false" aria-controls="corrige_4">Exercice 4 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_4">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    On note E l’ensemble des personnes inscrites sur les listes électorales pour les
+                                    deux dernières élections présidentielles en France, en 2007 et 2012. Les
+                                    personnes dans E pouvaient donc voter aux deux élections. On étudie seulement les
+                                    votes du second tour. On note :
+                                </li>
+                                <ul>
+                                    <li> NS1 l’ensemble des personnes ayant voté pour Nicolas Sarkozy en 2007, et NS2
+                                        l’ensemble des personnes ayant voté pour Nicolas Sarkozy en 2012
+                                    </li>
+                                    <li> SR l’ensemble des personnes ayant voté pour Ségolène Royal en 2007
+                                    </li>
+                                    <li> FH l’ensemble des personnes ayant voté pour François Hollande en 2012
+                                    </li>
+                                    <li>B1 l’ensemble des personnes ayant voté blanc (ou nul) en 2007
+                                    </li>
+                                    <li>A2 l’ensemble des personnes n’ayant pas voté en 2012
+                                    </li>
+                                </ul>
+                                <li>Déterminer le contenu des ensembles suivants en utilisant uniquement l’ensemble E,
+                                    les six en- sembles définis au dessus et les opérations ensemblistes classiques
+                                    (intersection, union et complémentaire) :</li>
+                            </ul>
+                            <ol>
+                                <li>NS : l’ensemble des personnes ayant voté deux fois pour Nicolas Sarkozy</li>
+                                <li>PS : l’ensemble des personnes ayant voté au moins une fois pour un candidat du
+                                    parti socialiste</li>
+                                <li>B2 : l’ensemble des personnes ayant voté blanc (ou nul) en 2012</li>
+                                <li>F : l’ensemble des personnes qui n’ont pas voté en 2007 et ont voté François
+                                    Hollande en 2012.</li>
+                                <li>A : l’ensemble des personnes s’étant abstenues exactement une fois (attention, le
+                                    vote blanc ou nul n’est pas une abstention).</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_4">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXXXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Partition d'évènements</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li> Une famille d'évènements $(A_i)$ forme une partition de l'ensemble $\Omega$ s'ils sont
+                                tous deux à
+                                deux incompatibles et si leur réunion est égale à $\Omega$
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si on note $A_1$ = "obtenir un nombre pair" et $A_2$ = "obtenir un nombre impair"
+                                "</li>
+                            <ul>
+
+                                <li>Alors $A_1=\{2;4;6\}$ et $A_2=\{1;3;5\}$</li>
+                                <li>Donc $A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en
+                                    commun</li>
+                                <li>De plus $A_1 \bigcup A_2 = \{1;2;3;4;5;6\} = \Omega$</li>
+                                <li>Donc $(A_1, A_2)$ forme une partition</li>
+                            </ul>
+                        </ul>
+                        <ul>
+
+                            <li>Si on note $A_1 = \{1\}$, $A_2 = \{2\}$ et $A_3 = \{3;4;5;6\}$
+                                "</li>
+                            <ul>
+
+                                <li>$A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
+                                </li>
+                                <li>$A_2$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
+                                </li>
+                                <li>$A_1$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en
+                                    commun</li>
+                                <li>De plus $A_1 \bigcup A_2 \bigcup A_3 = \{1;2;3;4;5;6\} = \Omega$</li>
+                                <li>Donc $(A_1, A_2, A_3)$ forme une partition</li>
+
+                            </ul>
+                        </ul>
+                    </div>
+
+
+                    <h2 id="proba">II. Probabilitiés</h2>
+
+                    <div class="card ai-card p-5">
+                        <h3>Loi de probabilité</h3>
+                        <h4>Définition</h4>
+                        <ul>
+
+                            <li>Soit une expérience aléatoire avec un univers $\Omega$. On rappelle que le cardinal
+                                d'$\Omega$ est le nombre d'issues (dans le cas du dé, il y
+                                en a 6, chacune des faces)</li>
+
+                            <li>On dit qu’elle suit une loi de probabilité $\mathbb{P}$ si à chaque issue $x_i$ on peut
+                                associer
+                                une probabilité $p_i$ telle que :
+                            </li>
+                            <ul>
+                                <li>Les $p_i$ sont entre 0 et 1 ie $ 0 \leq p_i \leq 1 $</li>
+                                <li>la somme des $p_i$ est égale à 1 ie : $\sum_{i=1}^{Card(\Omega)} p_i = 1$</li>
+                                <li>A chaque événement $ A = \{x_1, x_2, ..., x_k\} $ on peut associer le nombre
+                                    $\mathbb{P}(A)
+                                    =
+                                    \sum_{i=1}^{k} p_i = p_1 + p_2 + ... + p_k $</li>
+                            </ul>
+
+                            <ul>
+                                <li>Le nombre $p_i$ est la probabilité de l’éventualité $x_i$</li>
+                                <li>Le nombre $\mathbb{P}(A)$ est la probabilité de l'évènement $A$</li>
+                            </ul>
+                        </ul>
+
+
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Pour un dé non truqué, les probabilités de chaque face sont les mêmes, elles sont
+                                toutes
+                                égales à $1/6$</li>
+                            <ul>
+                                <li> Donc pour tout $1\leq i \leq 6$, on a $p_i = \frac{1}{6}$</li>
+                                <li> Si on note $A=$"obtenir un nombre pair"</li>
+                                <li> Alors $A=\{2;4;6\}$</li>
+                                <li> $\mathbb{P}(A) = p_2 + p_4 + p_6 = 3 \times \frac{1}{6} = \frac{1}{2} $</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_5" role="button"
+                        aria-expanded="false" aria-controls="enonce_5">Exercice 5 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_5"
+                        aria-expanded="false" aria-controls="corrige_5">Exercice 5 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_5">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    Une agence de notation propose un classement de 500 fonds communs de placement (FCP)
+                                    (de 1 étoile à 5 étoiles) en fonction de leur composition (actions françaises,
+                                    actions internationales ou titres à revenu fixe).
+                                </li>
+                                <li>Un échantillon de 25 FCP a été sélectionné possédant les propriétés
+                                    suivantes :
+                                    <ul>
+                                        <li>16 FCP sont composés d'actions françaises</li>
+                                        <li>13 FCP ont obtenu au plus 3 étoiles</li>
+                                        <li>7 FCP composés d'actions françaises ont 4 étoiles</li>
+                                        <li>2 FCP composés d'actions françaises ont 5 étoiles</li>
+                                    </ul>
+                                </li>
+                                <li>Supposons que l'on sélectionne aléatoirement un de ces 25 FCP</li>
+
+                                <ol>
+                                    <li>
+                                        Quelle est la probabilité de sélectionner un fonds d'actions françaises ?
+                                    </li>
+                                    <li>
+                                        Quelle est la probabilité de sélectionner un fonds noté 4 ou 5 étoiles ?
+                                    </li>
+                                    <li>
+                                        Quelle est la probabilité de choisir un fonds qui est à la fois un fonds
+                                        d'actions
+                                        françaises <b>et</b> un fonds noté 4 ou 5 étoiles ?
+                                    </li>
+
+                                    <li>
+                                        Quelle est la probabilité de choisir un fonds composé d’actions françaises
+                                        <b>ou</b>
+                                        noté 4 ou
+                                        5 étoiles ?
+                                    </li>
+
+                                </ol>
+                            </ul>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_5">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_6" role="button"
+                        aria-expanded="false" aria-controls="enonce_6">Exercice 6 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_6"
+                        aria-expanded="false" aria-controls="corrige_6">Exercice 6 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_6">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    Les lycéens ayant de bons résultats en terminale sont de plus en plus nombreux à
+                                    candidater chaque année dans les écoles les plus sélectives. Afin de faire leurs
+                                    choix, les lycéens ont la possibilité de consulter les données d’admission de
+                                    l’année précédente. Supposons qu’une de ces écoles ait reçu 2851 demandes
+                                    d'admission. Parmi elles, 1033 étudiants ont été admis sur dossier, 854 ont été
+                                    rejetés et 964 ont été mis sur une liste d’attente. À l’issue du processus, 1226
+                                    candidats ont été admis définitivement. Soient 𝐸 l’évènement « le candidat est
+                                    admis sur dossier », 𝑅 l’évènement « le candidat est rejeté », 𝐷 l’évènement
+                                    « le candidat est en liste d’attente » et 𝐹 l’évènement « le candidat mis sur
+                                    liste d’attente est admis ».
+                                </li>
+
+
+                                <ol>
+                                    <li>
+                                        Estimer la probabilité des évènements 𝐸, 𝑅 et 𝐷
+                                    </li>
+                                    <li>
+                                        Les évènements 𝐸 et 𝐷 sont-ils mutuellement exclusifs ? Calculer
+                                        $\mathbb{P}(E \bigcap D)$
+                                    </li>
+                                    <li>
+                                        Estimer la probabilité de l’évènement 𝐹.
+                                    </li>
+                                    <li>
+                                        En vous appuyant sur les probabilités déjà calculées, vous en déduirez la
+                                        probabilité pour un lycéen qui soumet sa candidature d’être admis sur dossier
+                                        ou après un passage par la liste d’attente.
+                                    </li>
+
+                                </ol>
+                            </ul>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_6">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Propriétés élémentaires</h3>
+                        <h4>Définition</h4>
+
+                        <ul>
+                            <li>Pour tout évènement $A$ : $0 \leq \mathbb{P}(A) \leq 1$</li>
+                            <li>La probabilité de l'évènement certain est 1 : $\mathbb{P}({\Omega}) = 1$</li>
+                            <li>La probabilité de l'évènement impossible est 0 : $\mathbb{P}({\emptyset}) = 0$</li>
+                            <li>La probabilitié d'un évènement est égal à 1 moins la probabilité de son contraire :
+                                $\mathbb{P}({A}) = 1 - \mathbb{P}({\bar{A}})$</li>
+                            <li>Si $A$ et $B$ sont incompatibles : $\mathbb{P}({A \bigcap B}) =
+                                \mathbb{P}({\emptyset}) = 0 $ </li>
+                            <li>$\mathbb{P}({A \bigcup B}) = \mathbb{P}({A}) + \mathbb{P}({B}) - \mathbb{P}({A \bigcap
+                                B})$</li>
+                        </ul>
+                    </div>
+
+                    <div class="card ai-card p-5">
+                        <h3>Equiprobabilité</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>On dit qu’il y a équiprobabilité quand toutes les éventualités (ou les événements
+                                élémentaires)
+                                ont la même probabilité.</li>
+                            <li>Dans le cas d’une équiprobabilité, on a : $\mathbb{P}(A) =
+                                \frac{Card(A)}{Card(\Omega)}$.
+                            </li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Dans un lancer de dé, toutes les faces ont une probabilité de $\frac{1}{6}$ : </li>
+                            <ul>
+                                <li>En effet, si $A$ est un évènement élémentaire il peut s'agir d'un des évènements : $
+                                    \{1\} ;
+                                    \{2\} ; \{3\} ; \{4\} ; \{5\} ; \{6\} $</li>
+                                <li>Donc $Card(A) = 1$</li>
+                                <li>On a $Card(\Omega) = 6$</li>
+                                <li>Et finalement $\mathbb{P}(A) = \frac{Card(A)}{Card(\Omega)} = \frac{1}{6}$</li>
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>La probabilité de l’événement $A$ = « faire un nombre strictement inférieur à 3 » est :
+                            </li>
+                            <ul>
+                                <li> $\mathbb{P}{(A)} = \frac{Card(A)}{Card(\Omega)} =
+                                    \frac{Card(\{1;2;3\})}{Card(\Omega)} = \frac{3}{6}
+                                    = \frac{1}{2}$</li>
+                                <li>La probabilité de l’événement $B$ = « faire un nombre pair » est : $\mathbb{P}{(B)}
+                                    =
+                                    \frac{Card(\{2;4;6\})}{Card(\Omega)} = \frac{3}{6} = \frac{1}{2}$</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_7" role="button"
+                        aria-expanded="false" aria-controls="enonce_7">Exercice 7 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_7"
+                        aria-expanded="false" aria-controls="corrige_7">Exercice 7 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_7">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    Une expérience a quatre résultats possibles équiprobables, et mutuellement
+                                    exclusifs : $E_1$, $E_2$, $E_3$ et $E_4$
+                                </li>
+                            </ul>
+                            <ol>
+                                <li>
+                                    Quelle est la probabilité que $E_2$ se produise ?
+                                </li>
+                                <li>
+                                    Quelle est la probabilité que deux des résultats se produisent (par ex. $E_1$ ou
+                                    $E_3$) ?
+                                </li>
+                                <li>Quelle est la probabilité que trois des résultats se produisent (par ex. $E_1$,
+                                    $E_2$ ou $E_4$) ?</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_7">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Répétition d’expériences identiques et indépendantes</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>Des expériences identiques sont des expériences qui ont les mêmes issues et probabilités
+                                associées.</li>
+                            <li>Des expériences indépendantes sont des expériences dont les résultats ne s’influent pas
+                                mutuellement.
+                            </li>
+
+                            <li>Soit $\Omega$ l’univers d’une expérience. Si on répète n fois cette expérience de
+                                manière
+                                indépendante alors le cardinal (l’ensemble des possibilités) de cette série
+                                d’expériences est :
+                                $Card(\Omega)^{n}$</li>
+                        </ul>
+
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Quand on lance un dé 2 fois successivement, il s’agit d’une répétition de 2
+                                expériences identiques
+                                et indépendantes car l'expérience est évidemment identique, et la réalisation de la
+                                première n'influe pas sur la deuxième (si on a fait un 6 au premier lancer, puis encore
+                                un 6 au deuxième lancer, la probabilité de faire
+                                un 6 au troisième lancer sera toujours de $\frac{1}{6}$. Donc les répétitions sont
+                                indépendantes.)</li>
+                            <ul>
+                                <li>$Card(\Omega)^{n} = 6^{2} = 36$ Il y a bien 36 issues dans cette nouvelle expérience
+                                </li>
+
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>Pour un lancer de pièce, on a $\Omega = \{P, F\}$ :
+                            </li>
+                            <ul>
+                                <li> Si on lance une pièce 3 fois successivement, il s’agit d’une répétition de 2
+                                    expériences
+                                    identiques et indépendantes</li>
+                                <li>$Card(\Omega)^{n} = 2^{3} = 8$ Il y a bien 8 issues dans cette nouvelle expérience :
+                                    PPP ; PPF ;
+                                    PFP ; PFF ; FPP ; FPF ; FFP ; FFF</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+
+
+
+
+
+
+                    <h2 id="variablesaleatoires">III. Variables aléatoires</h2>
+
+                    <div class="card ai-card p-5">
+                        <h3>Variable aléatoire et loi de probabilité</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>On dit qu’on définit une variable aléatoire $X$ lorsqu’à chaque éventualité d'une
+                                expérience
+                                aléatoire on associe un nombre.
+                            </li>
+                            <li> La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+                                prendre X
+                                ainsi que les probabilités associées.</li>
+
+                            <li> Donc, nous avons besoin :</li>
+                            <li> De l'ensemble des valeurs prises par cette variable aléatoire : $\Omega = \{x_1 ; ...
+                                x_n\}$
+                            </li>
+                            <li> Des valeurs des probabilités associées que l'on note : $\{\mathbb{P}(\{X=x_1)\} ; ...
+                                ;\mathbb{P}(X=x_n)\} = \{p_1 ; ... ; p_n\}$</li>
+
+                        </ul>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li>Si dans un jeu de dé on gagne un montant en euros égal à la valeur sur la face : </li>
+                            <ul>
+                                <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+                                    $\Omega$ :
+                                    $p_i
+                                    = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+                                </li>
+                            </ul>
+
+                            <li>Si dans un jeu de dé on perd 2 euros en faisant 1, on gagne 5 euros en faisant 6, et
+                                rien en
+                                faisant 2,3,4, 5, on définit une variable aléatoire : </li>
+                            <ul>
+                                <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+                                    $\Omega$ :
+                                    $p_i
+                                    = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+                                </li>
+                                <li>La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+                                    prendre X
+                                    ainsi que les probabilités associées. L'ensemble des valeurs prises est $\{-2;0;5\}$
+                                    et : $\mathbb{P}(\{X=-2\}) = \frac{1}{6}$,
+                                    $\mathbb{P}(\{X=0\}) = \frac{4}{6} = \frac{2}{3}$ et $\mathbb{P}(\{X=5\}) =
+                                    \frac{1}{6}$</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_8" role="button"
+                        aria-expanded="false" aria-controls="enonce_8">Exercice 8 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_8"
+                        aria-expanded="false" aria-controls="corrige_8">Exercice 8 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_8">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    L’entreprise Time Warner Cable fournit des services de télévision et d'internet.
+                                    Sur la base des adhésions passées, elle estime la probabilité du nombre
+                                    d’adhésions (arrondi à 100 000 près) auxquelles elle peut s’attendre pour l’année
+                                    prochaine comme suit :
+                                </li>
+                                <ul>
+                                    <li>Nombre d'abonnés : proba </li>
+                                    <li>100 000 : 0,10 </li>
+                                    <li>200 000 : 0,20 </li>
+                                    <li>300 000 : 0,25 </li>
+                                    <li>400 000 : 0,30 </li>
+                                    <li>500 000 : 0,10 </li>
+                                    <li>600 000 : 0,05 </li>
+
+                                </ul>
+                            </ul>
+                            <ol>
+                                <li>
+                                    Quelle est la probabilité que l’entreprise obtienne plus de 400 000 nouveaux
+                                    abonnés ?
+                                </li>
+                                <li>
+                                    Quelle est la probabilité que l’entreprise obtienne moins de 200 000 nouveaux
+                                    abonnés ?
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_8">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_9" role="button"
+                        aria-expanded="false" aria-controls="enonce_9">Exercice 9 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_9"
+                        aria-expanded="false" aria-controls="corrige_9">Exercice 9 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_9">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    Une enquête menée auprès de chômeurs dans une région américaine à la fin
+                                    décembre 2009 a permis de recueillir les données suivantes sur le nombre de mois
+                                    passés au chômage par ces derniers :
+                                </li>
+                                <ul>
+                                    <li>Nombre de mois de chômage / Nombre de chômeurs</li>
+                                    <li>1 / 1029</li>
+                                    <li>2 / 1686</li>
+                                    <li>3 / 2269</li>
+                                    <li>4 / 2675</li>
+                                    <li>5 / 3487</li>
+                                    <li>6 / 4652</li>
+                                    <li>7 / 4145</li>
+                                    <li>8 / 3587</li>
+                                    <li>9 / 2325</li>
+                                    <li>10 / 1120</li>
+
+                                </ul>
+                            </ul>
+                            <ol>
+                                <li>
+                                    On cherche à connaître les probabilités associées aux différentes durées de
+                                    chômage. Comment doit-on procéder ?
+                                </li>
+                                <li>
+                                    En déduire la probabilité qu’une personne sélectionnée aléatoirement soit au
+                                    chômage pendant 2 mois au plus.
+                                </li>
+                                <li>
+                                    En déduire la probabilité qu’une personne sélectionnée aléatoirement soit au
+                                    chômage pendant plus de 2 mois.
+                                </li>
+                                <li>
+                                    En déduire la probabilité qu’une personne sélectionnée aléatoirement soit au
+                                    chômage pendant plus de 6 mois.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_9">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Espérance mathématiques</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>L'espérance mathématique associée à la variable aléatoire $X$ ($x_i$) et aux
+                                probabilités
+                                associées ($p_i$) : $$\mathbb{E}(X) = \sum_{i=1}^{n}p_i x_i$$</li>
+
+                            <li>Dans le cadre d’un jeu d’argent, l’espérance est le gain moyen que l’on peut espérer
+                                toucher.</li>
+
+                            <li>C'est une notion équivalente à la moyenne en statistiques, les probabilitiés $p_i$
+                                jouant le rôle des fréquences $f_i$ :
+
+                                $$ \bar{x} = \sum_{i=1}^{n} f_i x_i $$</li>
+                        </ul>
+                        <h4>Exemple</h4>
+                        <ul>
+                            <li> Soit $X$ la variable aléatoire égale à la face obtenue d'un dé qu'on lance. Si
+                                lorsqu'on jette un dé, on gagne en euros le montant inscrit sur la face, en moyenne
+                                on gagne :
+
+                                $$ \mathbb{E}(X) = \sum_{i=1}^{6}p_i x_i = \frac{1}{6} \sum_{i=1}^{6}i =
+                                \frac{1}{6}(1+2+3+4+5+6) = 3.5
+                                $$
+                        </ul>
+                    </div>
+
+                    <p></p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#enonce_10" role="button"
+                        aria-expanded="false" aria-controls="enonce_10">Exercice 10 - Enoncé</a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#corrige_10"
+                        aria-expanded="false" aria-controls="corrige_10">Exercice 10 - Corrigé </button>
+                    <p></p>
+
+                    <div class="collapse multi-collapse" id="enonce_10">
+                        <div class="card ai-card p-5">
+                            <ul>
+                                <li>
+                                    La demande pour un produit de l’entreprise Carolina Industries varie
+                                    considérablement d'un mois à l'autre. Basée sur les données des deux dernières
+                                    années, l’entreprise a estimé les probabilités de demande mensuelle suivantes :
+                                </li>
+                                <ul>
+                                    <li>Demande mensuelle (en unités de produit) / Probabilité</li>
+                                    <li>300 / 0.20</li>
+                                    <li>400 / 0.30</li>
+                                    <li>500 / 0.35</li>
+                                    <li>600 / 0.15</li>
+
+                                </ul>
+                            </ul>
+                            <ol>
+                                <li>
+                                    Si cette entreprise base sa production sur l’espérance mathématique de la demande
+                                    mensuelle, quelle quantité doit-elle produire par mois ?
+                                </li>
+                                <li>
+                                    Supposons que chaque unité est vendue à 70$ pour un coût de production unitaire
+                                    de 50\$, combien l’entreprise perdra ou gagnera en un mois si son volume de
+                                    production est celui établi en 1) et que la demande effective pour le produit vaut
+                                    300 ?
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="collapse multi-collapse" id="corrige_9">
+                        <div class="card ai-card p-5">
+                            <ol>
+                                <li>
+                                    XXX
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card ai-card p-5">
+                        <h3>Variance et écart-type</h3>
+                        <h4>Définition</h4>
+                        <ul>
+                            <li>La variance mathématique associée à la variable aléatoire X ($x_i$) et aux probabilités
+                                associées ($p_i$) :
+
+                                $$\mathbb{V}(X) = \sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2$$</li>
+                            <li>L'écart-type est défini ainsi :
+
+                                $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\sum_{i=1}^{n}p_i (x_i -
+                                \mathbb{E}(x))^2}$$</li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-md-3">
+                    <!-- TOC -->
+                    <div class="position-fixed">
+                        <h5 class="mt-0 mt-md-5">Table des matières</h5>
+                        <div class="card p-4 ai-gray-text">
+                            <ul style="padding-left: 1.5rem; margin-bottom: 0rem;">
+                                <li><a href="#vocaprob">I. Vocabulaire probabiliste</a></li>
+                                <li><a href="#proba">II. Probabilités</a></li>
+                                <li><a href="#variablesaleatoires">III. Variables aléatoires</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <section>
+        <div class="ai-footer ai-section">
+            <div class="container">
+                <div class="row ai-footer-row ai-center-all">
+                    <div class="col-md-12">
+                        <div class="ai-footer-body">
+                            <a href="#">A propos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
