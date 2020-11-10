@@ -124,8 +124,6 @@ class Lecturer:
 
         title = field["title"]
 
-        print(title)
-
         field_id = make_id(title)
 
         if title:
@@ -133,13 +131,12 @@ class Lecturer:
         else:
             title = ""
 
-        button = f"""<a class="btn btn-primary btn-sm" data-toggle="collapse" 
+        button = f"""<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
                      href="#{field_id}" role="button" aria-expanded="false" aria-controls="{field_id}">
-                     Link with href
+                     {field["title"]}
                     </a>"""
 
         if field.get("button", False):
-            print("YEAH")
             line_html = [
                 opening,
                 button,

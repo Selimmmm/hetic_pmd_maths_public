@@ -43,13 +43,13 @@ section1:
 
     - title: Exercice 1
       fields:
-        - title: "Enoncé"
+        - title: "Enonce"
           type: bull
           button: true
           content:
             - Dans un...
 
-        - title: "Corrigé"
+        - title: "Corrige"
           type: num
           button: true
           content:
