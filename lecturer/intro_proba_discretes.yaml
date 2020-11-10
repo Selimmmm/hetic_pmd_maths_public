@@ -42,15 +42,16 @@ section1:
             - 'Pour un lancer de dé, les issues sont: $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$'
 
     - title: Exercice 1
-      type: exercice
       fields:
         - title: "Enoncé"
           type: bull
+          button: true
           content:
             - Dans un...
 
-        - title: "Questions"
+        - title: "Corrigé"
           type: num
+          button: true
           content:
             - Dans un...
             

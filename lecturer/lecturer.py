@@ -122,13 +122,40 @@ class Lecturer:
             opening = "<ul>"
             closing = "</ul>"
 
-        title = f"""<h3>{field["title"]}</h2>"""
-        line_html = [opening]
+        title = field["title"]
+
+        print(title)
+
+        field_id = make_id(title)
+
+        if title:
+            title = f"""<h3>{title}</h2>"""
+        else:
+            title = ""
+
+        button = f"""<a class="btn btn-primary btn-sm" data-toggle="collapse" 
+                     href="#{field_id}" role="button" aria-expanded="false" aria-controls="{field_id}">
+                     Link with href
+                    </a>"""
+
+        if field.get("button", False):
+            print("YEAH")
+            line_html = [
+                opening,
+                button,
+                f"""<div class="collapse" id="{field_id}">""",
+            ]
+        else:
+            line_html = [opening]
+
         for l_content in field["content"]:
-            # print(l_content)
             l_html = "<li>" + l_content + "</li>"
             line_html.append(l_html)
         line_html.append(closing)
+
+        if field.get("button", False):
+            line_html.append("<div>")
+
         line_html = "\n".join(line_html)
         return title + "\n" + line_html
 
