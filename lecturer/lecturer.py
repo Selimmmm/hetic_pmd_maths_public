@@ -158,13 +158,10 @@ class Lecturer:
                 + ["</div>"]
             )
         else:
-            line_html = [
-                opening,
-            ] + line_html
-
+            pass
         if "image" in field:
             svg_html_ = svg_html.format(path_svg=field["image"])
-            line_html = [svg_html_, "\n"]
+            line_html = line_html + [svg_html_, "\n"]
 
         line_html = "\n".join(line_html)
 
