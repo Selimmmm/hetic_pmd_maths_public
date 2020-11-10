@@ -1,4 +1,8 @@
 def make_id(s):
+
+    if s is None:
+        s = ""
+
     s = s.lower()
 
     try:

@@ -6,9 +6,12 @@ from utils import make_id
 
 PATH_TEMPLATES = "../templates/"
 PATH_TEMPLATE = os.path.join(PATH_TEMPLATES, "template.html")
-PATH_SECTION = os.path.join(PATH_TEMPLATES, "section.html")
 PATH_CONTENT = os.path.join(PATH_TEMPLATES, "intro_proba_discretes.yaml")
 PATH_CONTENT = "intro_proba_discretes.yaml"
+
+
+##TODO :
+# research subsection titles in following text and highlight the matched strings (lower)
 
 
 class Lecturer:
