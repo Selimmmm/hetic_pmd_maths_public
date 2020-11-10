@@ -78,10 +78,9 @@ class Lecturer:
 
     def make_subsections(self, section):
         # All subsection names
-        subsections = sorted([key for key in section if key.startswith("ssection")])
         subsection_html = []
-        for ss_name in subsections:
-            ss_html = self.make_subsection(section[ss_name])
+        for subsection in section["subsections"]:
+            ss_html = self.make_subsection(subsection)
             subsection_html.append(ss_html)
         subsection_html = "\n".join(subsection_html)
         return subsection_html

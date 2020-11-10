@@ -11,72 +11,34 @@ section1:
   title: I. Vocabulaire probabiliste
 
   # Expérience aléatoire
-  ssection1:
-    title: Expérience aléatoire
+  subsections:
+    - title: Expérience aléatoire
 
-    field1:
-      title: Definition
-      content:
-        line1: >
-          Une <b>expérience aléatoire</b> est une expérience dont on ne peut connaître 
-          le résultat a priori.
-        line2: Les résultats possibles sont appelées issues ou éventualités.
+      field1:
+        title: Definition
+        content:
+          line1: >
+            Une <b>expérience aléatoire</b> est une expérience dont on ne peut connaître 
+            le résultat a priori.
+          line2: Les résultats possibles sont appelées issues ou éventualités.
 
-    field2:
-      title: Exemple
-      content:
-        line1: Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
+      field2:
+        title: Exemple
+        content:
+          line1: Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
 
-  # Univers
-  ssection2:
-    title: Univers
+    - title: Univers
 
-    field1:
-      title: Definition
-      content:
-        line1: >
-          L’<b>univers</b> d’une expérience aléatoire est l’ensemble de ses issues possibles.
-        line2: >
-          On le note : $\Omega$.
+      field1:
+        title: Definition
+        content:
+          line1: >
+            L’<b>univers</b> d’une expérience aléatoire est l’ensemble de ses issues possibles.
+          line2: >
+            On le note : $\Omega$.
 
-    field2:
-      title: Exemple
-      content:
-        line1: >
-          Pour un lancer de dé, les issues sont : $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$
-        line2: >
-          Dans le cas du lancer de dé, l'univers est donc : $ \Omega = \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$
-
-  # Subsection
-  ssection3:
-    title:
-
-    field1:
-      title: Definition
-      content:
-        line1: >
-        line2: >
-
-    field2:
-      title: Exemple
-      content:
-        line1: >
-          Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
-        line2: >
-
-  # Subsection
-  ssection4:
-    title:
-
-    field1:
-      title: Definition
-      content:
-        line1: >
-        line2: >
-
-    field2:
-      title: Exemple
-      content:
-        line1: >
-          Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
-        line2: >
+      field2:
+        title: Exemple
+        content:
+          line1: >
+            Pour un lancer de dé, les issues sont : $ \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$
