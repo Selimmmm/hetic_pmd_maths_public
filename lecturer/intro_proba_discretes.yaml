@@ -81,7 +81,6 @@ section1:
             - |-
               Un <b>événement</b> est un sous-ensemble de l’univers (càd seulement une
                                 partie de $\Omega$)
-            - |-
 
 
         - title: Exemple
@@ -91,42 +90,41 @@ section1:
               Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à
                                 l'ensemble $\{2 ; 4 ; 6\}$
               
-            - |- 
               
 
-    - title: 
-      fields:
-        - title: Définition
-          type: bull
-          content:
-            - |-
+    # - title: 
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
 
-            - |-
+    #         - |-
 
 
-        - title: Exemple
-          type: bull
-          content:
-            - |- 
+    #     - title: Exemple
+    #       type: bull
+    #       content:
+    #         - |- 
               
-            - |- 
+    #         - |- 
 
-    - title: 
-      fields:
-        - title: Définition
-          type: bull
-          content:
-            - |-
+    # - title: 
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
 
-            - |-
+    #         - |-
 
 
-        - title: Exemple
-          type: bull
-          content:
-            - |- 
+    #     - title: Exemple
+    #       type: bull
+    #       content:
+    #         - |- 
               
-            - |- 
+    #         - |- 
 
 
 
@@ -162,56 +160,56 @@ section1:
 
 
 
-    - title: 
-      fields:
-        - title: Définition
-          type: bull
-          content:
-            - |-
+    # - title: 
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
 
-            - |-
+    #         - |-
 
 
-        - title: Exemple
-          type: bull
-          content:
-            - |- 
+    #     - title: Exemple
+    #       type: bull
+    #       content:
+    #         - |- 
               
-            - |- 
-              
-
-    - title: 
-      fields:
-        - title: Définition
-          type: bull
-          content:
-            - |-
-
-            - |-
-
-
-        - title: Exemple
-          type: bull
-          content:
-            - |- 
-              
-            - |- 
+    #         - |- 
               
 
-    - title: 
-      fields:
-        - title: Définition
-          type: bull
-          content:
-            - |-
+    # - title: 
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
 
-            - |-
+    #         - |-
 
 
-        - title: Exemple
-          type: bull
-          content:
-            - |- 
+    #     - title: Exemple
+    #       type: bull
+    #       content:
+    #         - |- 
               
-            - |- 
+    #         - |- 
+              
+
+    # - title: 
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
+
+    #         - |-
+
+
+    #     - title: Exemple
+    #       type: bull
+    #       content:
+    #         - |- 
+              
+    #         - |- 
               

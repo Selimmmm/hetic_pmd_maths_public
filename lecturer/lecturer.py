@@ -101,7 +101,7 @@ class Lecturer:
         # Make field one by one
         field_html = []
         for f in fields:
-            f_html = self.make_field(f)
+            f_html = self.make_field(field=f, subsection_title=subsection_title)
             field_html.append(f_html)
         field_html = "\n".join(field_html)
 
@@ -119,7 +119,7 @@ class Lecturer:
     ## Make fields
     ################################
 
-    def make_field(self, field):
+    def make_field(self, field, subsection_title):
 
         # Numbered
         if field["type"] == "num":
@@ -133,7 +133,7 @@ class Lecturer:
 
         # Title and id
         title = field["title"]
-        field_id = make_id(title)
+        field_id = make_id(str(subsection_title) + "_" + title)
 
         # Case no title or button (title inside in that case)
         if title != "" and not field.get("button", False):
