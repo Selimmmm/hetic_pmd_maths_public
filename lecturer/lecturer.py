@@ -18,6 +18,9 @@ PATH_CONTENT = "intro_proba_discretes.yaml"
 
 ##TODO : h3 and h2
 
+## TODO : deal with list in list in content
+# in yaml by calling the same function (with extra argument for ul / ol)
+
 
 class Lecturer:
     def __init__(self):

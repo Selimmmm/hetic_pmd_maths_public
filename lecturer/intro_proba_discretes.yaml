@@ -11,7 +11,6 @@ section1:
   title: I. Vocabulaire probabiliste
 
   subsections:
-    # Expérience aléatoire
     - title: Expérience aléatoire
       fields:
         - title: Definition
@@ -27,7 +26,6 @@ section1:
           content:
             - Un lancer de dé est une expérience aléatoire. Il y a 6 issues possibles.
 
-            # Univers
     - title: Univers
       fields:
         - title: Definition
@@ -44,7 +42,6 @@ section1:
             - |- 
               Dans le cas du lancer de dé, l'univers est donc : $ \Omega = \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$        
           # image: "../images/venn.svg"
-
 
     - title: Exercice 1
       fields:
@@ -72,7 +69,7 @@ section1:
               (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),\\
               (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),\\
               (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)\}$$
-
+    
     - title: Evénement
       fields:
         - title: Définition
@@ -82,59 +79,225 @@ section1:
               Un <b>événement</b> est un sous-ensemble de l’univers (càd seulement une
                                 partie de $\Omega$)
 
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Pour le lancer de dé, l'évènement "obtenir un nombre inférieur ou égal à 3" est égal
+                                à l'ensemble
+                                $\{1 ; 2 ; 3\}$
+            - |- 
+              Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à
+                                l'ensemble $\{2 ; 4 ; 6\}$
+                 
+    - title: Evénement élémentaire
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |- 
+              Un <b>événement élémentaire</b> est un sous-ensemble de l’univers composé d’une seule
+              issue.
+
+            - |-
+              Un <b>événement élémentaire</b> est donc un <b>singleton</b>, c'est à dire un ensemble
+              composé d'un seul élément.
+
 
         - title: Exemple
           type: bull
           content:
             - |- 
-              Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à
-                                l'ensemble $\{2 ; 4 ; 6\}$
+              "Obtenir un 1" est un événement élémentaire (il vaut $\{1\}$).
               
+    - title: Cardinal
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              Le cardinal d’un ensemble est le nombre d’éléments dans cet ensemble.
+
+            - |-
+              C'est donc aussi le nombre d'évènements élémentaires d'une expérience aléatoire.
+
+
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Le cardinal de l'évènement obtenir un nombre pair est 3 (il y a 3 éléments dans
+              $\{2;4;6\})$
+       
+    - title: Evénement certain
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              L’événement certain est l’événement constitué de toutes les issues possibles. C’est
+                                l’univers tout entier.
+
+
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Il est certain en lançant un dé de faire soit 1, soit 2, soit 3, soit 4, soit 5, soit
+              6. Donc l'évènement $\{1;2;3;4;5;6\}$ est certain (c'est bien $\Omega$, l'univers tout
+              entier)
               
-
-    # - title: 
-    #   fields:
-    #     - title: Définition
-    #       type: bull
-    #       content:
-    #         - |-
-
-    #         - |-
+    - title: Evénement impossible
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              L’événement impossible est l’ensemble vide, on le note : $\emptyset$
 
 
-    #     - title: Exemple
-    #       type: bull
-    #       content:
-    #         - |- 
-              
-    #         - |- 
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Il est impossible de ne faire aucun chiffre
 
-    # - title: 
-    #   fields:
-    #     - title: Définition
-    #       type: bull
-    #       content:
-    #         - |-
-
-    #         - |-
-
-
-    #     - title: Exemple
-    #       type: bull
-    #       content:
-    #         - |- 
-              
-    #         - |- 
+    - title: Intersection d’événements
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              L’intersection de deux événements $A$ et $B$ (notée $A \bigcap B$ ) est l’ensemble des
+                                issues qui
+                                sont à la fois dans $A$ <b>et</b> à la fois dans $B$.
 
 
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Si on note $E_1=$"obtenir un nombre pair" et $E_2=$"obtenir un nombre inférieur ou
+                                    égal
+                                    à 3
+                                    "
+                                    <ul>
+                                        <li>
+                                            Alors $E_1=\{2;4;6\}$
+                                        </li>
+                                        <li>
+                                            Et $E_2=\{1;2;3\}$
+
+                                        </li>
+                                        <li>
+                                            Donc $E_1 \bigcap E_2= \{2\}$
+                                        </li>
+                                    </ul>
+
+            - |- 
+              Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair
+                      
+                  <ul>
+                      <li>Alors $A=\{2;4;6\}$
+                      </li>
+                      <li>Et $B=\{1;3;5\}$
+                      </li>
+                      <li>Donc $A \bigcap B = \emptyset$
+                  </ul>
+              </ul>
+
+    - title: Union d’événements
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              L’union de deux événements $A$ et $B$ (notée $A \bigcup B$) est l’ensemble des issues
+                                qui sont
+                                soit dans $A$ soit dans $B$.
+
+
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Si on note $E_1=$"obtenir un nombre pair" et $E_2=$"obtenir un nombre inférieur ou égal
+                                à 3
+                                "
+                                <ul>
+                                    <li>
+                                        Alors $E_1=\{2;4;6\}$
+                                    </li>
+                                    <li>
+                                        Et $E_2=\{1;2;3\}$
+
+                                    </li>
+                                    <li>
+                                        Donc $E_1 \bigcup E_2= \{1;2;3;4;6\}$
+                                    </li>
+                                </ul>
 
 
 
 
+    - title: Evénement contraire
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              L’<b>événement contraire</b> d’un événement $A$ (noté $\bar{A}$) est l’ensemble des
+              issues de
+              l’univers qui n’appartiennent pas à A.
+
+            - |-
+              On l'appelle aussi le <b>complémentaire</b> de l’événement A.
 
 
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3"
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$, et $B=\{1;2;3\}$
+                                    </li>
+                                    <li>
+                                        Donc $\bar{A}=\{1;3;5\}$ et $\bar{B}=\{4;5;6\}$
+                                    </li>
+
+                                </ul>
 
 
+    - title: Evénements incompatibles
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              Deux événements $A$ et $B$ sont incompatibles s’ils ne peuvent se réaliser
+                                simultanément (s’ils
+                                n’ont aucune issue en commun)
+
+            - |-
+              Ainsi, deux événements contraires sont toujours incompatibles.
+
+
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair"
+                                <ul>
+                                    <li>
+                                        Alors $A=\{2;4;6\}$ et $B=\{1;3;5\}$
+                                    </li>
+                                    <li>
+                                        Donc $A$ et $B$ n'ont aucune issue en commun et sont donc incompatibles
+                                    </li>
+
+                                </ul>
 
 
 

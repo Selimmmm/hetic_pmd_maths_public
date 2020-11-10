@@ -148,8 +148,175 @@
 </ul>
 <h4>Exemple</h4>
 <ul>
+<li>Pour le lancer de dé, l'évènement "obtenir un nombre inférieur ou égal à 3" est égal
+                  à l'ensemble
+                  $\{1 ; 2 ; 3\}$</li>
 <li>Pour le lancer de dé, l'évènement "obtenir un nombre pair" est égal à
-                  l'ensemble $\{2 ; 4 ; 6\}$</li>
+                  l'ensemble $\{2 ; 4 ; 6\}$
+   </li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="evénement_élémentaire">Evénement élémentaire</h3>
+<h4>Définition</h4>
+<ul>
+<li>Un <b>événement élémentaire</b> est un sous-ensemble de l’univers composé d’une seule
+issue.</li>
+<li>Un <b>événement élémentaire</b> est donc un <b>singleton</b>, c'est à dire un ensemble
+composé d'un seul élément.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>"Obtenir un 1" est un événement élémentaire (il vaut $\{1\}$).</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="cardinal">Cardinal</h3>
+<h4>Définition</h4>
+<ul>
+<li>Le cardinal d’un ensemble est le nombre d’éléments dans cet ensemble.</li>
+<li>C'est donc aussi le nombre d'évènements élémentaires d'une expérience aléatoire.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Le cardinal de l'évènement obtenir un nombre pair est 3 (il y a 3 éléments dans
+$\{2;4;6\})$</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="evénement_certain">Evénement certain</h3>
+<h4>Définition</h4>
+<ul>
+<li>L’événement certain est l’événement constitué de toutes les issues possibles. C’est
+                  l’univers tout entier.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Il est certain en lançant un dé de faire soit 1, soit 2, soit 3, soit 4, soit 5, soit
+6. Donc l'évènement $\{1;2;3;4;5;6\}$ est certain (c'est bien $\Omega$, l'univers tout
+entier)</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="evénement_impossible">Evénement impossible</h3>
+<h4>Définition</h4>
+<ul>
+<li>L’événement impossible est l’ensemble vide, on le note : $\emptyset$</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Il est impossible de ne faire aucun chiffre</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="intersection_d’événements">Intersection d’événements</h3>
+<h4>Définition</h4>
+<ul>
+<li>L’intersection de deux événements $A$ et $B$ (notée $A \bigcap B$ ) est l’ensemble des
+                  issues qui
+                  sont à la fois dans $A$ <b>et</b> à la fois dans $B$.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Si on note $E_1=$"obtenir un nombre pair" et $E_2=$"obtenir un nombre inférieur ou
+                      égal
+                      à 3
+                      "
+                      <ul>
+                          <li>
+                              Alors $E_1=\{2;4;6\}$
+                          </li>
+                          <li>
+                              Et $E_2=\{1;2;3\}$
+
+                          </li>
+                          <li>
+                              Donc $E_1 \bigcap E_2= \{2\}$
+                          </li>
+                      </ul></li>
+<li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair
+        
+    <ul>
+        <li>Alors $A=\{2;4;6\}$
+        </li>
+        <li>Et $B=\{1;3;5\}$
+        </li>
+        <li>Donc $A \bigcap B = \emptyset$
+    </ul>
+</ul></li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="union_d’événements">Union d’événements</h3>
+<h4>Définition</h4>
+<ul>
+<li>L’union de deux événements $A$ et $B$ (notée $A \bigcup B$) est l’ensemble des issues
+                  qui sont
+                  soit dans $A$ soit dans $B$.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Si on note $E_1=$"obtenir un nombre pair" et $E_2=$"obtenir un nombre inférieur ou égal
+                  à 3
+                  "
+                  <ul>
+                      <li>
+                          Alors $E_1=\{2;4;6\}$
+                      </li>
+                      <li>
+                          Et $E_2=\{1;2;3\}$
+
+                      </li>
+                      <li>
+                          Donc $E_1 \bigcup E_2= \{1;2;3;4;6\}$
+                      </li>
+                  </ul></li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="evénement_contraire">Evénement contraire</h3>
+<h4>Définition</h4>
+<ul>
+<li>L’<b>événement contraire</b> d’un événement $A$ (noté $\bar{A}$) est l’ensemble des
+issues de
+l’univers qui n’appartiennent pas à A.</li>
+<li>On l'appelle aussi le <b>complémentaire</b> de l’événement A.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre inférieur ou égal à 3"
+                  <ul>
+                      <li>
+                          Alors $A=\{2;4;6\}$, et $B=\{1;2;3\}$
+                      </li>
+                      <li>
+                          Donc $\bar{A}=\{1;3;5\}$ et $\bar{B}=\{4;5;6\}$
+                      </li>
+
+                  </ul></li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="evénements_incompatibles">Evénements incompatibles</h3>
+<h4>Définition</h4>
+<ul>
+<li>Deux événements $A$ et $B$ sont incompatibles s’ils ne peuvent se réaliser
+                  simultanément (s’ils
+                  n’ont aucune issue en commun)</li>
+<li>Ainsi, deux événements contraires sont toujours incompatibles.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Si on note $A=$"obtenir un nombre pair" et $B=$"obtenir un nombre impair"
+                  <ul>
+                      <li>
+                          Alors $A=\{2;4;6\}$ et $B=\{1;3;5\}$
+                      </li>
+                      <li>
+                          Donc $A$ et $B$ n'ont aucune issue en commun et sont donc incompatibles
+                      </li>
+
+                  </ul></li>
 </ul>
 </div>
 
