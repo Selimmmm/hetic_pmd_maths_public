@@ -342,8 +342,8 @@ l’univers qui n’appartiennent pas à A.</li>
                     </a><br>
 <div class="collapse" id="exercice_2_énoncé">
 <ul>
-<li>On lance une pièce deux fois, quel est l'ensemble des issues ?</li>
-<li>On lance un dé deux fois, quel est l'ensemble des issues ?</li>
+<li>On lance une pièce deux fois, quel est le contraire de l'évènement faire deux fois piles (noté {PP} )? </li>
+<li>On lance une pièce deux fois, quel est le contraire de faire au moins une fois pile ? </li>
 </ul>
 </div>
 
@@ -353,14 +353,8 @@ l’univers qui n’appartiennent pas à A.</li>
                     </a><br>
 <div class="collapse" id="exercice_2_corrigé">
 <ol>
-<li>L'ensemble des issues est : $\Omega = \{PP ; PF ; FP ; FF\}$</li>
-<li>L'ensemble des issues est : $$\Omega = \{
-(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),\\
-(2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),\\
-(3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),\\
-(4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),\\
-(5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),\\
-(6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)\}$$</li>
+<li>Le contraire de $\{PP\}$ est : $\overline{\{PP\}} = \{PF ; FP ; FF\}$  </li>
+<li>Le contraire de $\{PF ; FP ; PP\}$ est : $\overline{\{PF ; FP ; PP\}} = \{FF\}$  </li>
 </ol>
 </div>
 </div>
@@ -511,8 +505,8 @@ car il est inclus dans l'ensemble des résultats donnant une différence (en v
   <li>$B_2 = \overline{NS_2 \bigcup FH \bigcup A_2}$ (C'est le contraire d'avoir voté pour NS <b> ou </b> FH <b>ou</b> de ne pas avoir voté)</li>
   <li>$F = \overline{(NS_1 \bigcup SR \bigcup B_1)} \bigcap FH$ (Pas voté en 2007 =  $\overline{(NS_1 \bigcup SR \bigcup B_1)} $ 
   <b> et </b> FH en 2012)</li>
-  <li> On peut soit s'être abstenu au deuxième scrutin  ($A_2$) <b> et </b> avoir voté au premier scruting ($NS_1 \bigcup SR \bigcup B_1$).
-        Ou l'inverse, ne pas s'être abstenu au deuxième ($\overline{A_2}$) et s'être abstenu au second  ($\overline{(NS_1 \bigcup SR \bigcup B_1)}$). Donc : 
+  <li> On peut soit s'être abstenu au deuxième scrutin  ($A_2$) <b> et </b> avoir voté au premier scrutin ($NS_1 \bigcup SR \bigcup B_1$).
+        <br> <b>Ou</b> l'inverse, ne pas s'être abstenu au deuxième ($\overline{A_2}$) <b>et</b> s'être abstenu au second  ($\overline{(NS_1 \bigcup SR \bigcup B_1)}$). Donc : 
   $$A =  (A_2 \bigcap  (NS_1 \bigcup SR \bigcup B_1)) \bigcup (\overline{A_2} \bigcap  \overline{(NS_1 \bigcup SR \bigcup B_1)}) $$</li>
 </ol></li>
 </ol>
@@ -1232,6 +1226,132 @@ Donc : $$\sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{12.83} = 3.58 € $$</li>
 </ol>
 </div>
 </div>
+<div class="card ai-card p-5">
+<h3 id="exercice_13">Exercice 13</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_13_énoncé" role="button" aria-expanded="false" aria-controls="exercice_13_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_13_énoncé">
+<ul>
+<li>On considère une paire de dés non truqués sur lesquels on a remplacé la numérotation classique par les numérotations suivantes :
+<br> — premier dé : les faces portent les numéros 1, 2, 2, 3, 3 et 4.
+<br> — second dé : les faces portent les numéros 1, 3, 4, 5, 6 et 8. 
+<br> On lance simultanément les deux dés.
+<ol>
+  <li>Décrire l’univers associé à cette expérience aléatoire. </li>
+  <li>On appelle S la variable aléatoire correspondant à la somme des valeurs obtenues sur les
+  deux dés. Donner l’ensemble des valeurs possibles pour S puis déterminer la loi de S. </li>
+  <li>Comparer la moyenne et l'écart type de cette loi avec ceux de la variable aléatoire T définie comme la somme des valeurs
+  obtenues en lançant simultanément deux dés classiques. </li>
+</ol></li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_13_corrigé" role="button" aria-expanded="false" aria-controls="exercice_13_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_13_corrigé">
+<ol>
+<li>L'univers correspond aux valeurs que peut prendre $S$. 
+<br> On a représenté dans le tableau ci après toutes les sommes possibles
+
+    <table border="1" class="table">
+      <thead>
+        <tr style="text-align: center;">
+          <th></th>
+          <th>1</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>8</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>2</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>3</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>3</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>4</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>4</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>5</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>12</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    Il y a toutes les valeurs entre 2 et 12, donc $\Omega = \{2 ; 3 ; 4 ; 5 ; 6; 7 ; 8 ; 9 ; 10 ; 11 ; 12\}$
+
+    <br> En comptant dans la table ci dessus : 
+
+    $$ \mathbb{P}(S = 2) = \frac{1}{36}$$
+    $$ \mathbb{P}(S = 3) = \frac{2}{36} = \frac{1}{18}$$
+    $$ \mathbb{P}(S = 4) = \frac{3}{36} = \frac{1}{12}$$
+    $$ \mathbb{P}(S = 5) = \frac{4}{36} = \frac{1}{9}$$
+    $$ \mathbb{P}(S = 6) = \frac{5}{36} = \frac{1}{9}$$
+    $$ \mathbb{P}(S = 7) = \frac{6}{36} = \frac{1}{6}$$
+    $$ \mathbb{P}(S = 8) = \frac{5}{36} = \frac{1}{6}$$
+    $$ \mathbb{P}(S = 9) = \frac{4}{36} = \frac{1}{6}$$
+    $$ \mathbb{P}(S = 10) = \frac{3}{36} = \frac{1}{6}$$
+    $$ \mathbb{P}(S = 11) = \frac{2}{36} = \frac{1}{6}$$
+    $$ \mathbb{P}(S = 12) = \frac{1}{36} = \frac{1}{6}$$
+
+    <br> On remarque que c'est la même loi que si on lance deux dés à 6 faces.</li>
+<li>Il s'agit de la même espérance et de la même variance que pour le lancer de deux dés à 6 faces donc :
+$$ \mathbb{E}(X) = \frac{7}{2}$$
+$$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$</li>
+</ol>
+</div>
+</div>
 <h2 id="probabilitiés_conditionnelles">IV. Probabilitiés conditionnelles</h2>
 <div class="card ai-card p-5">
 <h3 id="indépendance">Indépendance</h3>
@@ -1246,13 +1366,13 @@ Donc : $$\sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{12.83} = 3.58 € $$</li>
 </ul>
 </div>
 <div class="card ai-card p-5">
-<h3 id="exercice_13">Exercice 13</h3>
+<h3 id="exercice_14">Exercice 14</h3>
 
 <a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
-                     href="#exercice_13_énoncé" role="button" aria-expanded="false" aria-controls="exercice_13_énoncé">
+                     href="#exercice_14_énoncé" role="button" aria-expanded="false" aria-controls="exercice_14_énoncé">
                      Énoncé
                     </a><br>
-<div class="collapse" id="exercice_13_énoncé">
+<div class="collapse" id="exercice_14_énoncé">
 <ul>
 <li>exercice indépendance
               </li>
@@ -1260,10 +1380,10 @@ Donc : $$\sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{12.83} = 3.58 € $$</li>
 </div>
 
 <a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
-                     href="#exercice_13_corrigé" role="button" aria-expanded="false" aria-controls="exercice_13_corrigé">
+                     href="#exercice_14_corrigé" role="button" aria-expanded="false" aria-controls="exercice_14_corrigé">
                      Corrigé
                     </a><br>
-<div class="collapse" id="exercice_13_corrigé">
+<div class="collapse" id="exercice_14_corrigé">
 <ol>
 <li>lala</li>
 <li></li>

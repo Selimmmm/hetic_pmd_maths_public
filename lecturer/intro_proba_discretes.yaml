@@ -307,9 +307,10 @@ section1:
           button: true
           content:
             - |-
-              On lance une pièce deux fois, quel est l'ensemble des issues ?
-            - |- 
-              On lance un dé deux fois, quel est l'ensemble des issues ?
+              On lance une pièce deux fois, quel est le contraire de l'évènement faire deux fois piles (noté {PP} )? 
+
+            - |-
+              On lance une pièce deux fois, quel est le contraire de faire au moins une fois pile ? 
 
 
         - title: "Corrigé"
@@ -317,16 +318,10 @@ section1:
           button: true
           content:
             - |-
-              L'ensemble des issues est : $\Omega = \{PP ; PF ; FP ; FF\}$
+              Le contraire de $\{PP\}$ est : $\overline{\{PP\}} = \{PF ; FP ; FF\}$  
             - |-
-              L'ensemble des issues est : $$\Omega = \{
-              (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),\\
-              (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),\\
-              (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),\\
-              (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),\\
-              (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),\\
-              (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)\}$$
-        
+              Le contraire de $\{PF ; FP ; PP\}$ est : $\overline{\{PF ; FP ; PP\}} = \{FF\}$  
+
     - title: Exercice 3
       fields:
         - title: "Énoncé"
@@ -465,8 +460,8 @@ section1:
                 <li>$B_2 = \overline{NS_2 \bigcup FH \bigcup A_2}$ (C'est le contraire d'avoir voté pour NS <b> ou </b> FH <b>ou</b> de ne pas avoir voté)</li>
                 <li>$F = \overline{(NS_1 \bigcup SR \bigcup B_1)} \bigcap FH$ (Pas voté en 2007 =  $\overline{(NS_1 \bigcup SR \bigcup B_1)} $ 
                 <b> et </b> FH en 2012)</li>
-                <li> On peut soit s'être abstenu au deuxième scrutin  ($A_2$) <b> et </b> avoir voté au premier scruting ($NS_1 \bigcup SR \bigcup B_1$).
-                      Ou l'inverse, ne pas s'être abstenu au deuxième ($\overline{A_2}$) et s'être abstenu au second  ($\overline{(NS_1 \bigcup SR \bigcup B_1)}$). Donc : 
+                <li> On peut soit s'être abstenu au deuxième scrutin  ($A_2$) <b> et </b> avoir voté au premier scrutin ($NS_1 \bigcup SR \bigcup B_1$).
+                      <br> <b>Ou</b> l'inverse, ne pas s'être abstenu au deuxième ($\overline{A_2}$) <b>et</b> s'être abstenu au second  ($\overline{(NS_1 \bigcup SR \bigcup B_1)}$). Donc : 
                 $$A =  (A_2 \bigcap  (NS_1 \bigcup SR \bigcup B_1)) \bigcup (\overline{A_2} \bigcap  \overline{(NS_1 \bigcup SR \bigcup B_1)}) $$</li>
               </ol>
 
@@ -1170,6 +1165,132 @@ section3:
               $$\mathbb{V}(X) = 12.83 €^2$$
               Donc : $$\sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{12.83} = 3.58 € $$
 
+    - title: Exercice 13
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-              
+              On considère une paire de dés non truqués sur lesquels on a remplacé la numérotation classique par les numérotations suivantes :
+              <br> — premier dé : les faces portent les numéros 1, 2, 2, 3, 3 et 4.
+              <br> — second dé : les faces portent les numéros 1, 3, 4, 5, 6 et 8. 
+              <br> On lance simultanément les deux dés.
+              <ol>
+                <li>Décrire l’univers associé à cette expérience aléatoire. </li>
+                <li>On appelle S la variable aléatoire correspondant à la somme des valeurs obtenues sur les
+                deux dés. Donner l’ensemble des valeurs possibles pour S puis déterminer la loi de S. </li>
+                <li>Comparer la moyenne et l'écart type de cette loi avec ceux de la variable aléatoire T définie comme la somme des valeurs
+                obtenues en lançant simultanément deux dés classiques. </li>
+              </ol>
+
+        - title: "Corrigé"
+          type: num
+          button: true
+          content:
+            - |-
+              L'univers correspond aux valeurs que peut prendre $S$. 
+              <br> On a représenté dans le tableau ci après toutes les sommes possibles
+
+                  <table border="1" class="table">
+                    <thead>
+                      <tr style="text-align: center;">
+                        <th></th>
+                        <th>1</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>8</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>11</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>11</td>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <td>5</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  Il y a toutes les valeurs entre 2 et 12, donc $\Omega = \{2 ; 3 ; 4 ; 5 ; 6; 7 ; 8 ; 9 ; 10 ; 11 ; 12\}$
+
+                  <br> En comptant dans la table ci dessus : 
+
+                  $$ \mathbb{P}(S = 2) = \frac{1}{36}$$
+                  $$ \mathbb{P}(S = 3) = \frac{2}{36} = \frac{1}{18}$$
+                  $$ \mathbb{P}(S = 4) = \frac{3}{36} = \frac{1}{12}$$
+                  $$ \mathbb{P}(S = 5) = \frac{4}{36} = \frac{1}{9}$$
+                  $$ \mathbb{P}(S = 6) = \frac{5}{36} = \frac{1}{9}$$
+                  $$ \mathbb{P}(S = 7) = \frac{6}{36} = \frac{1}{6}$$
+                  $$ \mathbb{P}(S = 8) = \frac{5}{36} = \frac{1}{6}$$
+                  $$ \mathbb{P}(S = 9) = \frac{4}{36} = \frac{1}{6}$$
+                  $$ \mathbb{P}(S = 10) = \frac{3}{36} = \frac{1}{6}$$
+                  $$ \mathbb{P}(S = 11) = \frac{2}{36} = \frac{1}{6}$$
+                  $$ \mathbb{P}(S = 12) = \frac{1}{36} = \frac{1}{6}$$
+
+                  <br> On remarque que c'est la même loi que si on lance deux dés à 6 faces.
+
+            - |- 
+              Il s'agit de la même espérance et de la même variance que pour le lancer de deux dés à 6 faces donc :
+              $$ \mathbb{E}(X) = \frac{7}{2}$$
+              $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$
+
+
+
+
+
+
 section4:
   title: IV. Probabilitiés conditionnelles
 
@@ -1190,7 +1311,7 @@ section4:
             - |- 
                 ex
 
-    - title: Exercice 13
+    - title: Exercice 14
       fields:
         - title: "Énoncé"
           type: bull
@@ -1206,3 +1327,4 @@ section4:
             - |-
                 lala
             - |-
+
