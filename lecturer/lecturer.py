@@ -158,13 +158,17 @@ class Lecturer:
                     f"""<div class="collapse" id="{field_id}">""",
                 ]
                 + line_html
-                + ["</div>"]
+                # + ["</div>"] # not here
             )
         else:
             pass
+
         if "image" in field:
             svg_html_ = svg_html.format(path_svg=field["image"])
             line_html = line_html + [svg_html_, "\n"]
+
+        if field.get("button", False):
+            line_html = line_html + ["</div>"]  # to hide image with button do it here
 
         line_html = "\n".join(line_html)
 

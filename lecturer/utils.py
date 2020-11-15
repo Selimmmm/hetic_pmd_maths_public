@@ -21,8 +21,8 @@ button_html = """<a class="btn btn-primary btn-lg btn-block" data-toggle="collap
                     </a><br>"""
 
 
-svg_html = """<object type="image/svg+xml" data="{path_svg}">
+svg_html = """<object>
               <!-- Your fall back here -->
-              <img src="{path_svg}" />
+              <img src="{path_svg}" style="width:100%;"/>
               </object>
             """

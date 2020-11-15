@@ -408,8 +408,7 @@ section1:
               ## TODO : make a big drawing of it
               <li>
               <ul>
-
-        
+       
     - title: Exercice 4
       fields:
         - title: "Énoncé"
@@ -468,73 +467,160 @@ section1:
                       Ou l'inverse, ne pas s'être abstenu au deuxième ($\overline{A_2}$) et s'être abstenu au second  ($\overline{(NS_1 \bigcup SR \bigcup B_1)}$). Donc : 
                 $$A =  (A_2 \bigcap  (NS_1 \bigcup SR \bigcup B_1)) \bigcup (\overline{A_2} \bigcap  \overline{(NS_1 \bigcup SR \bigcup B_1)}) $$</li>
               </ol>
-           
+
+    - title: Partition d'évènements
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              Une famille d'évènements $(A_i)$ forme une partition de l'ensemble $\Omega$ s'ils sont
+                                tous deux à
+                                deux incompatibles et si leur réunion est égale à $\Omega$
+
+      
+
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+              Si on note $A_1$ = "obtenir un nombre pair" et $A_2$ = "obtenir un nombre impair"
+                      "
+                  <ul>
+
+                        <li>Alors $A_1=\{2;4;6\}$ et $A_2=\{1;3;5\}$</li>
+                        <li>Donc $A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en
+                            commun</li>
+                        <li>De plus $A_1 \bigcup A_2 = \{1;2;3;4;5;6\} = \Omega$</li>
+                        <li>Donc $(A_1, A_2)$ forme une partition</li>
+                    </ul>
+                </ul>
+                <ul>
+
+                    <li>Si on note $A_1 = \{1\}$, $A_2 = \{2\}$ et $A_3 = \{3;4;5;6\}$
+                        "</li>
+                    <ul>
+
+                        <li>$A_1$ et $A_2$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
+                        </li>
+                        <li>$A_2$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en commun
+                        </li>
+                        <li>$A_1$ et $A_3$ sont incompatibles (ou disjoints) car ils n'ont pas d'issue en
+                            commun</li>
+                        <li>De plus $A_1 \bigcup A_2 \bigcup A_3 = \{1;2;3;4;5;6\} = \Omega$</li>
+                        <li>Donc $(A_1, A_2, A_3)$ forme une partition</li>
+
+                    </ul>
 
 
 
 
+#########################################
+# Section 2
+#########################################
+section2:
+  title: II. Probabilitiés
+
+  subsections:
+    - title: Loi de probabilité
+      fields:
+        - title: Definition
+          type: bull
+          content:
+            - |-
+              Soit une expérience aléatoire avec un univers $\Omega$. On rappelle que le cardinal
+                                d'$\Omega$ est le nombre d'issues (dans le cas du dé, il y
+                                en a 6, chacune des faces)
+
+                            On dit qu’elle suit une loi de probabilité $\mathbb{P}$ si à chaque issue $x_i$ on peut
+                                associer
+                                une probabilité $p_i$ telle que :
+                          
+                            <ul>
+                                <li>Les $p_i$ sont entre 0 et 1 ie $ 0 \leq p_i \leq 1 $</li>
+                                <li>la somme des $p_i$ est égale à 1 ie : $\sum_{i=1}^{Card(\Omega)} p_i = 1$</li>
+                                <li>A chaque événement $ A = \{x_1, x_2, ..., x_k\} $ on peut associer le nombre
+                                    $\mathbb{P}(A)
+                                    =
+                                    \sum_{i=1}^{k} p_i = p_1 + p_2 + ... + p_k $</li>
+                            </ul>
+
+                            <ul>
+                                <li>Le nombre $p_i$ est la probabilité de l’éventualité $x_i$</li>
+                                <li>Le nombre $\mathbb{P}(A)$ est la probabilité de l'évènement $A$</li>
+                            </ul>
 
 
-
-
-
-
-
-
-
-
-
-
-    # - title: 
-    #   fields:
-    #     - title: Définition
-    #       type: bull
-    #       content:
-    #         - |-
-
-    #         - |-
-
-
-    #     - title: Exemple
-    #       type: bull
-    #       content:
-    #         - |- 
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Pour un dé non truqué, les probabilités de chaque face sont les mêmes, elles sont
+                      toutes
+                      égales à $1/6$
+                  <ul>
+                      <li> Donc pour tout $1\leq i \leq 6$, on a $p_i = \frac{1}{6}$</li>
+                      <li> Si on note $A=$"obtenir un nombre pair"</li>
+                      <li> Alors $A=\{2;4;6\}$</li>
+                      <li> $\mathbb{P}(A) = p_2 + p_4 + p_6 = 3 \times \frac{1}{6} = \frac{1}{2} $</li>
+                  </ul>
+  
+            
+    - title: Exercice 5
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-              
+                  Une agence de notation propose un classement de 500 fonds communs de placement (FCP)
+                  (de 1 étoile à 5 étoiles) en fonction de leur composition (actions françaises,
+                  actions internationales ou titres à revenu fixe).
               
-    #         - |- 
-              
+                  Un échantillon de 25 FCP a été sélectionné possédant les propriétés
+                      suivantes :
+                  <ul>
+                      <li>16 FCP sont composés d'actions françaises</li>
+                      <li>13 FCP ont obtenu au plus 3 étoiles</li>
+                      <li>7 FCP composés d'actions françaises ont 4 étoiles</li>
+                      <li>2 FCP composés d'actions françaises ont 5 étoiles</li>
+                  </ul>
+            - |-
+                Supposons que l'on sélectionne aléatoirement un de ces 25 FCP
+                  <ol>
+                      <li>
+                          Quelle est la probabilité de sélectionner un fonds d'actions françaises ?
+                      </li>
+                      <li>
+                          Quelle est la probabilité de sélectionner un fonds noté 4 ou 5 étoiles ?
+                      </li>
+                      <li>
+                          Quelle est la probabilité de choisir un fonds qui est à la fois un fonds
+                          d'actions
+                          françaises <b>et</b> un fonds noté 4 ou 5 étoiles ?
+                      </li>
 
-    # - title: 
-    #   fields:
-    #     - title: Définition
-    #       type: bull
-    #       content:
-    #         - |-
-
-    #         - |-
-
-
-    #     - title: Exemple
-    #       type: bull
-    #       content:
-    #         - |- 
-              
-    #         - |- 
-              
-
-    # - title: 
-    #   fields:
-    #     - title: Définition
-    #       type: bull
-    #       content:
-    #         - |-
-
-    #         - |-
+                      <li>
+                          Quelle est la probabilité de choisir un fonds composé d’actions françaises
+                          <b>ou</b>
+                          noté 4 ou
+                          5 étoiles ?
+                      </li>
+                  </ol>
+          
 
 
-    #     - title: Exemple
-    #       type: bull
-    #       content:
-    #         - |- 
-              
-    #         - |- 
-              
+        - title: "Corrigé"
+          type: num
+          button: true
+          content:
+            - |-
+              L'univers est l'échantillon de ces 25 FCP collectionnés, donc cette probabilité faut :
+              $\mathbb{P}(\text{ \{Composé d'actions françaises\}}) = \frac{16}{25}$   
+            - |- 
+              On sait que : $\mathbb{P}(\text{ \{Avoir 4 ou 5 étoiles \}}) = 1 - \mathbb{P}(\overline{\text{ \{Avoir 4 ou 5 étoiles \}}})$
+              Or $\overline{\text{ \{Avoir 4 ou 5 étoiles \}}} = \text{ \{Avoir 3 étoiles au plus \}} $ 
+              Donc $ \mathbb{P}(\text{ \{Avoir 4 ou 5 étoiles \}}) = 1 - \frac{13}{25} = \frac{12}{25}$
+
+          image: "../images/corrige_6.png"
+
