@@ -855,7 +855,7 @@ $Card(\Omega)^{n} = 2^{3} = 8$ Il y a bien 8 issues dans cette nouvelle expérie
     ainsi que les probabilités associées.</li>
 <li>Donc, nous avons besoin
 de l'ensemble des valeurs prises par cette variable aléatoire : $\Omega = \{x_1 ; ... ; x_n\}$ et
-des valeurs des probabilités associées que l'on note : $\{\mathbb{P}(\{X=x_1)\} ; ... ;\mathbb{P}(X=x_n)\} = \{p_1 ; ... ; p_n\}$</li>
+des valeurs des probabilités associées que l'on note : $\{ \mathbb{P}(\{X=x_1\}) ; ... ;\mathbb{P}(\{X=x_1\}) \} = \{p_1 ; ... ; p_n\}$</li>
 </ul>
 <h4>Exemple</h4>
 <ul>
@@ -1182,6 +1182,92 @@ et 𝑌 celui attendu pour le projet le plus ambitieux.
             
 
 
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_12">Exercice 12</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_12_énoncé" role="button" aria-expanded="false" aria-controls="exercice_12_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_12_énoncé">
+<ul>
+<li>Une usine fabrique des pièces à l’aide de deux machines A et B produisant chacune 50 % de la fabrication. 
+On constate que la machine A produit 5 % de pièces défectueuses alors que la machine B n’en produit que 1 %. 
+Les pièces sont vendues par lots de 100 et on ignore par quelle machine a été fabriquée chaque pièce d’un lot.
+<ol>
+  <li> On choisit au hasard une pièce. Calculer la probabilité qu’elle soit défectueuse. </li>
+  <li> Si une pièce est defectueuse, elle fait perdre 10 euros à l'entreprise, sinon, elle fait gagner 11 euros.
+  On note $X$ la valeur d'une pièce pour l'entreprise. 
+  Calculer la valeur moyenne d'une pièce pour l'entreprise.</li>
+  <li> Calculer l'écart type de $X$ </li>
+
+</ol>
+
+
+
+              </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_12_corrigé" role="button" aria-expanded="false" aria-controls="exercice_12_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_12_corrigé">
+<ol>
+<li>On peut imaginer qu'on choisit une pièce dans un lot sans perte de généralité. <br>
+Soit D l'évènement : la pièce est defectueuse. 
+<br> 5 % des pièces fabriquées par A sont défectueuses et A en produit 50, soit $0.05 \times 50 = 2.5$ pièces defectueuses
+<br> 1 % des pièces fabriquées par B sont défectueuses et B en produit 50, soit $0.01 \times 50 = 0.5$ pièces defectueuses
+<br> Donc il y a 2.5 + 0.5 = 3 pièces defectueuses en tout donc $\mathbb{P}(A) = \frac{3}{100}$</li>
+<li>On a soit $X = -10$ soit $X = 11$. On note $x_1 = - 10$ et $x_2 = 11$
+
+$$\mathbb{E}(X) = \sum_{i=1}^{2}p_i x_i =  \frac{3}{100} \times (-10) +  \frac{97}{100} \times(11) = 10.37 € $$</li>
+<li>$$\mathbb{V}(X) = \sum_{i=1}^{2}p_i (x_i - \mathbb{E}(x))^2 =  \frac{3}{100} \times (-10 - 10.37)^2 +  \frac{97}{100} \times(11 - 10.37)^2 $$
+$$\mathbb{V}(X) = \sum_{i=1}^{2}p_i (x_i - \mathbb{E}(x))^2 =  \frac{3}{100} \times (-20.37)^2 +  \frac{97}{100} \times(0.63)^2 $$
+$$\mathbb{V}(X) = 12.83 €^2$$
+Donc : $$\sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{12.83} = 3.58 € $$</li>
+</ol>
+</div>
+</div>
+<h2 id="probabilitiés_conditionnelles">IV. Probabilitiés conditionnelles</h2>
+<div class="card ai-card p-5">
+<h3 id="indépendance">Indépendance</h3>
+<h4>Définition</h4>
+<ul>
+<li>Indépendance</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>ex</li>
+<li>ex</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_13">Exercice 13</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_13_énoncé" role="button" aria-expanded="false" aria-controls="exercice_13_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_13_énoncé">
+<ul>
+<li>exercice indépendance
+              </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_13_corrigé" role="button" aria-expanded="false" aria-controls="exercice_13_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_13_corrigé">
+<ol>
+<li>lala</li>
+<li></li>
+</ol>
 </div>
 </div>
 

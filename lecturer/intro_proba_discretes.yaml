@@ -1,6 +1,8 @@
 toc:
   - I. Vocabulaire probabiliste
   - II. Probabilités
+  - III. Variables aléatoires
+  - IV. Probabilitiés conditionnelles
 
 title: "Introduction aux probabilités discrètes"
 
@@ -805,7 +807,6 @@ section2:
 section3:
   title: III. Variables aléatoires
 
-
   subsections:
     - title: Variable aléatoire et loi de probabilité
       fields:
@@ -1084,8 +1085,6 @@ section3:
               Aussi :
               $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$
 
-
- 
     - title: Exercice 11
       fields:
         - title: "Énoncé"
@@ -1124,5 +1123,86 @@ section3:
               <br>
           image: "../images/corrige_11.png"
 
+    - title: Exercice 12
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-              
+              Une usine fabrique des pièces à l’aide de deux machines A et B produisant chacune 50 % de la fabrication. 
+              On constate que la machine A produit 5 % de pièces défectueuses alors que la machine B n’en produit que 1 %. 
+              Les pièces sont vendues par lots de 100 et on ignore par quelle machine a été fabriquée chaque pièce d’un lot.
+              <ol>
+                <li> On choisit au hasard une pièce. Calculer la probabilité qu’elle soit défectueuse. </li>
+                <li> Si une pièce est defectueuse, elle fait perdre 10 euros à l'entreprise, sinon, elle fait gagner 11 euros.
+                On note $X$ la valeur d'une pièce pour l'entreprise. 
+                Calculer la valeur moyenne d'une pièce pour l'entreprise.</li>
+                <li> Calculer l'écart type de $X$ </li>
+
+              </ol>
 
 
+
+                            
+          
+        - title: "Corrigé"
+          type: num
+          button: true
+          content:
+            - |-
+              On peut imaginer qu'on choisit une pièce dans un lot sans perte de généralité. <br>
+              Soit D l'évènement : la pièce est defectueuse. 
+              <br> 5 % des pièces fabriquées par A sont défectueuses et A en produit 50, soit $0.05 \times 50 = 2.5$ pièces defectueuses
+              <br> 1 % des pièces fabriquées par B sont défectueuses et B en produit 50, soit $0.01 \times 50 = 0.5$ pièces defectueuses
+              <br> Donc il y a 2.5 + 0.5 = 3 pièces defectueuses en tout donc $\mathbb{P}(A) = \frac{3}{100}$
+            
+            - |-
+              On a soit $X = -10$ soit $X = 11$. On note $x_1 = - 10$ et $x_2 = 11$
+
+              $$\mathbb{E}(X) = \sum_{i=1}^{2}p_i x_i =  \frac{3}{100} \times (-10) +  \frac{97}{100} \times(11) = 10.37 € $$
+
+
+
+            - |- 
+              $$\mathbb{V}(X) = \sum_{i=1}^{2}p_i (x_i - \mathbb{E}(x))^2 =  \frac{3}{100} \times (-10 - 10.37)^2 +  \frac{97}{100} \times(11 - 10.37)^2 $$
+              $$\mathbb{V}(X) = \sum_{i=1}^{2}p_i (x_i - \mathbb{E}(x))^2 =  \frac{3}{100} \times (-20.37)^2 +  \frac{97}{100} \times(0.63)^2 $$
+              $$\mathbb{V}(X) = 12.83 €^2$$
+              Donc : $$\sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{12.83} = 3.58 € $$
+
+section4:
+  title: IV. Probabilitiés conditionnelles
+
+  subsections:
+    - title: Indépendance
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+                Indépendance
+
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+                ex
+            - |- 
+                ex
+
+    - title: Exercice 13
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-              
+              exercice indépendance
+                            
+        - title: "Corrigé"
+          type: num
+          button: true
+          content:
+            - |-
+                lala
+            - |-
