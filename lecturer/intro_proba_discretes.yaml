@@ -823,7 +823,7 @@ section3:
             - |-
                   Donc, nous avons besoin
                   de l'ensemble des valeurs prises par cette variable aléatoire : $\Omega = \{x_1 ; ... ; x_n\}$ et
-                  des valeurs des probabilités associées que l'on note : $\{\mathbb{P}(\{X=x_1)\} ; ... ;\mathbb{P}(X=x_n)\} = \{p_1 ; ... ; p_n\}$
+                  des valeurs des probabilités associées que l'on note : $\{ \mathbb{P}(\{X=x_1\}) ; ... ;\mathbb{P}(\{X=x_1\}) \} = \{p_1 ; ... ; p_n\}$
 
         - title: Exemple
           type: bull
