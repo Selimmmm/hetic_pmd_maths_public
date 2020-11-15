@@ -245,6 +245,13 @@ entier)</li>
     </ul>
 </ul></li>
 </ul>
+<object type="image/svg+xml" data="../images/venn.svg">
+              <!-- Your fall back here -->
+              <img src="../images/venn.svg" />
+              </object>
+            
+
+
 </div>
 <div class="card ai-card p-5">
 <h3 id="union_d’événements">Union d’événements</h3>
@@ -272,6 +279,13 @@ entier)</li>
                       </li>
                   </ul></li>
 </ul>
+<object type="image/svg+xml" data="../images/venn.svg">
+              <!-- Your fall back here -->
+              <img src="../images/venn.svg" />
+              </object>
+            
+
+
 </div>
 <div class="card ai-card p-5">
 <h3 id="evénement_contraire">Evénement contraire</h3>
@@ -318,6 +332,191 @@ l’univers qui n’appartiennent pas à A.</li>
 
                   </ul></li>
 </ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_2">Exercice 2</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_2_énoncé" role="button" aria-expanded="false" aria-controls="exercice_2_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_2_énoncé">
+<ul>
+<li>On lance une pièce deux fois, quel est l'ensemble des issues ?</li>
+<li>On lance un dé deux fois, quel est l'ensemble des issues ?</li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_2_corrigé" role="button" aria-expanded="false" aria-controls="exercice_2_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_2_corrigé">
+<ol>
+<li>L'ensemble des issues est : $\Omega = \{PP ; PF ; FP ; FF\}$</li>
+<li>L'ensemble des issues est : $$\Omega = \{
+(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),\\
+(2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),\\
+(3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),\\
+(4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),\\
+(5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),\\
+(6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)\}$$</li>
+</ol>
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_3">Exercice 3</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_3_énoncé" role="button" aria-expanded="false" aria-controls="exercice_3_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_3_énoncé">
+<ul>
+<li>On lance deux dés. Une épreuve est identifée à un couple (x, y) où x est le nombre
+              de points amenés par le premier dé et y par le second.
+              <ol>
+                  <li>
+                      Décrire (donner tous les éléments) et dénombrer les ensembles suivants :
+                      <ul>
+                          <li>
+                              $\Omega$ : Ensemble de tous les résultats possibles
+                          </li>
+                          <li>
+                              $A$ : Ensemble des résultats donnant une différence (en valeur absolue) de
+                              points paire
+                          </li>
+                          <li>
+                              $B$ : ensemble des résultats donnant deux points égaux
+                          </li>
+                          <li>
+                              $C$ : Ensemble des résultats tels que l’un des dés au moins amène 1
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      Caractériser par une phrase :
+                      <ul>
+                          <li>
+                              $A \bigcap B$
+                          </li>
+                          <li>
+                              $A \bigcup B$
+                          </li>
+                          <li>
+                              $A \bigcap \bar{B}$
+                          </li>
+                      </ul>
+                  </li>
+              </ol></li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_3_corrigé" role="button" aria-expanded="false" aria-controls="exercice_3_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_3_corrigé">
+<ol>
+<li><ul>
+<li>$\Omega$ : Même réponse que Exercice 2. - question 2</li>
+<li>
+<ul>
+  <li>$A$ : Les différences de points paires possibles en valeur absolue sont : $0, 2, 4$.
+  Les couples donnant 0 pour différence sont : $A_0 = \{(1, 1); (2, 2); (3, 3); (4, 4); (5,5);  (6,6)\}$</li>
+  <li>Les couples pour 2 sont : $A_2 = \{(1, 3); (3, 1); (2, 4); (4, 2); (3, 5); (5, 3); (4, 6); (6, 4)\}$</li>
+  <li> Les couples pour 4 sont : $A_4 = \{(1, 5); (5, 1); (2, 6); (6, 2)\}$</li>
+  <li> Donc $$A = A_0 \bigcup A_2 \bigcup A_4$$
+</ul>
+</li>
+<li>$$ B =  \{(1, 1); (2, 2); (3, 3); (4, 4); (5,5);  (6,6)\} $$</li>
+
+<li> $$C = \{(1, 1); (1, 2); (1, 3); (1, 4); (1, 5);  (1, 6)\\
+             (1, 1); (2, 1); (3, 1); (4, 1); (5, 1);  (6, 1)\} $$</li>
+</ul></li>
+<li>
+<ul>
+<li>$A \bigcap B$ est l'ensemble des résultats donnant une différence (en valeur absolue) de points paire 
+<b> et </b> l'ensemble des résultats donnant des points égaux. Donc c'est juste l'ensemble des résultats donnant des points égaux
+car il est inclus dans l'ensemble des résultats donnant une différence (en valeur absolue) de points paire ($A_0 = B$)   </li>
+
+<li>$A \bigcup B$ est l'ensemble des résultats donnant une différence (en valeur absolue) de points paire 
+<b> ou </b> l'ensemble des résultats donnant des points égaux. Donc c'est juste l'ensemble des résultats donnant une différence 
+(en valeur absolue) de points paire ($B = A_0$ donc $A = B \bigcup A_2 \bigcup A_4$)   </li>
+
+<li>$A \bigcap \bar{B}$ est l'ensemble des résultats donnant une différence (en valeur absolue) de points paire 
+<b> ou </b> l'ensemble des résultats donnant des points non égaux.  C'est donc $A_2 \bigcup A_4$  </li>
+
+## TODO : make a big drawing of it
+<li>
+<ul></li>
+</ol>
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_4">Exercice 4</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_4_énoncé" role="button" aria-expanded="false" aria-controls="exercice_4_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_4_énoncé">
+<ul>
+<li><ul>
+  <li>
+      On note E l’ensemble des personnes inscrites sur les listes électorales pour les
+      deux dernières élections présidentielles en France, en 2007 et 2012. Les
+      personnes dans E pouvaient donc voter aux deux élections. On étudie seulement les
+      votes du second tour. On note :
+  </li>
+  <ul>
+      <li> NS1 l’ensemble des personnes ayant voté pour Nicolas Sarkozy en 2007, et NS2
+          l’ensemble des personnes ayant voté pour Nicolas Sarkozy en 2012
+      </li>
+      <li> SR l’ensemble des personnes ayant voté pour Ségolène Royal en 2007
+      </li>
+      <li> FH l’ensemble des personnes ayant voté pour François Hollande en 2012
+      </li>
+      <li>B1 l’ensemble des personnes ayant voté blanc (ou nul) en 2007
+      </li>
+      <li>A2 l’ensemble des personnes n’ayant pas voté en 2012
+      </li>
+  </ul>
+  <li>Déterminer le contenu des ensembles suivants en utilisant uniquement l’ensemble E,
+      les six en- sembles définis au dessus et les opérations ensemblistes classiques
+      (intersection, union et complémentaire) :</li>
+</ul>
+<ol>
+  <li>NS : l’ensemble des personnes ayant voté deux fois pour Nicolas Sarkozy</li>
+  <li>PS : l’ensemble des personnes ayant voté au moins une fois pour un candidat du
+      parti socialiste</li>
+  <li>B2 : l’ensemble des personnes ayant voté blanc (ou nul) en 2012</li>
+  <li>F : l’ensemble des personnes qui n’ont pas voté en 2007 et ont voté François
+      Hollande en 2012.</li>
+  <li>A : l’ensemble des personnes s’étant abstenues exactement une fois (attention, le
+      vote blanc ou nul n’est pas une abstention).</li>
+</ol></li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_4_corrigé" role="button" aria-expanded="false" aria-controls="exercice_4_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_4_corrigé">
+<ol>
+<li><ol>
+  <li>$NS = NS_1 \bigcap NS_2$ (Voter aux deux élections pour NS : <b> et </b>)</li>
+  <li>$PS = SR \bigcup FH$ (Voter (au moins) à une des deux élections : <b> ou </b>)</li>
+  <li>$B_2 = \overline{NS_2 \bigcup FH \bigcup A_2}$ (C'est le contraire d'avoir voté pour NS <b> ou </b> FH <b>ou</b> de ne pas avoir voté)</li>
+  <li>$F = \overline{(NS_1 \bigcup SR \bigcup B_1)} \bigcap FH$ (Pas voté en 2007 =  $\overline{(NS_1 \bigcup SR \bigcup B_1)} $ 
+  <b> et </b> FH en 2012)</li>
+  <li> On peut soit s'être abstenu au deuxième scrutin  ($A_2$) <b> et </b> avoir voté au premier scruting ($NS_1 \bigcup SR \bigcup B_1$).
+        Ou l'inverse, ne pas s'être abstenu au deuxième ($\overline{A_2}$) et s'être abstenu au second  ($\overline{(NS_1 \bigcup SR \bigcup B_1)}$). Donc : 
+  $$A =  (A_2 \bigcap  (NS_1 \bigcup SR \bigcup B_1)) \bigcup (\overline{A_2} \bigcap  \overline{(NS_1 \bigcup SR \bigcup B_1)}) $$</li>
+</ol></li>
+</ol>
+</div>
 </div>
 
 
