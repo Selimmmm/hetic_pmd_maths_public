@@ -968,7 +968,7 @@ section3:
                  <br>
           image: "../images/corrige_9.png"
 
-    - title: Espérance mathématiques
+    - title: Espérance mathématique
       fields:
         - title: Définition
           type: bull
