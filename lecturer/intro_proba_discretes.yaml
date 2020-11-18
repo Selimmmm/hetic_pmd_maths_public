@@ -4,7 +4,9 @@ toc:
   - III. Variables aléatoires
   - IV. Probabilitiés conditionnelles
 
+# corriger question  4 exercice 6
 
+# ajouter avec $X$ variable aléatoire
 
 title: "Introduction aux probabilités discrètes"
 
@@ -1287,8 +1289,10 @@ section3:
 
             - |- 
               Il s'agit de la même espérance et de la même variance que pour le lancer de deux dés à 6 faces donc :
-              $$ \mathbb{E}(X) = \frac{7}{2}$$
-              $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$
+              
+              
+#$$ \mathbb{E}(X) = \frac{7}{2}$$
+#$$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$
 
 
 
