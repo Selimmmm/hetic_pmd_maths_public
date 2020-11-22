@@ -1273,22 +1273,26 @@ section3:
 
                   <br> En comptant dans la table ci dessus : 
 
-                  $$ \mathbb{P}(S = 2) = \frac{1}{36}$$
-                  $$ \mathbb{P}(S = 3) = \frac{2}{36} = \frac{1}{18}$$
-                  $$ \mathbb{P}(S = 4) = \frac{3}{36} = \frac{1}{12}$$
-                  $$ \mathbb{P}(S = 5) = \frac{4}{36} = \frac{1}{9}$$
-                  $$ \mathbb{P}(S = 6) = \frac{5}{36} = \frac{1}{9}$$
-                  $$ \mathbb{P}(S = 7) = \frac{6}{36} = \frac{1}{6}$$
-                  $$ \mathbb{P}(S = 8) = \frac{5}{36} = \frac{1}{6}$$
-                  $$ \mathbb{P}(S = 9) = \frac{4}{36} = \frac{1}{6}$$
-                  $$ \mathbb{P}(S = 10) = \frac{3}{36} = \frac{1}{6}$$
-                  $$ \mathbb{P}(S = 11) = \frac{2}{36} = \frac{1}{6}$$
-                  $$ \mathbb{P}(S = 12) = \frac{1}{36} = \frac{1}{6}$$
+                  $$ \mathbb{P}(S = 2) = \frac{1}{36}  $$
+                  $$ \mathbb{P}(S = 3) = \frac{2}{36}  $$
+                  $$ \mathbb{P}(S = 4) = \frac{3}{36}  $$
+                  $$ \mathbb{P}(S = 5) = \frac{4}{36}  $$
+                  $$ \mathbb{P}(S = 6) = \frac{5}{36}  $$
+                  $$ \mathbb{P}(S = 7) = \frac{6}{36}  $$
+                  $$ \mathbb{P}(S = 8) = \frac{5}{36}  $$
+                  $$ \mathbb{P}(S = 9) = \frac{4}{36}  $$
+                  $$ \mathbb{P}(S = 10) = \frac{3}{36} $$
+                  $$ \mathbb{P}(S = 11) = \frac{2}{36} $$
+                  $$ \mathbb{P}(S = 12) = \frac{1}{36} $$
 
                   <br> On remarque que c'est la même loi que si on lance deux dés à 6 faces.
 
             - |- 
               Il s'agit de la même espérance et de la même variance que pour le lancer de deux dés à 6 faces donc :
+
+              $$ \mathbb{E}(X) = 7$$
+              $$ \mathbb{V}(X) = 5.83 $$
+              $$ \sigma_{X} =  2.41$$
               
               
 #$$ \mathbb{E}(X) = \frac{7}{2}$$
@@ -1303,21 +1307,93 @@ section4:
   title: IV. Probabilitiés conditionnelles
 
   subsections:
-    - title: Indépendance
+    - title: Expériences indépendantes
       fields:
         - title: Définition
           type: bull
           content:
             - |-
-                Indépendance
+                Des expériences indépendantes sont des expériences dont les résultats ne s'influencent pas.
 
         - title: Exemple
           type: bull
           content:
             - |- 
-                ex
+                 Quand on lance un dé 3 fois successivement, il s’agit d’une répétition de 3 expériences identiques
+                 et indépendantes. Si on a fait un 6 au premier lancer, puis encore un 6 au deuxième lancer, la
+                 probabilité de faire un 6 au troisième lancer sera toujours de $\frac{1}{6}$
+
+
+
+    - title: Evènements indépendants
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+                Des évènements sont dits indépendants si la réalisation de l'un ne dépend pas de la réalisation de l'autre.
             - |- 
-                ex
+                Si $A$ et $B$ sont deux évènements indépendants : $\mathbb{P}(A \bigcap B) = \mathbb{P}(A) \times \mathbb{P}(B)$
+            - |- 
+                <p style="color:red">L'indépendance n'est pas l'incompatibilité !!! <br>
+                (Si $A$ et $B$ sont deux évènements incompatibles : $\mathbb{P}(A \bigcap B) = 0$)</p>
+                
+        - title: Exemple
+          type: bull
+          content:
+            - |- 
+                 Quand on lance un dé 2 fois successivement, il s’agit d’une répétition de 2 expériences indépendantes.
+                 Si on note $P_1$ l'évènement faire pile la première fois et $P_2$ l'évènement faire pile la seconde, alors :
+                 $\mathbb{P}(P_1 \bigcap P_2) = \mathbb{P}(P_1) \times \mathbb{P}(P_2) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$
+
+
+    - title: Arbre pondéré
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              On peut représenter les événements d’une série d’expériences par un arbre pondéré.
+              On inscrit les probabilités associées à chaque événement sur la branche correspondante de l’arbre.
+
+
+            - |-
+              <b> Intersection et principe multiplicatif </b> :<br>
+              Pour calculer la probabilité de l'intersection de deux évènements, on multiple les probabilités sur les branches successives.
+
+            - |-
+              <b> Union et principe addidtif </b> :<br>
+              Pour calculer la probabilité de l'union de deux évènements, on ajoute les probabilités des branches.
+          
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              On dispose d'une urne contenant 5 boules rouges et 2 boules bleues. On fait deux tirages avec remise (c'est à dire qu'à l'issue du premier tirage, 
+              on remet dans l'urne la première boule tirée). L'arbre ci-dessous résume l'expérience.
+
+
+            - |- 
+              <b> Principe multiplicatif </b> :<br>
+              Notons $B_1$, $B_2$ les évènements tirer une boule bleue au premier et au deuxième tirage. $B_1 \bigcap B_2$ est l'évènement : 
+              "tirer une boule bleue au premier et au second tirages". <br>
+              $\mathbb{P}(B_1 \bigcap B_2) =  \frac{2}{7} \times \frac{2}{7} = \frac{4}{49}$
+
+            - |- 
+              <b> Principe additif </b> :<br>
+              Notons $R_1$, $R_2$ les évènements tirer une boule rouge au premier et au deuxième tirage. On s'intéresse à la probabilité de tirer une 
+              boule rouge au second tirage. <br>
+              Pour que cet évènement $R_2$ se réalise, on peut soit : <br>
+              - Tirer une boule rouge au premier tirage et une boule rouge au second : $\mathbb{P}(R_1 \bigcap R_2) = \frac{5}{7} \times \frac{5}{7} = \frac{25}{49} $ (principe multiplicatif) <br>
+              - Tirer une boule bleue au premier tirage et une boule rouge au second : $\mathbb{P}(B_1 \bigcap R_2) = \frac{2}{7} \times \frac{5}{7} = \frac{10}{49} $ (principe multiplicatif) <br>
+              - Finalement, on peut appliquer le principe additif :
+              $\mathbb{P}(R_2) = \frac{10}{49} + \frac{25}{49} = \frac{35}{49} = \frac{5}{7} $ (qui est bien le résultat escompté)
+
+
+
+          image: "../images/arbre_1.png"
+
+
 
     - title: Exercice 14
       fields:
@@ -1326,13 +1402,66 @@ section4:
           button: true
           content:
             - |-              
-              exercice indépendance
+              - Dans une première urne se trouvent quatre billes numérotées de 1 à 4. On note $A_i$ l'évènement tirer la bille $i$. <br>
+              - Dans une seconde urne se trouvent trois billes numérotées de 1 à 3. On note $B_i$ l'évènement tirer la bille $i$. <br>
+              - On pioche d'abord une bille dans la première urne, puis une dans la seconde urne. Représenter cette expérience avec un arbre pondéré.
+              
                             
         - title: "Corrigé"
           type: num
           button: true
           content:
             - |-
-                lala
-            - |-
 
+
+          image: "../images/arbre_2.png"
+
+
+    - title: Probabilité conditionnelle
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              Les probabilités conditionnelles concernent des expériences aléatoires qui ne sont pas forcément indépendantes les unes des autres.
+            
+            - |-
+              Soient A et B deux événements. La probabilité que B advienne sachant que A est advenu est : 
+
+              $$ \mathbb{P}(B | A) = \frac{\mathbb{P}(B \bigcap A)}{\mathbb{P}(A)}$$
+            - |-
+              Elle se lit « P de B sachant A ».
+
+
+            - |-
+              En remanipulant la formule, on a aussi : 
+
+              $$ \mathbb{P}(B \bigcap A) = \mathbb{P}(B | A) \times \mathbb{P}(A)$$
+          
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              On dispose d'une urne contenant 5 boules rouges et 2 boules bleues. On fait deux tirages avec remise (c'est à dire qu'à l'issue du premier tirage, 
+              on remet dans l'urne la première boule tirée). L'arbre ci-dessous résume l'expérience.
+
+
+            - |- 
+              <b> Principe multiplicatif </b> :<br>
+              Notons $B_1$, $B_2$ les évènements tirer une boule bleue au premier et au deuxième tirage. $B_1 \bigcap B_2$ est l'évènement : 
+              "tirer une boule bleue au premier et au second tirages". <br>
+              $\mathbb{P}(B_1 \bigcap B_2) =  \frac{2}{7} \times \frac{2}{7} = \frac{4}{49}$
+
+            - |- 
+              <b> Principe additif </b> :<br>
+              Notons $R_1$, $R_2$ les évènements tirer une boule rouge au premier et au deuxième tirage. On s'intéresse à la probabilité de tirer une 
+              boule rouge au second tirage. <br>
+              Pour que cet évènement $R_2$ se réalise, on peut soit : <br>
+              - Tirer une boule rouge au premier tirage et une boule rouge au second : $\mathbb{P}(R_1 \bigcap R_2) = \frac{5}{7} \times \frac{5}{7} = \frac{25}{49} $ (principe multiplicatif) <br>
+              - Tirer une boule bleue au premier tirage et une boule rouge au second : $\mathbb{P}(B_1 \bigcap R_2) = \frac{2}{7} \times \frac{5}{7} = \frac{10}{49} $ (principe multiplicatif) <br>
+              - Finalement, on peut appliquer le principe additif :
+              $\mathbb{P}(R_2) = \frac{10}{49} + \frac{25}{49} = \frac{35}{49} = \frac{5}{7} $ (qui est bien le résultat escompté)
+
+
+
+          image: "../images/arbre_1.png"
