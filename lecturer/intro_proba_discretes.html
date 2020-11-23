@@ -1444,9 +1444,9 @@ $\mathbb{P}(R_2) = \frac{10}{49} + \frac{25}{49} = \frac{35}{49} = \frac{5}{7} $
                      Corrigé
                     </a><br>
 <div class="collapse" id="exercice_14_corrigé">
-<ol>
+<ul>
 <li></li>
-</ol>
+</ul>
 <object>
               <!-- Your fall back here -->
               <img src="../images/arbre_2.png" style="width:100%;"/>
@@ -1457,42 +1457,401 @@ $\mathbb{P}(R_2) = \frac{10}{49} + \frac{25}{49} = \frac{35}{49} = \frac{5}{7} $
 </div>
 </div>
 <div class="card ai-card p-5">
-<h3 id="probabilité_conditionnelle">Probabilité conditionnelle</h3>
+<h3 id="probabilités_conditionnelles_et_formule_de_bayes">Probabilités conditionnelles et formule de Bayes</h3>
 <h4>Définition</h4>
 <ul>
 <li>Les probabilités conditionnelles concernent des expériences aléatoires qui ne sont pas forcément indépendantes les unes des autres.</li>
-<li>Soient A et B deux événements. La probabilité que B advienne sachant que A est advenu est : 
+<li>Soient A et B deux événements. La probabilité que B advienne sachant que A est advenu est donnée
+par la formule de Bayes : 
 
 $$ \mathbb{P}(B | A) = \frac{\mathbb{P}(B \bigcap A)}{\mathbb{P}(A)}$$</li>
-<li>Elle se lit « P de B sachant A ».</li>
+<li>Elle se lit « Probabilité de B sachant A ». </li>
+<li>Elle est parfois alternativement notée $\mathbb{P}_{A}(B)$.</li>
 <li>En remanipulant la formule, on a aussi : 
 
 $$ \mathbb{P}(B \bigcap A) = \mathbb{P}(B | A) \times \mathbb{P}(A)$$</li>
-</ul>
-<h4>Exemple</h4>
-<ul>
-<li>On dispose d'une urne contenant 5 boules rouges et 2 boules bleues. On fait deux tirages avec remise (c'est à dire qu'à l'issue du premier tirage, 
-on remet dans l'urne la première boule tirée). L'arbre ci-dessous résume l'expérience.</li>
-<li><b> Principe multiplicatif </b> :<br>
-Notons $B_1$, $B_2$ les évènements tirer une boule bleue au premier et au deuxième tirage. $B_1 \bigcap B_2$ est l'évènement : 
-"tirer une boule bleue au premier et au second tirages". <br>
-$\mathbb{P}(B_1 \bigcap B_2) =  \frac{2}{7} \times \frac{2}{7} = \frac{4}{49}$</li>
-<li><b> Principe additif </b> :<br>
-Notons $R_1$, $R_2$ les évènements tirer une boule rouge au premier et au deuxième tirage. On s'intéresse à la probabilité de tirer une 
-boule rouge au second tirage. <br>
-Pour que cet évènement $R_2$ se réalise, on peut soit : <br>
-- Tirer une boule rouge au premier tirage et une boule rouge au second : $\mathbb{P}(R_1 \bigcap R_2) = \frac{5}{7} \times \frac{5}{7} = \frac{25}{49} $ (principe multiplicatif) <br>
-- Tirer une boule bleue au premier tirage et une boule rouge au second : $\mathbb{P}(B_1 \bigcap R_2) = \frac{2}{7} \times \frac{5}{7} = \frac{10}{49} $ (principe multiplicatif) <br>
-- Finalement, on peut appliquer le principe additif :
-$\mathbb{P}(R_2) = \frac{10}{49} + \frac{25}{49} = \frac{35}{49} = \frac{5}{7} $ (qui est bien le résultat escompté)</li>
+<li>De même, on a :
+$$ \mathbb{P}(A | B) = \frac{\mathbb{P}(A \bigcap B)}{\mathbb{P}(B)}$$</li>
+<li>En combinant les formules pour  $ \mathbb{P}(A | B) $ et $ \mathbb{P}(B | A) $, on peut écrire :
+
+$$ \mathbb{P}(B | A) = \frac{\mathbb{P}(A |B) \mathbb{P}(B)}{\mathbb{P}(A)}$$</li>
 </ul>
 <object>
               <!-- Your fall back here -->
-              <img src="../images/arbre_1.png" style="width:100%;"/>
+              <img src="../images/arbre_3.svg" style="width:100%;"/>
               </object>
             
 
 
+<h4>Exemple</h4>
+<ul>
+<li>Soit une urne contenant 6 boules rouges et 4 boules blanches. On effectue deux tirages
+ successifs sans remise (il y a donc 10 boules dans l’urne au premier tirage, puis 9 au deuxième
+ tirage). Soit A « tirer une boule blanche au premier tirage » et B « tirer une boule blanche au
+ deuxième tirage ».</li>
+<li>On peut résumer cette expérience avec l'arbre pondéré ci-dessous</li>
+<li>Sur cet arbre on lit : 
+<br>
+$\mathbb{P}(A) = \frac{4}{10} $ et $\mathbb{P}(\bar{A}) = \frac{6}{10} $
+<br>
+$\mathbb{P}(B|A) = \frac{3}{9} $ et $\mathbb{P}(\bar{B}|A) = \frac{6}{9} $
+<br>
+$\mathbb{P}(B|\bar{A}) = \frac{4}{9} $ et $\mathbb{P}(\bar{B}|\bar{A}) = \frac{5}{9} $</li>
+<li>On peut donc calculer la probabilité de tirer deux boules blanches: <br>
+$ \mathbb{P}(B \bigcap A) = \mathbb{P}(B | A) \times \mathbb{P}(A) =\frac{3}{9} \times \frac{4}{10} = \frac{12}{90} = \frac{2}{15}$</li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/arbre_4.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_15">Exercice 15</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_15_énoncé" role="button" aria-expanded="false" aria-controls="exercice_15_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_15_énoncé">
+<ul>
+<li>En reprenant l'exemple ci-dessus, calculer la probabilité de tirer 
+une boule rouge au premier tirage et une boule blanche au second.</li>
+<li>Calculer la probabilité de tirer une boule rouge aux deux tirages.
+              </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_15_corrigé" role="button" aria-expanded="false" aria-controls="exercice_15_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_15_corrigé">
+<ul>
+<li>$ \mathbb{P}(B \bigcap \bar{A}) = \mathbb{P}(B | \bar{A}) \times \mathbb{P}(\bar{A}) = \frac{4}{9} \times \frac{6}{10} = \frac{24}{90} = \frac{4}{15}$</li>
+<li>$ \mathbb{P}(\bar{B} \bigcap \bar{A}) = \mathbb{P}(\bar{B} | \bar{A}) \times \mathbb{P}(\bar{A}) = \frac{5}{9} \times \frac{6}{10} = \frac{30}{90} = \frac{1}{3}$</li>
+</ul>
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="propriétés_élémentaires_des_probabilités_conditionnelles">Propriétés élémentaires des probabilités conditionnelles</h3>
+<h4>Définition</h4>
+<ul>
+<li>Si $A$ et $B$ sont deux évènements indépendants, alors $\mathbb{P}(B | A) = \mathbb{P}(B)$
+<br> 
+C'est à dire que la réalisation de $A$ n'apporte pas d'information sur la réalisation de $B$.
+<br> 
+On peut aussi le démontrer par le calcul :<br>
+- Par définition : $ \mathbb{P}(B | A) = \frac{\mathbb{P}(B \bigcap A)}{\mathbb{P}(A)}$ <br>
+- $A$ et $B$ étant indépendants, on peut écrire : $\mathbb{P}(B \bigcap A) = \mathbb{P}(B) \times \mathbb{P}(A)$ <br>
+- On obtient finalement : $ \mathbb{P}(B | A) = \frac{\mathbb{P}(B) \times \mathbb{P}(A)}{\mathbb{P}(A)} = \mathbb{P}(B)$ <br></li>
+<li>Si $A$ et $B$ sont deux évènements incompatibles, alors $\mathbb{P}(B | A) = \mathbb{P}(A | B) = 0$</li>
+<li>Les probabilités conditionnelles se manipulent comme les probabilités non conditionnelles :
+<br> - Par exemple, on sait que $\mathbb{P}(B) = 1 - \mathbb{P}(\bar{B})$. 
+<br> - On a aussi : $\mathbb{P}(B | A) = 1 - \mathbb{P}(\bar{B} |A)$. </li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_16">Exercice 16</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_16_énoncé" role="button" aria-expanded="false" aria-controls="exercice_16_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_16_énoncé">
+<ul>
+<li>L’entreprise JLVB a financé une campagne de publicité télévisée pour l'un de ses savons. 
+Pour déterminer l’impact de cette campagne un sondage est réalisé permettant la détermination des probabilités suivantes :
+<br>
+• Probabilité de l’évènement 𝐴 : « le consommateur a acheté le savon » = 0,20 <br>
+• Probabilité de l’évènement 𝑉 : « le consommateur a vu la publicité » = 0,40 <br>
+• Probabilité de 𝐴 ∩ 𝑉 = 0,12 <br>
+Le fait de voir la publicité augmente-t-il la probabilité que le consommateur achète le savon ? Expliquez votre raisonnement et justifiez votre résultat.
+
+
+              </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_16_corrigé" role="button" aria-expanded="false" aria-controls="exercice_16_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_16_corrigé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/corrige_16.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_17">Exercice 17</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_17_énoncé" role="button" aria-expanded="false" aria-controls="exercice_17_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_17_énoncé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/enonce_17.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_17_corrigé" role="button" aria-expanded="false" aria-controls="exercice_17_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_17_corrigé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/corrige_17.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="formule_des_probabilités_totales">Formule des probabilités totales</h3>
+<h4>Définition</h4>
+<ul>
+<li>La formule des probabilités totales est un outil qui permet de calculer la probabilité 
+d'un évènement en décomposant l'évènement en plusieurs cas distincts, grâce à d'autres évènements.</li>
+<li>Supposons que $A$, $B$ et $C$ forment une partition de $\Omega$ 
+(c'est à dire que $A \bigcup B \bigcup C = \Omega$ et qu'en plus $A \bigcap B = \emptyset$, 
+$A \bigcap C = \emptyset$, $B \bigcap C = \emptyset$)</li>
+<li>On peut calculer la probabilité d'un évènement $D$ en remarquant que 
+$ D = (D \bigcap A) \bigcup (D \bigcap B) \bigcup (D \bigcap C)$
+<br> Donc $\mathbb{P}(D) = \mathbb{P}((D \bigcap A) \bigcup (D \bigcap B) \bigcup (D \bigcap C))$
+<br> Puisque $A$, $B$ et $C$ sont disjoints : 
+
+$ \mathbb{P}(D) = \mathbb{P}(D \bigcap A) +  \mathbb{P}(D \bigcap B) +  \mathbb{P}(D \bigcap C) $
+
+<br> Finalement : 
+$$ \mathbb{P}(D) = \mathbb{P}(D|A) \times \mathbb{P}(A) +  \mathbb{P}(D|B) \times \mathbb{P}(B) +  \mathbb{P}(D|C) \times \mathbb{P}(C) $$</li>
+<li>Intuitivement, cela revient à dire que la probabilité de $D$ se calcule 
+comme la somme des probabilités d'évènements incompatibles qui "recouvrent" tout l'espace.</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Dans cet exemple, $E_1$, $E_2$ et $E_3$ forment une partition de $\Omega$.</li>
+<li>On cherche à calculer la probabilité d'un évènement $A$. </li>
+<li>$ A = (A \bigcap E_1) \bigcup (A \bigcap E_2) \bigcup (A \bigcap E_3)$</li>
+<li>On obtient :
+$$ \mathbb{P}(A) = \mathbb{P}(A|E_1) \times \mathbb{P}(E_1) +  \mathbb{P}(A|E_2) \times \mathbb{P}(E_2) +  \mathbb{P}(A|E_3) \times \mathbb{P}(E_3) $$</li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/proba_totales.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_18">Exercice 18</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_18_énoncé" role="button" aria-expanded="false" aria-controls="exercice_18_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_18_énoncé">
+<ul>
+<li>Dans un questionnaire à choix multiples, 
+les étudiants ont le choix entre quatre réponses pour chaque question. 
+Soit 𝑝 = 0,3 la probabilité qu’une étudiante sélectionnée aléatoirement 
+connaisse la réponse à une question donnée. 
+Si l’étudiante ignore la réponse, elle choisit au hasard l’une des réponses proposées. 
+Quelle est la probabilité que l’étudiante connaisse vraiment la bonne réponse sachant qu’elle l’a donnée ?  
+       </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_18_corrigé" role="button" aria-expanded="false" aria-controls="exercice_18_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_18_corrigé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/corrige_18.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_19">Exercice 19</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_19_énoncé" role="button" aria-expanded="false" aria-controls="exercice_19_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_19_énoncé">
+<ul>
+<li>Une compagnie d’assurances répartit ses clients en trois classes de risque : 𝑅1 (risque faible), 𝑅2 (risque moyen) et 𝑅3 (risque élevé). 
+Les effectifs de chaque classe représentent 20%, 50% et 30% de la population totale. 
+Les probabilités d’avoir un accident dans l’année pour chacune des classes sont 0,05, 0,15 et 0,30.  
+<br>
+1) Quelle est la probabilité pour qu’une personne choisie au hasard ait un accident dans l’année ?
+<br>
+2) Si M. Martin n’a pas eu d’accident cette année, 
+quelle est la probabilité qu’il soit dans la classe de risque faible 𝑅1 ?
+<br>
+
+<br>   </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_19_corrigé" role="button" aria-expanded="false" aria-controls="exercice_19_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_19_corrigé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/corrige_19.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_20">Exercice 20</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_20_énoncé" role="button" aria-expanded="false" aria-controls="exercice_20_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_20_énoncé">
+<ul>
+<li>Lors des élections, le candidat 𝐴 l’emporte avec 60% des votes.
+Des sondages réalisés antérieurement ont montré que 70% des femmes et 45% des hommes allaient voter pour le candidat 𝐴.
+<br>
+1) En supposant qu’il n’y ait eu aucun vote blanc (ou nul) et 0% d’abstention, calculer la proportion des hommes parmi les votants.
+<br>
+2) Si un bulletin de vote choisit au hasard porte le nom d’un autre candidat que le candidat 𝐴, quelle est la probabilité qu’il s’agisse du vote d’une femme ?</li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_20_corrigé" role="button" aria-expanded="false" aria-controls="exercice_20_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_20_corrigé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/corrige_20.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_21">Exercice 21</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_21_énoncé" role="button" aria-expanded="false" aria-controls="exercice_21_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_21_énoncé">
+<ul>
+<li>Pour faire face aux erreurs d’arbitrage, la FIFA a décidé de mettre en place un système de détection des buts : 
+des caméras sont installées sur la ligne de but et indiquent si le ballon a ou non franchi la ligne. 
+Le système proposé à la FIFA a les caractéristiques suivantes : 
+il se compose de deux caméras (notées 𝐴 et 𝐵) qui chacune et indépendamment de l’autre détecte avec probabilité 0,98 que 
+le ballon a bien franchi la ligne quand c’est le cas, et qui dans 3 % des cas indique « but » alors que le ballon n’a pas complètement franchi la ligne. 
+<br>
+L’objectif de la FIFA est de déterminer quelle est la meilleure règle pour l’usage de ces caméras, 
+sachant que dans les cas litigieux il y a a priori une chance sur deux que le ballon ait franchi la ligne.
+<br>
+On pourra noter 𝐹𝐿 l’évènement «le ballon a franchi la ligne» et $CB_A$ l’évènement« la caméra 𝐴 indique un but » (idem pour la caméra 𝐵 avec $CB_B$).
+<br>
+1) Traduire les hypothèses sur les caméras en valeurs pour certaines probabilités conditionnelles.
+<br>
+2) On s’intéresse au fonctionnement de la caméra 𝐴. 
+Quelle est la probabilité que « le ballon ait franchi la ligne » quand « la caméra A indique but » ? 
+Quelle est la probabilité que « le ballon n’ait pas franchi la ligne » lorsque « la caméra 𝐴 indique but » ?
+<br></li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_21_corrigé" role="button" aria-expanded="false" aria-controls="exercice_21_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_21_corrigé">
+<ul>
+<li></li>
+</ul>
+<object>
+              <!-- Your fall back here -->
+              <img src="../images/corrige_21.png" style="width:100%;"/>
+              </object>
+            
+
+
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_22">Exercice 22</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_22_énoncé" role="button" aria-expanded="false" aria-controls="exercice_22_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_22_énoncé">
+<ul>
+<li>Dans les années 70, en participant à l'émission télévisée américaine, 
+alors célèbre, Let's make a deal, vous auriez pu gagner une Cadillac ou... une chèvre. 
+Le candidat devait choisir une porte parmi 3. L'une cachait la Cadillac, les deux autres des chèvres. 
+Après son premier choix, l'animateur Monty Hall (qui savait tout) ouvrait une (mauvaise) porte parmi 
+les deux non choisies. Il proposait au candidat, soit de garder son choix initial, 
+soit de changer pour l'autre porte encore non ouverte. Qu'avait-il intérêt à faire ?
+
+              </li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_22_corrigé" role="button" aria-expanded="false" aria-controls="exercice_22_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_22_corrigé">
+<ul>
+<li></li>
+</ul>
+</div>
 </div>
 
 
