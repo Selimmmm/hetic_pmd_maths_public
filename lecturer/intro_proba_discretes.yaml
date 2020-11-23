@@ -786,7 +786,7 @@ section2:
           type: bull
           content:
             - |- 
-                Quand on lance un dé 2 fois successivement, il s’agit d’une répétition de 2
+                Quand on lance une pièce 2 fois successivement, il s’agit d’une répétition de 2
                                 expériences identiques
                                 et indépendantes car l'expérience est évidemment identique, et la réalisation de la
                                 première n'influe pas sur la deuxième (si on a fait un 6 au premier lancer, puis encore
