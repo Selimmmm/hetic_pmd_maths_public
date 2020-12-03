@@ -1,0 +1,230 @@
+<!-- Set variables -->
+
+
+<!doctype html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+
+
+
+    <!-- Standard settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+
+
+    <meta name="title" content="HETIC - PMD - Mathématiques">
+    <meta name="description" content="Site de cours.">
+    <meta id="meta-url" name="url" content="">
+    <meta name="author" content="selim-mellouk">
+
+
+
+    <!-- Icons -->
+    <link rel="icon" href="https://dildehdrg5ol8.cloudfront.net/static/img/madewithml/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://dildehdrg5ol8.cloudfront.net/static/img/madewithml/favicon.ico" />
+    <title>Dénombrement</title>
+
+
+
+    <!-- Bundles -->
+    <link rel="stylesheet" href="https://dildehdrg5ol8.cloudfront.net/static/bundles/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://dildehdrg5ol8.cloudfront.net/static/bundles/bundle.css">
+    <script src="https://dildehdrg5ol8.cloudfront.net/static/bundles/vendor.js"></script>
+    <script src="https://dildehdrg5ol8.cloudfront.net/static/bundles/bundle.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+
+
+</head>
+
+<!-- Body -->
+
+<body>
+
+
+
+    <!-- Topics -->
+    <section class="ai-section ai-bold-anchors">
+        <div class="container">
+            <div class="row flex-column-reverse flex-md-row mb-5">
+                <div class="col-md-9">
+
+                    <div class="row">
+                        <div class="col-md-9 mr-auto">
+                            <h2>Dénombrement</h2>
+                        </div>
+                    </div>
+
+                    <hr class="mt-0 mb-5">
+
+
+
+                    <h2 id="principales_notions">I. Principales notions</h2>
+<div class="card ai-card p-5">
+<h3 id="coefficient_binomial_(ou_nombre_de_combinaisons)">Coefficient binomial (ou nombre de combinaisons)</h3>
+<h4>Definition</h4>
+<ul>
+<li>Soit $\Omega$ un ensemble à $n$ éléments. On cherche à calcule le nombre de combinaisons à $k$ éléments.
+<br> Ce nombre de combinaisons est le nombre de sous-ensembles de $\Omega$ de cardinal $k$, c'est à dire le 
+nombre de choix que nous avons si nous voulons sélectionner $k$ éléments distincts d'un ensemble à $n$ éléments.
+<br> L'ordre ne compte pas.
+<br> Ce nombre est égal au coefficient binomial $k$ parmi $n$ que l'on note $\dbinom{n}{k}$</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Dans une classe de 5 élèves, on cherche à constituer un groupe de 2 délégués. 
+<br> Si l'on numérote tous les élèves de 1 à 5, les combinaisons possibles sont : 
+<br>
+
+(1,2),
+(1,3),
+(1,4),
+(1,5),
+(2,3),
+(2,4),
+(2,5),
+(3,4),
+(3,5),
+(4,5)
+<br>
+Il y a 10 combinaisons possibles. Donc $\dbinom{10}{5} = 10$</li>
+</ul>
+<h4>Propriétés</h4>
+<ul>
+<li>Dans un ensemble à $n$ éléments, il y a toujours 0 façon de ne choisir aucun élément (on en prend aucun)
+<br> Donc $\dbinom{n}{0} = 1$</li>
+<li>Dans un ensemble à $n$ éléments, il y a toujours $n$ façons de choisir un élément (on peut prendre n'importe lequel)
+<br> Donc $\dbinom{n}{1} = n$</li>
+<li>Dans un ensemble à $n$ éléments, il y a toujours $n-1$ façons de choisir $n-1$ éléments 
+(il s'agit en fait de choisir lequel on laisse de côté)
+<br> Donc $\dbinom{n}{n-1} = n$</li>
+<li>Dans un ensemble à $n$ éléments, choisir $k$ éléments, c'est la même chose qu'en choisir $n-k$. 
+<br> En effet, il n'y a pas de différence entre choisir ceux qu'on sélectionne, ou ceux qu'on laisse de côté.
+<br> Donc $\dbinom{n}{k} = \dbinom{n}{n-k}$
+<br> D'où le fait que $\dbinom{n}{1} = \dbinom{n}{n-1}$</li>
+</ul>
+<h4>Formule</h4>
+<ul>
+<li>On introduit la factorielle d'un nombre entier positif $n$, que l'on notera $n!$
+<br> Cette quantité est calculée ainsi : $n! = 1 \times 2  \times ...  \times n$
+<br> Par convention $0! = 1$ (et on a aussi $1! = 1$)</li>
+<li>Le coefficient binomial $\dbinom{n}{k}$ est donné par la formule suivante : 
+$$\dbinom{n}{k}  =  \frac{n!}{(n-k)!(k!)} $$</li>
+<li>C'est à dire : 
+
+$$\dbinom{n}{k}  =  \frac{1 \times 2  \times ...  \times n}{(1 \times 2  \times ...  \times (n-k))(1 \times 2  \times ...  \times k)} $$</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Reprenons l'exemple précédent : 
+Dans une classe de 5 élèves, on cherche à constituer un groupe de 2 délégués.</li>
+<li>On calcule : $$\dbinom{5}{2} = \frac{5!}{(5-2)!(2!)}$$ 
+<br> Tout d'abord : $5! = 1 \times 2 \times 3 \times 4 \times 5 = 120$
+<br> Ensuite : $(5-2)! = (3)! = 1 \times 2 \times 3 = 6$
+<br> Enfin : $2! = 1 \times 2 = 2$
+$$\dbinom{5}{2} = \frac{120}{2 \times 6} = \frac{120}{12} = 10$$
+<br> On retrouve bien 10 combinaisons, la même valeur que lorsqu'on les compte "à la main".</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_1">Exercice 1</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_1_énoncé" role="button" aria-expanded="false" aria-controls="exercice_1_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_1_énoncé">
+<ul>
+<li>
+Soit un ensemble composé de 6 éléments, noté 𝑆={𝐴,𝐵,𝐶,𝐷,𝐸,𝐹}; 
+1. L’expérience consiste à sélectionner 3 éléments parmi les 6.
+<br>Sachant que l’ordre de tirage des lettres ne compte pas, combien y-a-t-il de résultats possibles ? 
+<br>Donner des exemples de résultats.
+
+2. L’expérience consiste à sélectionner 2 éléments parmi les 6.
+<br>Sachant que l’ordre de tirage des lettres ne compte pas, combien y-a-t-il de résultats possibles ? 
+<br>Donner des exemples de résultats.
+
+3. En déduire le nombre de résultats si on en sélectionne 4.</li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_1_corrigé" role="button" aria-expanded="false" aria-controls="exercice_1_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_1_corrigé">
+<ul>
+<li>aa</li>
+</ul>
+</div>
+</div>
+
+
+
+                </div>
+
+                <div class="col-md-3">
+                    <!-- TOC -->
+                    <div class="position-fixed">
+                        <h5 class="mt-0 mt-md-5">Table des matières</h5>
+                        <div class="card p-4 ai-gray-text">
+                            <ul style="padding-left: 1.5rem; margin-bottom: 0rem;">
+                                <li><a href="#vocaprob">I. Vocabulaire probabiliste</a></li>
+                                <li><a href="#proba">II. Probabilités</a></li>
+                                <li><a href="#variablesaleatoires">III. Variables aléatoires</a></li>
+                                <li><a href="#variablesaleatoires">IV. Probabilitiés conditionnelles</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <section>
+        <div class="ai-footer ai-section">
+            <div class="container">
+                <div class="row ai-footer-row ai-center-all">
+                    <div class="col-md-12">
+                        <div class="ai-footer-body">
+                            <a href="#">A propos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

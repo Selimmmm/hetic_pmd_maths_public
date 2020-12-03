@@ -1,0 +1,316 @@
+# toc:
+#   - I. Vocabulaire probabiliste
+#   - II. Probabilités
+#   - III. Variables aléatoires
+#   - IV. Probabilitiés conditionnelles
+
+# corriger question  4 exercice 6
+
+# ajouter avec $X$ variable aléatoire
+
+title: "Lois discrètes"
+
+#########################################
+# Section 1
+#########################################
+section1:
+  title: I. Quelques rappels
+
+  subsections:
+    - title: Rappel - Loi de probabilité
+      fields:
+        - title: Definition
+          type: bull
+          content:
+            - |-
+              Soit une expérience aléatoire avec un univers $\Omega$. On rappelle que le cardinal
+                                d'$\Omega$ est le nombre d'issues (dans le cas du dé, il y
+                                en a 6, chacune des faces)
+
+                            On dit qu’elle suit une loi de probabilité $\mathbb{P}$ si à chaque issue $x_i$ on peut
+                                associer
+                                une probabilité $p_i$ telle que :
+                          
+                            <ul>
+                                <li>Les $p_i$ sont entre 0 et 1 ie $ 0 \leq p_i \leq 1 $</li>
+                                <li>la somme des $p_i$ est égale à 1 ie : $\sum_{i=1}^{Card(\Omega)} p_i = 1$</li>
+                                <li>A chaque événement $ A = \{x_1, x_2, ..., x_k\} $ on peut associer le nombre
+                                    $\mathbb{P}(A)
+                                    =
+                                    \sum_{i=1}^{k} p_i = p_1 + p_2 + ... + p_k $</li>
+                            </ul>
+
+                            <ul>
+                                <li>Le nombre $p_i$ est la probabilité de l’éventualité $x_i$</li>
+                                <li>Le nombre $\mathbb{P}(A)$ est la probabilité de l'évènement $A$</li>
+                            </ul>
+
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Pour un dé non truqué, les probabilités de chaque face sont les mêmes, elles sont
+                      toutes
+                      égales à $1/6$
+                  <ul>
+                      <li> Donc pour tout $1\leq i \leq 6$, on a $p_i = \frac{1}{6}$</li>
+                      <li> Si on note $A=$"obtenir un nombre pair"</li>
+                      <li> Alors $A=\{2;4;6\}$</li>
+                      <li> $\mathbb{P}(A) = p_2 + p_4 + p_6 = 3 \times \frac{1}{6} = \frac{1}{2} $</li>
+                  </ul>
+
+    - title: Rappel - Variable aléatoire et loi de probabilité
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              On dit qu’on définit une variable aléatoire $X$ lorsqu’à chaque éventualité d'une
+                  expérience
+                  aléatoire on associe un nombre.
+            - |-
+              La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+                  prendre X
+                  ainsi que les probabilités associées.
+            - |-
+              Donc, nous avons besoin
+              de l'ensemble des valeurs prises par cette variable aléatoire : $\Omega = \{x_1 ; ... ; x_n\}$ et
+              des valeurs des probabilités associées que l'on note : $\{ \mathbb{P}(\{X=x_1\}) ; ... ;\mathbb{P}(\{X=x_1\}) \} = \{p_1 ; ... ; p_n\}$
+
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Quand on lance un dé 2 fois successivement, il s’agit d’une répétition de 2
+                              expériences identiques
+                              et indépendantes car l'expérience est évidemment identique, et la réalisation de la
+                              première n'influe pas sur la deuxième (si on a fait un 6 au premier lancer, puis encore
+                              un 6 au deuxième lancer, la probabilité de faire
+                              un 6 au troisième lancer sera toujours de $\frac{1}{6}$. Donc les répétitions sont
+                              indépendantes.)
+              $Card(\Omega)^{n} = 6^{2} = 36$ Il y a bien 36 issues dans cette nouvelle expérience
+
+            - |-
+              Si dans un jeu de dé on gagne un montant en euros égal à la valeur sur la face :
+              <ul>
+                  <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+                      $\Omega$ :
+                      $p_i
+                      = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+                  </li>
+              </ul>
+
+              Si dans un jeu de dé on perd 2 euros en faisant 1, on gagne 5 euros en faisant 6, et
+                  rien en
+                  faisant 2,3,4, 5, on définit une variable aléatoire : </li>
+              <ul>
+                  <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+                      $\Omega$ :
+                      $p_i
+                      = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+                  </li>
+                  <li>La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+                      prendre X
+                      ainsi que les probabilités associées. L'ensemble des valeurs prises est $\{-2;0;5\}$
+                      et : $\mathbb{P}(\{X=-2\}) = \frac{1}{6}$,
+                      $\mathbb{P}(\{X=0\}) = \frac{4}{6} = \frac{2}{3}$ et $\mathbb{P}(\{X=5\}) =
+                      \frac{1}{6}$</li>
+              </ul>
+
+    - title: Rappel - Espérance mathématique
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              L'espérance mathématique associée à la variable aléatoire $X$ ($x_i$) et aux
+                            probabilités
+                            associées ($p_i$) : $$\mathbb{E}(X) = \sum_{i=1}^{n}p_i x_i$$
+            - |-
+              Dans le cadre d’un jeu d’argent, l’espérance est le gain moyen que l’on peut espérer
+                            toucher.
+            - |-
+              C'est une notion équivalente à la moyenne en statistiques, les probabilitiés $p_i$
+                            jouant le rôle des fréquences $f_i$ :
+
+                            $$ \bar{x} = \sum_{i=1}^{n} f_i x_i $$
+
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Soit $X$ la variable aléatoire égale à la face obtenue d'un dé qu'on lance. Si
+                               lorsqu'on jette un dé, on gagne en euros le montant inscrit sur la face, en moyenne
+                               on gagne :
+
+                               $$ \mathbb{E}(X) = \sum_{i=1}^{6}p_i x_i = \frac{1}{6} \sum_{i=1}^{6}i =
+                               \frac{1}{6}(1+2+3+4+5+6) = 3.5
+                               $$
+
+    - title: Rappel - Variance et écart-type
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              La variance mathématique associée à la variable aléatoire X ($x_i$) et aux probabilités
+                                associées ($p_i$) :
+
+                                $$\mathbb{V}(X) = \sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2$$
+              <br> (En fait, $\mathbb{V}(X) = \mathbb{E}((X - \mathbb{E}(X))^2) $, c'est à dire que la variance est la moyenne des écarts à la moyenne au carré)
+
+            - |-
+              L'écart-type est défini ainsi :
+                            $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2}$$
+            - |-
+              Dans le cadre d'un jeu d'argent, l'écart-type est une mesure de risque. En finance, c'est ce qu'on appelle la volatilité.
+
+            - |-
+              On peut aussi calculer la variance ainsi : 
+
+              $$\mathbb{V}(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2  = \sum_{i=1}^{n}p_i x_i^2 - (\sum_{i=1}^{n}p_i x_i)^2$$
+
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Soit $X$ la variable aléatoire égale à la face obtenue d'un dé qu'on lance.  Son espérance est égale à 3.5
+
+              $$\mathbb{V}(X) = \sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2 = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.5)^2 $$
+              $$\mathbb{V}(X) = \frac{1}{6} ((1 - 3.5)^2 + ... + (6 - 3.5)^2)$$
+
+              $$\mathbb{V}(X) = \frac{1}{6}(6.25 + 2.25 + 0.25 + 0.25 + 2.25 + 6.25)$$
+              $$\mathbb{V}(X) = \frac{17.5}{6} = \frac{35}{12} $$
+            - |-
+              Aussi :
+              $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$
+
+section2:
+  title: II. Quelques lois de probabilités discrètes
+
+  subsections:
+    - title: Loi de Bernouilli
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              La loi de Bernouilli est la loi utilisée pour modéliser une expérience à deux issues, 
+              l'une de probabilité $p$ (le succès), l'autre de probabilité $1-p$ (l'échec).
+
+            - |-
+              $p$ est appelé le paramètre de la loi.
+            - |-
+              Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
+              <br>
+              On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
+              <br>
+              Donc : 
+              $$ \mathbb{E}(X) = p$$
+            - |-
+              Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$
+
+        - title: Exemples
+          type: bull
+          content:
+            - |-
+              Si on lance une pièce équilibrée, et qu'on note $X$ la variable aléatoire égale à 1 en cas de succès (Face) et à 0 en cas d'échec (Pile),
+              alors $p=\frac{1}{2}$
+
+            - |-
+              Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Face, on note $X \sim Ber(\frac{3}{4})$
+
+            - |-
+              Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Pile, on note $X \sim Ber(\frac{1}{4})$
+
+    - title: Exercice 1
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+
+              Dans le cadre d'un jeu, on lance plusieurs fois la même pièce équilibrée. 
+              <br>
+              On définira le succès comme le fait d'obtenir face à chaque fois. Tous les autres cas sont des échecs.
+              <br>
+              Soit $X$ la variable aléatoire égale à 1 si l'on gagne et à 0 sinon.
+              <br>
+              1. On lance la pièce deux fois.  Quelle est la loi de $X$ ?
+
+              <br>
+
+              2. Même question si on lance la pièce 3 fois.
+
+              <br>
+              2. Même question si on lance la pièce 10 fois.
+
+              <br>
+              3. Même question si on lance la pièce $n$ fois.
+
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+              --
+
+    - title: Schéma de Bernouilli et loi binomiale
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              --
+            #   La loi de Bernouilli est la loi utilisée pour modéliser une expérience à deux issues,
+            #   l'une de probabilité $p$ (le succès), l'autre de probabilité $1-p$ (l'échec).
+            # - |-
+            #   $p$ est appelé le paramètre de la loi.
+            # - |-
+            #   Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
+            #   <br>
+            #   On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
+            #   <br>
+            #   Donc :
+            #   $$ \mathbb{E}(X) = p$$
+            # - |-
+            #   Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$
+
+        - title: Exemples
+          type: bull
+          content:
+            - |-
+              ---
+            #   Si on lance une pièce équilibrée, et qu'on note $X$ la variable aléatoire égale à 1 en cas de succès (Face) et à 0 en cas d'échec (Pile),
+            #   alors $p=\frac{1}{2}$
+            # - |-
+            #   Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Face, on note $X \sim Ber(\frac{3}{4})$
+            # - |-
+            #   Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Pile, on note $X \sim Ber(\frac{1}{4})$
+
+    - title: Loi Géométrique
+      fields:
+        - title: Définition
+          type: bull
+          content:
+            - |-
+              La loi géométrique
+
+            # - |-
+            #   $p$ est appelé le paramètre de la loi.
+            # - |-
+            #   Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
+            #   <br>
+            #   On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
+            #   <br>
+            #   Donc :
+            #   $$ \mathbb{E}(X) = p$$
+            # - |-
+            #   Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$
+
+        - title: Exemples
+          type: bull
+          content:
+            - |-
+              --

@@ -1,0 +1,130 @@
+# toc:
+#   - I. Vocabulaire probabiliste
+#   - II. Probabilités
+#   - III. Variables aléatoires
+#   - IV. Probabilitiés conditionnelles
+
+# corriger question  4 exercice 6
+
+# ajouter avec $X$ variable aléatoire
+
+title: "Dénombrement"
+
+#########################################
+# Section 1
+#########################################
+section1:
+  title: I. Principales notions
+
+  subsections:
+    - title: Coefficient binomial (ou nombre de combinaisons)
+      fields:
+        - title: Definition
+          type: bull
+          content:
+            - |-
+              Soit $\Omega$ un ensemble à $n$ éléments. On cherche à calcule le nombre de combinaisons à $k$ éléments.
+              <br> Ce nombre de combinaisons est le nombre de sous-ensembles de $\Omega$ de cardinal $k$, c'est à dire le 
+              nombre de choix que nous avons si nous voulons sélectionner $k$ éléments distincts d'un ensemble à $n$ éléments.
+              <br> L'ordre ne compte pas.
+              <br> Ce nombre est égal au coefficient binomial $k$ parmi $n$ que l'on note $\dbinom{n}{k}$
+
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Dans une classe de 5 élèves, on cherche à constituer un groupe de 2 délégués. 
+              <br> Si l'on numérote tous les élèves de 1 à 5, les combinaisons possibles sont : 
+              <br>
+
+              (1,2),
+              (1,3),
+              (1,4),
+              (1,5),
+              (2,3),
+              (2,4),
+              (2,5),
+              (3,4),
+              (3,5),
+              (4,5)
+              <br>
+              Il y a 10 combinaisons possibles. Donc $\dbinom{10}{5} = 10$
+
+        - title: Propriétés
+          type: bull
+          content:
+            - |-
+              Dans un ensemble à $n$ éléments, il y a toujours 0 façon de ne choisir aucun élément (on en prend aucun)
+              <br> Donc $\dbinom{n}{0} = 1$
+
+            - |-
+              Dans un ensemble à $n$ éléments, il y a toujours $n$ façons de choisir un élément (on peut prendre n'importe lequel)
+              <br> Donc $\dbinom{n}{1} = n$
+
+            - |-
+              Dans un ensemble à $n$ éléments, il y a toujours $n-1$ façons de choisir $n-1$ éléments 
+              (il s'agit en fait de choisir lequel on laisse de côté)
+              <br> Donc $\dbinom{n}{n-1} = n$
+
+            - |-
+              Dans un ensemble à $n$ éléments, choisir $k$ éléments, c'est la même chose qu'en choisir $n-k$. 
+              <br> En effet, il n'y a pas de différence entre choisir ceux qu'on sélectionne, ou ceux qu'on laisse de côté.
+              <br> Donc $\dbinom{n}{k} = \dbinom{n}{n-k}$
+              <br> D'où le fait que $\dbinom{n}{1} = \dbinom{n}{n-1}$
+
+        - title: Formule
+          type: bull
+          content:
+            - |-
+              On introduit la factorielle d'un nombre entier positif $n$, que l'on notera $n!$
+              <br> Cette quantité est calculée ainsi : $n! = 1 \times 2  \times ...  \times n$
+              <br> Par convention $0! = 1$ (et on a aussi $1! = 1$)
+            - |-
+              Le coefficient binomial $\dbinom{n}{k}$ est donné par la formule suivante : 
+              $$\dbinom{n}{k}  =  \frac{n!}{(n-k)!(k!)} $$
+
+            - |-
+              C'est à dire : 
+
+              $$\dbinom{n}{k}  =  \frac{1 \times 2  \times ...  \times n}{(1 \times 2  \times ...  \times (n-k))(1 \times 2  \times ...  \times k)} $$
+
+        - title: Exemple
+          type: bull
+          content:
+            - |-
+              Reprenons l'exemple précédent : 
+              Dans une classe de 5 élèves, on cherche à constituer un groupe de 2 délégués.
+
+            - |-
+              On calcule : $$\dbinom{5}{2} = \frac{5!}{(5-2)!(2!)}$$ 
+              <br> Tout d'abord : $5! = 1 \times 2 \times 3 \times 4 \times 5 = 120$
+              <br> Ensuite : $(5-2)! = (3)! = 1 \times 2 \times 3 = 6$
+              <br> Enfin : $2! = 1 \times 2 = 2$
+              $$\dbinom{5}{2} = \frac{120}{2 \times 6} = \frac{120}{12} = 10$$
+              <br> On retrouve bien 10 combinaisons, la même valeur que lorsqu'on les compte "à la main".
+
+    - title: Exercice 1
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+
+              Soit un ensemble composé de 6 éléments, noté 𝑆={𝐴,𝐵,𝐶,𝐷,𝐸,𝐹}; 
+              1. L’expérience consiste à sélectionner 3 éléments parmi les 6.
+              <br>Sachant que l’ordre de tirage des lettres ne compte pas, combien y-a-t-il de résultats possibles ? 
+              <br>Donner des exemples de résultats.
+
+              2. L’expérience consiste à sélectionner 2 éléments parmi les 6.
+              <br>Sachant que l’ordre de tirage des lettres ne compte pas, combien y-a-t-il de résultats possibles ? 
+              <br>Donner des exemples de résultats.
+
+              3. En déduire le nombre de résultats si on en sélectionne 4.
+
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+              aa

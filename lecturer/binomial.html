@@ -1,0 +1,361 @@
+<!-- Set variables -->
+
+
+<!doctype html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+
+
+
+    <!-- Standard settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+
+
+    <meta name="title" content="HETIC - PMD - Mathématiques">
+    <meta name="description" content="Site de cours.">
+    <meta id="meta-url" name="url" content="">
+    <meta name="author" content="selim-mellouk">
+
+
+
+    <!-- Icons -->
+    <link rel="icon" href="https://dildehdrg5ol8.cloudfront.net/static/img/madewithml/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://dildehdrg5ol8.cloudfront.net/static/img/madewithml/favicon.ico" />
+    <title>Lois discrètes</title>
+
+
+
+    <!-- Bundles -->
+    <link rel="stylesheet" href="https://dildehdrg5ol8.cloudfront.net/static/bundles/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://dildehdrg5ol8.cloudfront.net/static/bundles/bundle.css">
+    <script src="https://dildehdrg5ol8.cloudfront.net/static/bundles/vendor.js"></script>
+    <script src="https://dildehdrg5ol8.cloudfront.net/static/bundles/bundle.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+
+
+</head>
+
+<!-- Body -->
+
+<body>
+
+
+
+    <!-- Topics -->
+    <section class="ai-section ai-bold-anchors">
+        <div class="container">
+            <div class="row flex-column-reverse flex-md-row mb-5">
+                <div class="col-md-9">
+
+                    <div class="row">
+                        <div class="col-md-9 mr-auto">
+                            <h2>Lois discrètes</h2>
+                        </div>
+                    </div>
+
+                    <hr class="mt-0 mb-5">
+
+
+
+                    <h2 id="quelques_rappels">I. Quelques rappels</h2>
+<div class="card ai-card p-5">
+<h3 id="rappel_-_loi_de_probabilité">Rappel - Loi de probabilité</h3>
+<h4>Definition</h4>
+<ul>
+<li>Soit une expérience aléatoire avec un univers $\Omega$. On rappelle que le cardinal
+                  d'$\Omega$ est le nombre d'issues (dans le cas du dé, il y
+                  en a 6, chacune des faces)
+
+              On dit qu’elle suit une loi de probabilité $\mathbb{P}$ si à chaque issue $x_i$ on peut
+                  associer
+                  une probabilité $p_i$ telle que :
+            
+              <ul>
+                  <li>Les $p_i$ sont entre 0 et 1 ie $ 0 \leq p_i \leq 1 $</li>
+                  <li>la somme des $p_i$ est égale à 1 ie : $\sum_{i=1}^{Card(\Omega)} p_i = 1$</li>
+                  <li>A chaque événement $ A = \{x_1, x_2, ..., x_k\} $ on peut associer le nombre
+                      $\mathbb{P}(A)
+                      =
+                      \sum_{i=1}^{k} p_i = p_1 + p_2 + ... + p_k $</li>
+              </ul>
+
+              <ul>
+                  <li>Le nombre $p_i$ est la probabilité de l’éventualité $x_i$</li>
+                  <li>Le nombre $\mathbb{P}(A)$ est la probabilité de l'évènement $A$</li>
+              </ul></li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Pour un dé non truqué, les probabilités de chaque face sont les mêmes, elles sont
+        toutes
+        égales à $1/6$
+    <ul>
+        <li> Donc pour tout $1\leq i \leq 6$, on a $p_i = \frac{1}{6}$</li>
+        <li> Si on note $A=$"obtenir un nombre pair"</li>
+        <li> Alors $A=\{2;4;6\}$</li>
+        <li> $\mathbb{P}(A) = p_2 + p_4 + p_6 = 3 \times \frac{1}{6} = \frac{1}{2} $</li>
+    </ul></li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="rappel_-_variable_aléatoire_et_loi_de_probabilité">Rappel - Variable aléatoire et loi de probabilité</h3>
+<h4>Définition</h4>
+<ul>
+<li>On dit qu’on définit une variable aléatoire $X$ lorsqu’à chaque éventualité d'une
+    expérience
+    aléatoire on associe un nombre.</li>
+<li>La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+    prendre X
+    ainsi que les probabilités associées.</li>
+<li>Donc, nous avons besoin
+de l'ensemble des valeurs prises par cette variable aléatoire : $\Omega = \{x_1 ; ... ; x_n\}$ et
+des valeurs des probabilités associées que l'on note : $\{ \mathbb{P}(\{X=x_1\}) ; ... ;\mathbb{P}(\{X=x_1\}) \} = \{p_1 ; ... ; p_n\}$</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Quand on lance un dé 2 fois successivement, il s’agit d’une répétition de 2
+                expériences identiques
+                et indépendantes car l'expérience est évidemment identique, et la réalisation de la
+                première n'influe pas sur la deuxième (si on a fait un 6 au premier lancer, puis encore
+                un 6 au deuxième lancer, la probabilité de faire
+                un 6 au troisième lancer sera toujours de $\frac{1}{6}$. Donc les répétitions sont
+                indépendantes.)
+$Card(\Omega)^{n} = 6^{2} = 36$ Il y a bien 36 issues dans cette nouvelle expérience</li>
+<li>Si dans un jeu de dé on gagne un montant en euros égal à la valeur sur la face :
+<ul>
+    <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+        $\Omega$ :
+        $p_i
+        = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+    </li>
+</ul>
+
+Si dans un jeu de dé on perd 2 euros en faisant 1, on gagne 5 euros en faisant 6, et
+    rien en
+    faisant 2,3,4, 5, on définit une variable aléatoire : </li>
+<ul>
+    <li>L'ensemble des valeurs prises est $\Omega = \{1;2;3;4;5;6\}$ et pour tout $i$ dans
+        $\Omega$ :
+        $p_i
+        = \mathbb{P}(\{X=i\}) = \frac{1}{6}$
+    </li>
+    <li>La loi de probabilité d’une variable aléatoire X est l’ensemble des valeurs que peut
+        prendre X
+        ainsi que les probabilités associées. L'ensemble des valeurs prises est $\{-2;0;5\}$
+        et : $\mathbb{P}(\{X=-2\}) = \frac{1}{6}$,
+        $\mathbb{P}(\{X=0\}) = \frac{4}{6} = \frac{2}{3}$ et $\mathbb{P}(\{X=5\}) =
+        \frac{1}{6}$</li>
+</ul></li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="rappel_-_espérance_mathématique">Rappel - Espérance mathématique</h3>
+<h4>Définition</h4>
+<ul>
+<li>L'espérance mathématique associée à la variable aléatoire $X$ ($x_i$) et aux
+              probabilités
+              associées ($p_i$) : $$\mathbb{E}(X) = \sum_{i=1}^{n}p_i x_i$$</li>
+<li>Dans le cadre d’un jeu d’argent, l’espérance est le gain moyen que l’on peut espérer
+              toucher.</li>
+<li>C'est une notion équivalente à la moyenne en statistiques, les probabilitiés $p_i$
+              jouant le rôle des fréquences $f_i$ :
+
+              $$ \bar{x} = \sum_{i=1}^{n} f_i x_i $$</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Soit $X$ la variable aléatoire égale à la face obtenue d'un dé qu'on lance. Si
+                 lorsqu'on jette un dé, on gagne en euros le montant inscrit sur la face, en moyenne
+                 on gagne :
+
+                 $$ \mathbb{E}(X) = \sum_{i=1}^{6}p_i x_i = \frac{1}{6} \sum_{i=1}^{6}i =
+                 \frac{1}{6}(1+2+3+4+5+6) = 3.5
+                 $$</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="rappel_-_variance_et_écart-type">Rappel - Variance et écart-type</h3>
+<h4>Définition</h4>
+<ul>
+<li>La variance mathématique associée à la variable aléatoire X ($x_i$) et aux probabilités
+                  associées ($p_i$) :
+
+                  $$\mathbb{V}(X) = \sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2$$
+<br> (En fait, $\mathbb{V}(X) = \mathbb{E}((X - \mathbb{E}(X))^2) $, c'est à dire que la variance est la moyenne des écarts à la moyenne au carré)</li>
+<li>L'écart-type est défini ainsi :
+              $$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2}$$</li>
+<li>Dans le cadre d'un jeu d'argent, l'écart-type est une mesure de risque. En finance, c'est ce qu'on appelle la volatilité.</li>
+<li>On peut aussi calculer la variance ainsi : 
+
+$$\mathbb{V}(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2  = \sum_{i=1}^{n}p_i x_i^2 - (\sum_{i=1}^{n}p_i x_i)^2$$</li>
+</ul>
+<h4>Exemple</h4>
+<ul>
+<li>Soit $X$ la variable aléatoire égale à la face obtenue d'un dé qu'on lance.  Son espérance est égale à 3.5
+
+$$\mathbb{V}(X) = \sum_{i=1}^{n}p_i (x_i - \mathbb{E}(x))^2 = \frac{1}{6} \sum_{i=1}^{n} (x_i - 3.5)^2 $$
+$$\mathbb{V}(X) = \frac{1}{6} ((1 - 3.5)^2 + ... + (6 - 3.5)^2)$$
+
+$$\mathbb{V}(X) = \frac{1}{6}(6.25 + 2.25 + 0.25 + 0.25 + 2.25 + 6.25)$$
+$$\mathbb{V}(X) = \frac{17.5}{6} = \frac{35}{12} $$</li>
+<li>Aussi :
+$$ \sigma_{x} = \sqrt{\mathbb{V}(X)} = \sqrt{\frac{35}{12}} = 1.71$$</li>
+</ul>
+</div>
+<h2 id="quelques_lois_de_probabilités_discrètes">II. Quelques lois de probabilités discrètes</h2>
+<div class="card ai-card p-5">
+<h3 id="loi_de_bernouilli">Loi de Bernouilli</h3>
+<h4>Définition</h4>
+<ul>
+<li>La loi de Bernouilli est la loi utilisée pour modéliser une expérience à deux issues, 
+l'une de probabilité $p$ (le succès), l'autre de probabilité $1-p$ (l'échec).</li>
+<li>$p$ est appelé le paramètre de la loi.</li>
+<li>Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
+<br>
+On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
+<br>
+Donc : 
+$$ \mathbb{E}(X) = p$$</li>
+<li>Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$</li>
+</ul>
+<h4>Exemples</h4>
+<ul>
+<li>Si on lance une pièce équilibrée, et qu'on note $X$ la variable aléatoire égale à 1 en cas de succès (Face) et à 0 en cas d'échec (Pile),
+alors $p=\frac{1}{2}$</li>
+<li>Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Face, on note $X \sim Ber(\frac{3}{4})$</li>
+<li>Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Pile, on note $X \sim Ber(\frac{1}{4})$</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="exercice_1">Exercice 1</h3>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_1_énoncé" role="button" aria-expanded="false" aria-controls="exercice_1_énoncé">
+                     Énoncé
+                    </a><br>
+<div class="collapse" id="exercice_1_énoncé">
+<ul>
+<li>
+Dans le cadre d'un jeu, on lance plusieurs fois la même pièce équilibrée. 
+<br>
+On définira le succès comme le fait d'obtenir face à chaque fois. Tous les autres cas sont des échecs.
+<br>
+Soit $X$ la variable aléatoire égale à 1 si l'on gagne et à 0 sinon.
+<br>
+1. On lance la pièce deux fois.  Quelle est la loi de $X$ ?
+
+<br>
+
+2. Même question si on lance la pièce 3 fois.
+
+<br>
+2. Même question si on lance la pièce 10 fois.
+
+<br>
+3. Même question si on lance la pièce $n$ fois.</li>
+</ul>
+</div>
+
+<a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" 
+                     href="#exercice_1_corrigé" role="button" aria-expanded="false" aria-controls="exercice_1_corrigé">
+                     Corrigé
+                    </a><br>
+<div class="collapse" id="exercice_1_corrigé">
+<ul>
+<li>--</li>
+</ul>
+</div>
+</div>
+<div class="card ai-card p-5">
+<h3 id="schéma_de_bernouilli_et_loi_binomiale">Schéma de Bernouilli et loi binomiale</h3>
+<h4>Définition</h4>
+<ul>
+<li>--</li>
+</ul>
+<h4>Exemples</h4>
+<ul>
+<li>---</li>
+</ul>
+</div>
+<div class="card ai-card p-5">
+<h3 id="loi_géométrique">Loi Géométrique</h3>
+<h4>Définition</h4>
+<ul>
+<li>La loi géométrique</li>
+</ul>
+<h4>Exemples</h4>
+<ul>
+<li>--</li>
+</ul>
+</div>
+
+
+
+                </div>
+
+                <div class="col-md-3">
+                    <!-- TOC -->
+                    <div class="position-fixed">
+                        <h5 class="mt-0 mt-md-5">Table des matières</h5>
+                        <div class="card p-4 ai-gray-text">
+                            <ul style="padding-left: 1.5rem; margin-bottom: 0rem;">
+                                <li><a href="#vocaprob">I. Vocabulaire probabiliste</a></li>
+                                <li><a href="#proba">II. Probabilités</a></li>
+                                <li><a href="#variablesaleatoires">III. Variables aléatoires</a></li>
+                                <li><a href="#variablesaleatoires">IV. Probabilitiés conditionnelles</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <section>
+        <div class="ai-footer ai-section">
+            <div class="container">
+                <div class="row ai-footer-row ai-center-all">
+                    <div class="col-md-12">
+                        <div class="ai-footer-body">
+                            <a href="#">A propos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
