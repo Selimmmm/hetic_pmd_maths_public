@@ -48,13 +48,13 @@ section1:
               (3,5),
               (4,5)
               <br>
-              Il y a 10 combinaisons possibles. Donc $\dbinom{10}{5} = 10$
+              Il y a 10 combinaisons possibles. Donc $\dbinom{5}{2} = 10$
 
         - title: Propriétés
           type: bull
           content:
             - |-
-              Dans un ensemble à $n$ éléments, il y a toujours 0 façon de ne choisir aucun élément (on en prend aucun)
+              Dans un ensemble à $n$ éléments, il y a toujours 1 façon de ne choisir aucun élément (on en prend aucun)
               <br> Donc $\dbinom{n}{0} = 1$
 
             - |-
@@ -62,12 +62,12 @@ section1:
               <br> Donc $\dbinom{n}{1} = n$
 
             - |-
-              Dans un ensemble à $n$ éléments, il y a toujours $n-1$ façons de choisir $n-1$ éléments 
+              Dans un ensemble à $n$ éléments, il y a toujours $n$ façons de choisir $n-1$ éléments 
               (il s'agit en fait de choisir lequel on laisse de côté)
               <br> Donc $\dbinom{n}{n-1} = n$
 
             - |-
-              Dans un ensemble à $n$ éléments, choisir $k$ éléments, c'est la même chose qu'en choisir $n-k$. 
+              Dans un ensemble à $n$ éléments, choisir $k$ éléments, c'est la même chose qu'en exclure $n-k$. 
               <br> En effet, il n'y a pas de différence entre choisir ceux qu'on sélectionne, ou ceux qu'on laisse de côté.
               <br> Donc $\dbinom{n}{k} = \dbinom{n}{n-k}$
               <br> D'où le fait que $\dbinom{n}{1} = \dbinom{n}{n-1}$
@@ -131,16 +131,16 @@ section1:
           content:
             - |-
               1. Calcul de 3 parmi 6 :
-              $$\dbinom{6}{3} = \frac{6!}{(6-3)!(3!)} = 20$$
+              $$\dbinom{6}{3} = \frac{6!}{(6-3)!(3!)} = \frac{720}{36} =20$$
               <br> Exemples : {𝐴,𝐵,𝐶}, {𝐷,𝐸,𝐹}, {𝐵,𝐶,𝐷}...
               <br> 
 
               2. Calcul de 2 parmi 6 :
-              $$\dbinom{6}{2} = \frac{6!}{(6-2)!(2!)} = 15$$
+              $$\dbinom{6}{2} = \frac{6!}{(6-2)!(2!)} = \frac{720}{48} = 15$$
               <br> Exemples : {𝐴,𝐵}, {𝐷,𝐸}, {𝐵,𝐷}...
               <br> 
 
-              2. Calcul de 4 parmi 6 :
+              3. Calcul de 4 parmi 6 :
               $$\dbinom{6}{4} = \dbinom{6}{6 - 4}  = \dbinom{6}{2} = 15$$
               <br> Exemples : {𝐴,𝐵,𝐶,𝐷}, {𝐶,𝐷,𝐸,𝐹}, {𝐵,𝐶,𝐷,𝐹}...
 
@@ -160,7 +160,7 @@ section1:
               dans un tambour de 35 boules rouges numérotées de 1 à 35. Pour gagner le jackpot Powerball, 
               les numéros des participants doivent correspondre aux numéros des 5 boules blanches dans n'importe quel ordre et doivent également correspondre au numéro du Powerball rouge. 
               <br>
-              Par exemple, les numéros 5-16-22-22-23-29 avec un numéro 6 Powerball ont permis le jackpot record de 580 millions de dollars.
+              Par exemple, les numéros 5-16-22-23-29 avec un numéro 6 Powerball ont permis le jackpot record de 580 millions de dollars.
 
               <br> 
               1. Combien de résultats de loterie Powerball sont possibles ?

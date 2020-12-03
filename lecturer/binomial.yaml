@@ -240,10 +240,6 @@ section2:
               1. On lance la pièce deux fois.  Quelle est la loi de $X$ ?
 
               <br>
-
-              2. Même question si on lance la pièce 3 fois.
-
-              <br>
               2. Même question si on lance la pièce 10 fois.
 
               <br>
@@ -256,6 +252,32 @@ section2:
             - |-
               --
 
+    - title: Exercice 2
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+
+              1. Soit $X \sim Ber(\frac{1}{2})$ 
+              <br>
+              Calculer $Var(X)$
+              <br>
+              2. Soit $X \sim Ber(\frac{1}{4})$ 
+              <br>
+              Calculer $Var(X)$
+              <br>
+              3. Soit $X \sim Ber(p)$ 
+              <br>
+              Calculer $Var(X)$
+
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+              --
     - title: Schéma de Bernouilli et loi binomiale
       fields:
         - title: Définition
