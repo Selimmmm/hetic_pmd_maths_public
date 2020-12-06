@@ -3,16 +3,14 @@
 #   - II. Probabilités
 #   - III. Variables aléatoires
 #   - IV. Probabilitiés conditionnelles
-
 # corriger question  4 exercice 6
-
 # ajouter avec $X$ variable aléatoire
 
 title: "Lois discrètes"
 
-#########################################
+########################################
 # Section 1
-#########################################
+########################################
 section1:
   title: I. Quelques rappels
 
@@ -200,13 +198,19 @@ section2:
 
             - |-
               $p$ est appelé le paramètre de la loi.
+
+            - |-
+              On pourra noter : $x_0 = 0$, $x_1 = 1$, $p_0 = \mathbb{P}(X = 0) = (1-p)$, $p_1 = \mathbb{P}(X=1) = p$
             - |-
               Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
               <br>
-              On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
+              On a : $ \mathbb{E}(X) = x_1 \times p_1 + x_0 \times p_0 = 1 \times p + 0 \times (1-p)$
               <br>
               Donc : 
               $$ \mathbb{E}(X) = p$$
+              <br>
+              Et : 
+              $$ Var(X) = p(1-p)$$
             - |-
               Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$
 
@@ -297,62 +301,412 @@ section2:
           button: true
           content:
             - |-
-              --
-    - title: Schéma de Bernouilli et loi binomiale
+              $X$ suit une loi de Bernouilli donc $X = 0$ ou $X = 1$ <br>
+              Et, $\mathbb{P}(X = 1) = p_1 = p,  \mathbb{P}(X = 0) = p_0 = 1 - p$ <br>
+              1. Soit $X \sim Ber(\frac{1}{2})$ <br>
+              Alors, $\mathbb{P}(X = 1) = p_1 = \frac{1}{2},  \mathbb{P}(X = 0) = p_0 = 1 - \frac{1}{2} = \frac{1}{2}$
+              <br>
+              $Var(X) =  \sum p_i (x_i - \mathbb{E}(x))^2$
+              <br>
+              $Var(X) =  \sum p_i (x_i - \frac{1}{2})^2$
+              <br>
+              $Var(X) =   \frac{1}{2} \times (1 - \frac{1}{2})^2 + \frac{1}{2}  \times (0 - \frac{1}{2})^2 $
+              <br>
+              $Var(X) =   \frac{1}{2} \times (\frac{1}{2})^2 + \frac{1}{2}  \times (\frac{1}{2})^2 $
+              <br>
+              $Var(X) =   \frac{1}{8}  + \frac{1}{8} $
+              <br>
+              $Var(X) = \frac{1}{4}$
+              <br>
+              2. Soit $X \sim Ber(\frac{1}{4})$  
+              <br>
+              Alors, $\mathbb{P}(X = 1) = p_1 = \frac{1}{4},  \mathbb{P}(X = 0) = p_0 = 1 - \frac{3}{4}$ <br>
+              $Var(X) =  \sum p_i (x_i - \mathbb{E}(x))^2$
+              <br>
+              $Var(X) =  \sum p_i (x_i - \frac{1}{4})^2$
+              <br>
+              $Var(X) =   \frac{1}{4} \times (1 - \frac{1}{4})^2 + \frac{3}{4}  \times (0 - \frac{1}{4})^2 $
+              <br>
+              $Var(X) =   \frac{1}{4} \times (\frac{3}{4})^2 + \frac{3}{4}  \times (\frac{1}{4})^2 $
+              <br>
+              $Var(X) =   \frac{9}{64}  + \frac{3}{64} $
+              <br>
+              $Var(X) = \frac{12}{64} = \frac{3}{16}$
+              <br>
+              3. Soit $X \sim Ber(p)$ 
+              <br>
+              $Var(X) =  \sum p_i (x_i - \mathbb{E}(x))^2$
+              <br>
+              $Var(X) =  \sum p_i (x_i - p)^2$
+              <br>
+              $Var(X) =   p \times (1 - p)^2 + (1-p)  \times (0 - p)^2 $
+              <br>
+              $Var(X) =   p \times (1 - p)^2 + (1-p)  \times p^2 $
+              <br>
+              $Var(X) =   p \times (1 - 2 \times p + p^{2}) + (1-p)  \times p^2 $
+              <br>
+              $Var(X) =   p \times (1 - 2 \times p + p^{2}) +  p^2- p^3 $
+              <br>
+              $Var(X) =   p - 2 \times p^2 + p^{3} +  p^2 - p^3 $
+              <br>
+              $Var(X) =   p - p^2 = p \times (1-p)$
+              <br>
+
+    - title: Schéma de Bernouilli (ou expérience binomiale)
+      fields:
+        - title: Définition - Schéma de Bernouilli
+          type: bull
+          content:
+            - |-
+              Un schéma de Bernouilli (d'ordre $n$) est la répétition de $n$ expériences de Bernouilli, identiques et indépendantes.
+              On peut aussi en parler comme d'expérience binomiale
+            - |-
+              Par identique, on sous entend que la probabilité $p$ du succès doit être la même à chaque fois
+            - |-
+              Par indépendante, on sous entend que le résultat d'une expérience ne doit pas influer sur les résultats des expériences suivantes
+
+        - title: Exemple - Schéma de Bernouilli
+          type: bull
+          content:
+            - |-
+              Dans une urne contenant 2 boules noires et 3 boules blanches, on tire <b> avec remise </b> 3 boules. 
+              On considère que le succès est tirer une boule noire et l'échec tirer une boule blanche.
+
+            - |-
+              Si l'on ne remet pas les boules après tirage, on modifie la probabilité de tirer une boule d'une couleur, et les expériences ne sont donc plus identiques.
+
+            - |-
+              L'arbre ci-dessous représente un tel schéma de Bernouilli. On note $S$ l'évènement Succès (tirer une boule noire)
+              <br>
+              Puisqu'il y a 5 boules en tout, et 2 boules noires, à chaque fois qu'on tire, il y a toujours une probabilité 
+              $\frac{2}{5}$ de tirer une boule noire (succès) et une probabilité $\frac{3}{5}$ de tirer une boule blanche (échec)
+              <br>Les branches successives sont les mêmes, les probabilités ne changent pas au cours de l'expérience
+
+          image: "../images/schema_bernouilli.svg"
+
+        - title: Rôle du coefficient binomial
+          type: bull
+          content:
+            - |-
+              Le coefficient binomial permet de facilement compter le nombre de succès. Si on tire $n$ boules sans une urne composée
+              de boules blanches et noires, il y a $\dbinom{n}{k} = C_{n}^{k}$ cas où on tire $k$ boules noires.
+
+    - title: Exercice 3 - Nombre de succès
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              1. Dans l'expérience décrite ci-dessus, dans combien de cas tire-t-on 1 boule noire ?
+              <br>
+              2. Dans l'expérience décrite ci-dessus, dans combien de cas tire-t-on 2 boules noires ?
+              <br>
+              3. Dans l'expérience décrite ci-dessus, dans combien de cas tire-t-on 3 boules noires ?
+              <br>
+
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Pour répondre à ces questions, on peut compter le nombre de fois de fois qu'on rencontre un seul succès 
+              sur une branche de l'arbre constituée de trois sous-branches consécutives.<br>
+              On trouve alors : <br>
+              1. 3 cas ($\bar{S}\bar{S}S$, $\bar{S}S\bar{S}$, $S\bar{S}\bar{S}$)
+              <br>
+              2. 3 cas ($\bar{S}SS$, $S\bar{S}S$, $SS\bar{S}$)
+              <br>
+              3. 1 cas ($SSS$)
+
+            - |-
+              On peut également reformuler la question ainsi : combien de manières y-a-t-il de sélectionner 1, 2 ou 3 
+              boules noires (c'est à dire de rencontrer un succès) parmi ces 3 essais.
+              <br>
+              Il y en a $\dbinom{3}{1} = 3, \dbinom{3}{2} = 3, \dbinom{3}{3} = 1$
+
+          image: "../images/compte_succes.png"
+
+    - title: Loi binomiale
       fields:
         - title: Définition
           type: bull
           content:
             - |-
-              --
-            #   La loi de Bernouilli est la loi utilisée pour modéliser une expérience à deux issues,
-            #   l'une de probabilité $p$ (le succès), l'autre de probabilité $1-p$ (l'échec).
-            # - |-
-            #   $p$ est appelé le paramètre de la loi.
-            # - |-
-            #   Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
-            #   <br>
-            #   On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
-            #   <br>
-            #   Donc :
-            #   $$ \mathbb{E}(X) = p$$
-            # - |-
-            #   Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$
 
-        - title: Exemples
-          type: bull
-          content:
+              Soit $X$ la variable aléatoire qui compte le nombre de succès dans un schéma de Bernouilli constitué de 
+              $n$ épreuves ayant chacune une probabilité de succès égale à $p$
+
             - |-
-              ---
-            #   Si on lance une pièce équilibrée, et qu'on note $X$ la variable aléatoire égale à 1 en cas de succès (Face) et à 0 en cas d'échec (Pile),
-            #   alors $p=\frac{1}{2}$
-            # - |-
-            #   Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Face, on note $X \sim Ber(\frac{3}{4})$
-            # - |-
-            #   Si la pièce a une probabilité $\frac{3}{4}$ de tomber sur Pile, on note $X \sim Ber(\frac{1}{4})$
+              La variable aléatoire X suit une loi appelée loi binomiale de paramètres $n$ et $p$
 
-    - title: Loi Géométrique
+              <br>
+              Si $X$ suit une loi Binomiale de paramète $n$ et $p$, on note  $X \sim \mathscr B \left(n ; p\right)$
+
+            - |-
+              Pour calculer la probabilité du nombre de succès dans le cadre d'un schéma de Bernouilli, ie, pour 
+              calculer la probabilité que $X$ soit égale $k$, on peut utiliser la formule suivante : 
+
+              $$\mathbb{P}(X=k) =  \dbinom{n}{k} \times p^{k} \times (1-p)^{n-k}$$
+
+              Que l'on peut alternativement écrire avec la notation $C_{n}^k$ pour le coefficient binomial : 
+
+              $$\mathbb{P}(X=k) =  C_{n}^k \times p^{k} \times (1-p)^{n-k}$$
+
+            - |-
+              Expliquons cette formule : 
+              <br>
+              Pour avoir $k$ succès, il faut parcourir $k$ sous branches avec une probabilité $p$
+              <br>
+              Il faut forcément avoir $n-k$ échecs (toutes les autres issues aux expériences de Bernouilli sont des échecs)
+              <br>
+              Donc, sur chaque branche correspondant à $k$ succès, en appliquant le principe multiplicatif, la probabilité est : $p^{k} \times (1-p)^{n-k}$
+              <br> 
+              Or, il y a en tout $\dbinom{n}{k}$ branches avec $k$ succès.
+              <br> 
+              Donc la probabilité finale est : $\mathbb{P}(X=k) =  \dbinom{n}{k} \times p^{k} \times (1-p)^{n-k}$
+              <br>
+
+            - |-
+              <b>Calcul de l'espérance : </b>
+              <br> 
+              Si $X$ suit une loi binomiale de paramètres $n$ et $p$, alors :
+
+              $$ \mathbb{E}(X) = np $$
+
+              On peut comprendre cette formule intuitivement. En moyenne, le nombre de succès est égal au nombre d'essais fois la probabilité d'un succès.
+
+              <br> Dans l'exemple ci-dessus, on tire 3 boules, avec une probabilité $\frac{2}{5}$ de tirer une boule noire (succès).
+              <br> Donc, on tirera en moyenne $\frac{6}{5} = 1.2$ boules noires.
+              <br>
+
+            - |-
+              <b>Calcul de la variance : </b>
+
+              $$ \mathbb{V}(X) = np(1-p) $$
+
+              On remarque que c'est $n$ fois la variance d'une expérience de Bernouilli. En fait, puisque les expériences sont indépendantes, les variances de chacune se somment.
+
+          image: "../images/schema_bernouilli_p.png"
+
+    - title: Exercice 4 - Premiers calculs de probabilités - Exemple
       fields:
-        - title: Définition
+        - title: "Énoncé"
           type: bull
+          button: true
           content:
             - |-
-              La loi géométrique
+              On note $X$ la variable aléatoire égale au nombre de succès dans l'expérience décrite ci-dessus.
+              <br>
+              1. Ecrire avec des notations mathématiques la probabilité de tirer 3 boules noires
+              <br>
+              2. Ecrire avec des notations mathématiques la probabilité de tirer 1 boule noire
+              <br>
+              3. Dans l'expérience décrite ci-dessus, quelle est la probabilité de tirer 3 boules noires ?
+              <br>
+              4. Dans l'expérience décrite ci-dessus, quelle est la probabilité de tirer 1 boule noire ?
+              <br>
 
-            # - |-
-            #   $p$ est appelé le paramètre de la loi.
-            # - |-
-            #   Soit $X$ une variable aléatoire égale à 1 en cas de succès et à 0 en cas d'échec, dans le cadre d'une expérience de Bernouilli.
-            #   <br>
-            #   On a : $ \mathbb{E}(X) = 1 \times p + 0 \times (1-p)$
-            #   <br>
-            #   Donc :
-            #   $$ \mathbb{E}(X) = p$$
-            # - |-
-            #   Si $X$ suit une loi de Bernouilli de paramète $p$, on note $X \sim Ber(p)$
-
-        - title: Exemples
+        - title: "Corrigé"
           type: bull
+          button: true
           content:
             - |-
-              --
+              1. $\mathbb{P}(X = 3)$<br>
+              2. $\mathbb{P}(X = 1)$<br>
+              3. Appliquons le principe multiplicatif. Il suffit de multiplier entre elles les probabilités des sous-branches 
+              de l'arbre, au sein de la branche qui ne contient que des $S$ et aucun $\bar{S}$
+              <br>
+              $\mathbb{P}(X=3) = \mathbb{P}(SSS) = \frac{2}{5} \times  \frac{2}{5} \times  \frac{2}{5} = \frac{8}{125}$
+              <br>
+              4. <br>
+              <b> Première méthode ("à la main"): </b> <br>
+              $\mathbb{P}(X=1) = \mathbb{P}((S\bar{S}\bar{S}) \bigcup (\bar{S}S\bar{S}) \bigcup (\bar{S}\bar{S}S))$
+              <br>
+              La probabilité d'obtenir $\bar{S}\bar{S}S$ est : 
+              $\frac{3}{5} \times  \frac{3}{5} \times  \frac{2}{5} = \frac{18}{125}$
+              <br>
+              De même, la probabilité d'obtenir $\bar{S}S\bar{S}$ est : 
+              $\frac{3}{5} \times  \frac{2}{5} \times  \frac{3}{5} = \frac{18}{125}$
+              <br>
+              De même, la probabilité d'obtenir $S\bar{S}\bar{S}$ est : 
+              $\frac{2}{5} \times  \frac{3}{5} \times  \frac{3}{5} = \frac{18}{125}$
+              <br>
+              Finalement : 
+              <br>
+
+              $\mathbb{P}(X=1) = \mathbb{P}(S\bar{S}\bar{S}) + \mathbb{P}(\bar{S}S\bar{S}) + \mathbb{P}(\bar{S}\bar{S}S)$
+              <br>
+              $\mathbb{P}(X=1) = \frac{18}{125} + \frac{18}{125} +\frac{18}{125} = \frac{54}{125}$
+
+
+              <br>
+              <b> Deuxième méthode (en exploitant la formule): </b> <br>
+              $\mathbb{P}(X=k) =  \dbinom{n}{k} \times p^{k} \times (1-p)^{n-k}$
+              <br>
+              Ici, $p=\frac{2}{5}$, $1-p = \frac{3}{5}$, $n=3$ et $k=1$
+              <br> 
+              Donc : $\mathbb{P}(X=1) =  \dbinom{3}{1} \times p^{1} \times (1-p)^{3-1}$
+              <br>
+              $\mathbb{P}(X=1) =  \dbinom{3}{1} \times (\frac{2}{5}) \times (\frac{3}{5})^{3-1}$
+              <br>
+              $\mathbb{P}(X=1) =  \dbinom{3}{1} \times \frac{2}{5} \times (\frac{3}{5})^{2}$
+              <br>
+              $\mathbb{P}(X=1) =  \dbinom{3}{1} \times \frac{2}{5} \times (\frac{3}{5})^{2}$
+              <br>
+              $\mathbb{P}(X=1) =  3 \times \frac{2}{5} \times \frac{9}{25}$
+              <br>
+              $\mathbb{P}(X=1) =  \frac{54}{125}$
+
+    - title: Exercice 5 - Calculs de probabilités - Application Directe
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Dans le cadre de son enquête "Music 360", Nielsen Co. a demandé à des adolescents et à des adultes
+              par quels media ils avaient écouté de la musique au cours des 12 derniers mois.
+              Près des deux tiers des adolescents américains de moins de 18 ans disent utiliser le site de partage de
+              vidéos de google Inc. pour écouter de la musique et 35 % des adolescents disent utiliser le service de radio
+              en ligne personnalisé de Pandora Media (le Wall Street Journal, 14 août 2012).
+              <br>
+              Supposons que 10 adolescents soient choisis au hasard pour être interviewés sur la façon dont ils écoutent de la musique.
+              On note $X$ la variable aléatoire égale au nombre de succès dans l'expérience décrite ci-dessus.
+              <br>
+              1. La sélection aléatoire de 10 adolescents pour savoir s'ils utilisent
+              ou non le service de radio en ligne de Pandora constitue-t-elle une expérience binomiale ? Justifiez.
+              <br>
+              2. Quelle est la probabilité qu'aucun des 10 adolescents n'utilise Pandora ?
+              <br>
+              3. Quelle est la probabilité que 4 des 10 adolescents utilisent Pandora ?
+              <br>
+              4. Quelle est la probabilité qu'au moins 2 des 10 adolescents utilisent Pandora ?
+              <br>
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+          image: "../images/corrige_5_binomial.png"
+
+    - title: Exercice 6 - Calcul de probabilités espérance et variance - Application directe
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Un sondage a montré que 30% des américains sont satisfaits de la façon dont les choses se passent aux Etats-Unis
+              (Institut Gallup, 12 septembre 2012). <br>
+              Supposons qu'un échantillon de 20 américains soit sélectionné dans le cadre d'une étude sur l'état de la nation.
+              <br>
+              1. Calculez la probabilité qu'exactement 4 des 20 américains interrogés soient satisfaits de la façon dont les choses vont aux États-Unis.
+              <br>
+              2. Calculez la probabilité qu'au moins 2 des américains interrogés soient satisfaits de la façon dont les choses vont aux États-Unis.
+              <br>
+              3. Parmi les 20 américains sélectionnés, quel est le nombre attendu de satisfaits ? Calculez la variance et l'écart-type du nombre d'américains satisfaits.
+              <br>
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+          image: "../images/corrige_6_binomial.png"
+
+    - title: Exercice 7 - Problème de modélisation - Application Intermédiaire
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Un magicien prétend avoir des capacités de perception extrasensorielle.
+              Des scientifiques lui font passer le test suivant :
+              deviner les 10 résultats de jets successifs d’un dé équilibré. Le magicien donne 7 bonnes réponses.
+              <br>
+              1. Quelle est la probabilité d’obtenir un résultat équivalent ou meilleur pour un individu sans capacités de perception extrasensorielles ?
+              <br>
+              2. Combien de réponses correctes obtiendrait en moyenne cet individu ordinaire ?
+              <br>
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+          image: "../images/corrige_7_binomial.png"
+
+    - title: Exercice 8 - Problème de modélisation - Application Intermédiaire
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Supposons que vous ayez le choix entre deux compagnies aériennes pour partir en vacances.
+              La compagnie 𝐴 affrète un avion quadrimoteur et la compagnie 𝐵 affrète un bimoteur. Les données techniques indiquent que, dans tous les cas, les moteurs de l’avion fonctionnent indépendamment et chacun a une probabilité 𝑝 de tomber en panne.
+              <br>Pour arriver à destination sain et sauf, il faut que moins de la moitié des moteurs de l’avion tombe en panne. Quel avion choisissez-vous (Vous discuterez en fonction de la valeur de 𝑝) ?
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+          image: "../images/corrige_9_binomial.png"
+
+    - title: Exercice 9 - Problème de modélisation - Application Avancée
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Supposons l’équiprobabilité et l’indépendance des sexes à la naissance.
+              <br>Quel est le nombre minimum d’enfants qu’un couple doit planifier pour s’assurer 90% de chances d’avoir au moins un garçon et une fille ?
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+          image: "../images/corrige_8_binomial.png"
+
+    - title: Exercice 10 - Démonstration de cours - Facultatif et difficile
+      fields:
+        - title: "Énoncé"
+          type: bull
+          button: true
+          content:
+            - |-
+              Soit $X \sim \mathscr B \left(n ; p\right)$
+                <br>Démontrer que : 
+                <br> $\mathbb{E}(X) = np$
+                <br> $\mathbb{V}(X) = np(1-p)$
+
+        - title: "Corrigé"
+          type: bull
+          button: true
+          content:
+            - |-
+    # - title: Loi Géométrique
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
+    #           La loi géométrique
+    #     - title: Exemples
+    #       type: bull
+    #       content:
+    #         - |-
+    #           --
+    # - title: Loi de Poisson
+    #   fields:
+    #     - title: Définition
+    #       type: bull
+    #       content:
+    #         - |-
+    #           La loi géométrique
+    #     - title: Exemples
+    #       type: bull
+    #       content:
+    #         - |-
+    #           --

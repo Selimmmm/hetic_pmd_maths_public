@@ -28,6 +28,7 @@ section1:
               nombre de choix que nous avons si nous voulons sélectionner $k$ éléments distincts d'un ensemble à $n$ éléments.
               <br> L'ordre ne compte pas.
               <br> Ce nombre est égal au coefficient binomial $k$ parmi $n$ que l'on note $\dbinom{n}{k}$
+              <br> Alternativement, on le note $C_{n}^k$
 
         - title: Exemple
           type: bull
