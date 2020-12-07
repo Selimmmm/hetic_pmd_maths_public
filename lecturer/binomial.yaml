@@ -676,7 +676,7 @@ section2:
           button: true
           content:
             - |-
-              Soit $X \sim \mathscr B \left(n ; p\right)$
+              Soit $X \sim \mathscr B \left(n, p\right)$
                 <br>Démontrer que : 
                 <br> $\mathbb{E}(X) = np$
                 <br> $\mathbb{V}(X) = np(1-p)$
