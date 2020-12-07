@@ -320,7 +320,7 @@ section2:
               <br>
               2. Soit $X \sim Ber(\frac{1}{4})$  
               <br>
-              Alors, $\mathbb{P}(X = 1) = p_1 = \frac{1}{4},  \mathbb{P}(X = 0) = p_0 = 1 - \frac{3}{4}$ <br>
+              Alors, $\mathbb{P}(X = 1) = p_1 = \frac{1}{4},  \mathbb{P}(X = 0) = p_0 = 1 - \frac{1}{4} = \frac{3}{4}$ <br>
               $Var(X) =  \sum p_i (x_i - \mathbb{E}(x))^2$
               <br>
               $Var(X) =  \sum p_i (x_i - \frac{1}{4})^2$
