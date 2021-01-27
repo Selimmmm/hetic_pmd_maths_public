@@ -588,6 +588,10 @@ section2:
           button: true
           content:
             - |-
+              4. <br>
+              La probabilité est : 
+              $ \mathbb{P}(X \geq 2) = 1 - \mathbb{P}(X < 2) = 1 - (\mathbb{P}(X = 0) + \mathbb{P}(X =1) $
+
           image: "../images/corrige_5_binomial.png"
 
     - title: Exercice 6 - Calcul de probabilités espérance et variance - Application directe
