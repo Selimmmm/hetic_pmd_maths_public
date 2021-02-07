@@ -1,0 +1,20 @@
+# HETIC - PMD - Mathématiques
+
+## Estimation Statistique
+
+
+- [Poly de cours](https://selimmmm.github.io/hetic_pmd_maths_public/poly_cours_lois_continues_estimation.pdf)
+
+- [Représentations graphiques loi normale](https://selimmmm.github.io/hetic_pmd_maths_public/loi_normale_export.pdf)
+
+- [Représentations graphiques TCL](https://selimmmm.github.io/hetic_pmd_maths_public/tcl_illustration_export.pdf)
+
+- [Exercices loi normale](https://selimmmm.github.io/hetic_pmd_maths_public/exercices_loi_normales.pdf)
+
+- [Exercices et corrigés intervalles de confiance (1/2)](https://selimmmm.github.io/hetic_pmd_maths_public/estimation_statistique.html)
+
+- [Exercices intervalles de confiance (2/2)](https://selimmmm.github.io/hetic_pmd_maths_public/intervalle_moyenne_ex.pdf)
+
+
+***
+
